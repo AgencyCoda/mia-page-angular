@@ -21,6 +21,7 @@ import { MiaPrintElementComponent } from './components/mia-print-element/mia-pri
 import { ColumnOneComponent } from './elements/column-one/column-one.component';
 import { TextElementComponent } from './elements/text-element/text-element.component';
 import { ColumnTwoComponent } from './elements/column-two/column-two.component';
+import { ColumnThreeComponent } from './elements/column-three/column-three.component';
 
 
 
@@ -34,7 +35,8 @@ import { ColumnTwoComponent } from './elements/column-two/column-two.component';
     MiaPrintElementComponent,
     ColumnOneComponent,
     TextElementComponent,
-    ColumnTwoComponent
+    ColumnTwoComponent,
+    ColumnThreeComponent
   ],
   imports: [
     // Angular Core
