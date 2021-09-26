@@ -8,6 +8,7 @@ import { MiaPageModule, TextElementComponent } from 'projects/agencycoda/mia-pag
 
 import { MIA_PAGE_EDITOR_CONFIG } from 'projects/agencycoda/mia-page/src/lib/entities/mia-page-editor-config';
 import { ColumnOneComponent } from 'projects/agencycoda/mia-page/src/lib/elements/column-one/column-one.component';
+import { ColumnTwoComponent } from 'projects/agencycoda/mia-page/src/lib/elements/column-two/column-two.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { ColumnOneComponent } from 'projects/agencycoda/mia-page/src/lib/element
             title: 'Columns', 
             items: [
               { id: 'column-one', title: 'Column 1/1', type: 1, image: 'assets/mia_elements/element_column_one.png', component: ColumnOneComponent },
-              { id: 'column-two', title: 'Column 1/2 - 1/2', type: 1, image: 'assets/mia_elements/element_column_one.png' },
+              { id: 'column-two', title: 'Column 1/2 - 1/2', type: 1, image: 'assets/mia_elements/element_column_two.png', component: ColumnTwoComponent },
             ] 
           },
           { 

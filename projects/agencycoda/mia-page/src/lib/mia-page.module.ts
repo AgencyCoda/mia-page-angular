@@ -9,6 +9,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 
+/** OTHER LIBRARIES */
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 /** COMPONENTS */
 import { MiaPageEditorComponent } from './components/mia-page-editor/mia-page-editor.component';
 import { TitleElementComponent } from './elements/title-element/title-element.component';
@@ -17,6 +20,7 @@ import { AddElementModalComponent } from './modals/add-element-modal/add-element
 import { MiaPrintElementComponent } from './components/mia-print-element/mia-print-element.component';
 import { ColumnOneComponent } from './elements/column-one/column-one.component';
 import { TextElementComponent } from './elements/text-element/text-element.component';
+import { ColumnTwoComponent } from './elements/column-two/column-two.component';
 
 
 
@@ -29,7 +33,8 @@ import { TextElementComponent } from './elements/text-element/text-element.compo
     AddElementModalComponent,
     MiaPrintElementComponent,
     ColumnOneComponent,
-    TextElementComponent
+    TextElementComponent,
+    ColumnTwoComponent
   ],
   imports: [
     // Angular Core
@@ -38,7 +43,10 @@ import { TextElementComponent } from './elements/text-element/text-element.compo
     // Angular Material
     MatDialogModule,
     MatTabsModule,
-    MatIconModule
+    MatIconModule,
+
+    // Other Libraries
+    FlexLayoutModule,
   ],
   exports: [
     // Components
