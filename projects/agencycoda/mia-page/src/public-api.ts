@@ -2,11 +2,6 @@
  * Public API Surface of mia-page
  */
 /**
- * Entities
- */
- export * from './lib/entities/mia-page';
- export * from './lib/entities/mia-element';
-/**
  * Elements
  */
 export * from './lib/elements/base-element.component';

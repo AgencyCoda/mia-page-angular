@@ -2,6 +2,12 @@
  * Public API Surface of mia-page-core
  */
 
-export * from './lib/mia-page-core.service';
-export * from './lib/mia-page-core.component';
+/**
+ * Entities
+ */
+ export * from './lib/entities/mia-page';
+ export * from './lib/entities/mia-element';
+ /**
+  * Module
+  */
 export * from './lib/mia-page-core.module';

@@ -1,6 +1,6 @@
+import { MiaElement } from '@agencycoda/mia-page-core';
+import { MiaPage } from '@agencycoda/mia-page-core';
 import { Component, Input, OnInit } from '@angular/core';
-import { MiaElement } from '../../entities/mia-element';
-import { MiaPage } from '../../entities/mia-page';
 
 @Component({
   selector: 'mia-creator-element',
