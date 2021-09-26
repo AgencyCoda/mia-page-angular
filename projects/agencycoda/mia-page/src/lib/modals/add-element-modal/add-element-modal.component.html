@@ -14,9 +14,9 @@
 
 <ng-template #elementButton let-element="element">
 
-    <img *ngIf="element.type == 1" [src]="element.image" />
+    <img *ngIf="element.type == 1" [src]="element.image" (click)="onSelectElement(element)" />
 
-    <div *ngIf="element.type == 0" class="">
+    <div *ngIf="element.type == 0" class="" (click)="onSelectElement(element)">
         <mat-icon>{{ element.icon }}</mat-icon> {{ element.title }}
     </div>
     

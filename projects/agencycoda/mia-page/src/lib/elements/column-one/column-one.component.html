@@ -1,0 +1,5 @@
+<div class="column-elements">
+    <mia-print-element *ngFor="let element of element.data.elements" [element]="element"></mia-print-element>
+</div>
+
+<button (click)="onClickAddElement(this.element)">Add element</button>

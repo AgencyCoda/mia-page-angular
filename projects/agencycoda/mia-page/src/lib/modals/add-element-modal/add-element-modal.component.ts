@@ -1,3 +1,4 @@
+import { MiaEditorElement } from '@agencycoda/mia-page';
 import { Inject } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
@@ -19,4 +20,15 @@ export class AddElementModalComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSelectElement(editor: MiaEditorElement) {
+    if(editor.component == undefined){
+      return;
+    }
+
+    if(editor.component.createElement == undefined){
+      return;
+    }
+
+    this.dialogRef.close(editor.component.createElement());
+  }
 }

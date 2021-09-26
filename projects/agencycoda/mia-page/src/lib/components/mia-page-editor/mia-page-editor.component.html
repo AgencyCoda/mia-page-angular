@@ -8,6 +8,8 @@
     </div>
 </div>
 
-<mia-print-elements [elements]="page.data.elements"></mia-print-elements>
+<div class="editor-content">
+    <mia-print-element *ngFor="let element of page.data.elements" [element]="element"></mia-print-element>
+</div>
 
 <button (click)="onClickAddElement()">Add element</button>

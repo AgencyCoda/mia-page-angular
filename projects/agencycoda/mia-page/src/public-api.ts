@@ -15,11 +15,13 @@
  * Elements
  */
 export * from './lib/elements/base-element.component';
+export * from './lib/elements/column-one/column-one.component';
+export * from './lib/elements/text-element/text-element.component';
 /**
  * Components
  */
 export * from './lib/components/mia-page-editor/mia-page-editor.component';
-export * from './lib/components/mia-print-elements/mia-print-elements.component';
+export * from './lib/components/mia-print-element/mia-print-element.component';
 /**
  * Modals
  */

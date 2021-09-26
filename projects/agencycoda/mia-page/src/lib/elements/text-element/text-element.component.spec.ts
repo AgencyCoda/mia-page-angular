@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MiaPrintElementsComponent } from './mia-print-elements.component';
+import { TextElementComponent } from './text-element.component';
 
-describe('MiaPrintElementsComponent', () => {
-  let component: MiaPrintElementsComponent;
-  let fixture: ComponentFixture<MiaPrintElementsComponent>;
+describe('TextElementComponent', () => {
+  let component: TextElementComponent;
+  let fixture: ComponentFixture<TextElementComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MiaPrintElementsComponent ]
+      declarations: [ TextElementComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MiaPrintElementsComponent);
+    fixture = TestBed.createComponent(TextElementComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

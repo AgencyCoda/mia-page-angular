@@ -2,6 +2,7 @@ export class MiaEditorElement {
     static TYPE_SHOW_ICON = 0;
     static TYPE_SHOW_IMAGE = 1;
 
+    id: string = '';
     title: string = '';
     type_show: number = 0;
     group?: string = '';

@@ -1,3 +1,4 @@
+import { nil } from '@agencycoda/mia-core';
 import { MiaPage } from '@agencycoda/mia-page-core';
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
@@ -20,6 +21,8 @@ export class MiaPageEditorComponent implements OnInit {
   }
 
   onClickAddElement() {
-    this.editorService.showAddElementModal();
+    this.editorService
+    .showAddElementModal()
+    .subscribe(ele => this.page.data.elements.push(ele));
   }
 }
