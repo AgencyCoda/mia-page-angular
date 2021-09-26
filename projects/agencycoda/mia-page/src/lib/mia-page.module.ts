@@ -22,6 +22,8 @@ import { ColumnOneComponent } from './elements/column-one/column-one.component';
 import { TextElementComponent } from './elements/text-element/text-element.component';
 import { ColumnTwoComponent } from './elements/column-two/column-two.component';
 import { ColumnThreeComponent } from './elements/column-three/column-three.component';
+import { ColumnOneTwoComponent } from './elements/column-one-two/column-one-two.component';
+import { ColumnTwoOneComponent } from './elements/column-two-one/column-two-one.component';
 
 
 
@@ -36,7 +38,9 @@ import { ColumnThreeComponent } from './elements/column-three/column-three.compo
     ColumnOneComponent,
     TextElementComponent,
     ColumnTwoComponent,
-    ColumnThreeComponent
+    ColumnThreeComponent,
+    ColumnOneTwoComponent,
+    ColumnTwoOneComponent
   ],
   imports: [
     // Angular Core
