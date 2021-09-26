@@ -1,6 +1,7 @@
 import { MiaPage } from '@agencycoda/mia-page-core';
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { MiaPageEditorService } from '../../services/mia-page-editor.service';
 
 @Component({
   selector: 'mia-page-editor',
@@ -11,8 +12,14 @@ export class MiaPageEditorComponent implements OnInit {
 
   @Input() page = new MiaPage();
 
-  constructor() { }
+  constructor(
+    protected editorService: MiaPageEditorService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  onClickAddElement() {
+    this.editorService.showAddElementModal();
   }
 }

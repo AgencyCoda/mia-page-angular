@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MiaCreatorElementComponent } from './mia-creator-element.component';
+import { AddElementModalComponent } from './add-element-modal.component';
 
-describe('MiaCreatorElementComponent', () => {
-  let component: MiaCreatorElementComponent;
-  let fixture: ComponentFixture<MiaCreatorElementComponent>;
+describe('AddElementModalComponent', () => {
+  let component: AddElementModalComponent;
+  let fixture: ComponentFixture<AddElementModalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MiaCreatorElementComponent ]
+      declarations: [ AddElementModalComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MiaCreatorElementComponent);
+    fixture = TestBed.createComponent(AddElementModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

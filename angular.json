@@ -61,6 +61,11 @@
             "tsConfig": "projects/example/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/agencycoda/mia-page/assets",
+                "output": "/assets/"
+              },
               "projects/example/src/favicon.ico",
               "projects/example/src/assets"
             ],
