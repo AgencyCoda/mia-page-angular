@@ -1,4 +1,13 @@
-<h1>Editor:</h1>
+<div class="editor-header">
+    <button>Edit</button>
+
+    <div class="title-page">
+        <h2 *ngIf="page.title != undefined && page.title != ''">{{ page.title }}</h2>
+        <h2 *ngIf="page.title == undefined || page.title == ''">New Page (untitled)</h2>
+        <p>Page - Published</p>
+    </div>
+</div>
+
 <mia-print-elements [elements]="page.data.elements"></mia-print-elements>
 
 

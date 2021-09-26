@@ -6,6 +6,10 @@
       "@agencycoda/mia-page": [
         "dist/agencycoda/mia-page/agencycoda-mia-page",
         "dist/agencycoda/mia-page"
+      ],
+      "@agencycoda/mia-page-core": [
+        "dist/agencycoda/mia-page-core/agencycoda-mia-page-core",
+        "dist/agencycoda/mia-page-core"
       ]
     },
     "baseUrl": "./",
