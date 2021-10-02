@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MiaBaseElementComponent } from '../base-element.component';
 
 @Component({
@@ -9,8 +10,9 @@ import { MiaBaseElementComponent } from '../base-element.component';
 export class RowElementComponent extends MiaBaseElementComponent {
 
   constructor(
+    protected dialog: MatDialog
   ) {
-    super();
+    super(dialog);
   }
 
 }

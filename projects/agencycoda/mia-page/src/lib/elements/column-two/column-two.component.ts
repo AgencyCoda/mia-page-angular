@@ -1,5 +1,6 @@
 import { MiaElement } from '@agencycoda/mia-page-core';
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MiaPageEditorService } from '../../services/mia-page-editor.service';
 import { MiaBaseHasChildElementComponent } from '../base-has-child-element.component';
 
@@ -12,8 +13,9 @@ export class ColumnTwoComponent extends MiaBaseHasChildElementComponent implemen
 
   constructor(
     protected editorService: MiaPageEditorService,
+    protected dialog: MatDialog
   ) {
-    super(editorService);
+    super(editorService, dialog);
   }
 
   ngOnInit(): void {

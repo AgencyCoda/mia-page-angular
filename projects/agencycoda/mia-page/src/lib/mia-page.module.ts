@@ -26,6 +26,7 @@ import { ColumnThreeComponent } from './elements/column-three/column-three.compo
 import { ColumnOneTwoComponent } from './elements/column-one-two/column-one-two.component';
 import { ColumnTwoOneComponent } from './elements/column-two-one/column-two-one.component';
 import { MiaElementActionsComponent } from './components/mia-element-actions/mia-element-actions.component';
+import { TextEditModalComponent } from './edits/text-edit-modal/text-edit-modal.component';
 
 
 
@@ -43,7 +44,8 @@ import { MiaElementActionsComponent } from './components/mia-element-actions/mia
     ColumnThreeComponent,
     ColumnOneTwoComponent,
     ColumnTwoOneComponent,
-    MiaElementActionsComponent
+    MiaElementActionsComponent,
+    TextEditModalComponent
   ],
   imports: [
     // Angular Core

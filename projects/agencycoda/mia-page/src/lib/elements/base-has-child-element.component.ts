@@ -1,6 +1,7 @@
 import { MiaElement } from "@agencycoda/mia-page-core";
 import { ElementRef, Input, Renderer2 } from "@angular/core";
 import { Component, OnInit } from "@angular/core";
+import { MatDialog } from "@angular/material/dialog";
 import { MiaEditorElement } from "../entities/mia-editor-element";
 import { MiaPageEditorService } from "../services/mia-page-editor.service";
 import { MiaBaseElementComponent } from "./base-element.component";
@@ -12,9 +13,10 @@ import { MiaBaseElementComponent } from "./base-element.component";
 export class MiaBaseHasChildElementComponent extends MiaBaseElementComponent implements OnInit {
 
   constructor(
-    protected editorService: MiaPageEditorService
+    protected editorService: MiaPageEditorService,
+    protected dialog: MatDialog
   ) {
-    super();
+    super(dialog);
   }
     
   onClickAddElement(element: MiaElement) {

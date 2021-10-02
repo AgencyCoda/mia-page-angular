@@ -2,6 +2,6 @@
     <mia-print-element *ngFor="let subelement of element.data.elements" [element]="subelement" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemoveChild($event)"></mia-print-element>
 </div>
 
-<mia-element-actions *ngIf="element.isSelected" (clickRemove)="onClickRemove()"></mia-element-actions>
+<mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()"></mia-element-actions>
 
 <button (click)="onClickAddElement(this.element); $event.stopPropagation()">Add element</button>

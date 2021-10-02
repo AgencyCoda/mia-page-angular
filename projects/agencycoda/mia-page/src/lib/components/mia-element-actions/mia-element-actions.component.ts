@@ -7,11 +7,16 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class MiaElementActionsComponent implements OnInit {
 
+  @Output() clickEdit = new EventEmitter<any>();
   @Output() clickRemove = new EventEmitter<any>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onClickEdit() {
+    this.clickEdit.emit();
   }
 
   onClickRemove() {

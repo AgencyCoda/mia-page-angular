@@ -1,6 +1,7 @@
 import { MiaElement } from "@agencycoda/mia-page-core";
 import { ElementRef, EventEmitter, HostListener, Input, Output, Renderer2, ViewChild } from "@angular/core";
 import { Component, OnInit } from "@angular/core";
+import { MatDialog } from "@angular/material/dialog";
 import { MiaElementActionsComponent } from "../components/mia-element-actions/mia-element-actions.component";
 import { MiaEditorElement } from "../entities/mia-editor-element";
 
@@ -16,12 +17,24 @@ export class MiaBaseElementComponent implements OnInit {
   @Output() clickElement = new EventEmitter<MiaElement>();
   @Output() clickRemove = new EventEmitter<MiaElement>();
 
-  constructor() {
+  constructor(
+    protected dialog: MatDialog
+  ) {
         
   }
 
   ngOnInit(): void {
         
+  }
+
+  onClickEdit() {
+    if(this.element.editComponent == undefined){
+      return;
+    }
+    
+    this.dialog.open(this.element.editComponent, {
+      data: this.element
+    })
   }
 
   onClickElement(element: MiaElement) {

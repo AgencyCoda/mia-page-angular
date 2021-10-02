@@ -4,7 +4,9 @@ export class MiaElement {
     type: string = '';
     classes?: string = '';
     data: any = { elements: new Array<MiaElement>() };
+
     isSelected = false;
+    editComponent: any;
 
     static createWithChildren(id: string): MiaElement {
         let element = new MiaElement();
