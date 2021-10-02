@@ -11,11 +11,9 @@ import { MiaBaseHasChildElementComponent } from '../base-has-child-element.compo
 export class ColumnTwoComponent extends MiaBaseHasChildElementComponent implements OnInit {
 
   constructor(
-    protected renderer: Renderer2,
-    protected elementRef: ElementRef,
     protected editorService: MiaPageEditorService,
   ) {
-    super(editorService, renderer, elementRef);
+    super(editorService);
   }
 
   ngOnInit(): void {

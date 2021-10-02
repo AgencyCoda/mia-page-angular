@@ -1,3 +1,3 @@
 <div class="column-elements" fxLayout="row">
-    <mia-print-element *ngFor="let element of element.data.elements" [element]="element" (clickElement)="onClickElement($event)"></mia-print-element>
+    <mia-print-element *ngFor="let subelement of element.data.elements" [element]="subelement" (clickElement)="onClickElement($event)"></mia-print-element>
 </div>

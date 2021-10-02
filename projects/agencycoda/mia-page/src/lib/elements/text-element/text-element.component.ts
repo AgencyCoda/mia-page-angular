@@ -12,10 +12,8 @@ export class TextElementComponent extends MiaBaseElementComponent implements OnI
   @ViewChild('actionsComp') actionsComp?: ElementRef;
 
   constructor(
-    protected renderer: Renderer2,
-    protected elementRef: ElementRef
   ) {
-    super(renderer, elementRef);
+    super();
   }
 
   ngOnInit(): void {

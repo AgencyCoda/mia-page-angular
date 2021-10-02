@@ -12,11 +12,9 @@ import { MiaBaseElementComponent } from "./base-element.component";
 export class MiaBaseHasChildElementComponent extends MiaBaseElementComponent implements OnInit {
 
   constructor(
-    protected editorService: MiaPageEditorService,
-    protected renderer: Renderer2,
-    protected elementRef: ElementRef
+    protected editorService: MiaPageEditorService
   ) {
-    super(renderer, elementRef);
+    super();
   }
     
   onClickAddElement(element: MiaElement) {

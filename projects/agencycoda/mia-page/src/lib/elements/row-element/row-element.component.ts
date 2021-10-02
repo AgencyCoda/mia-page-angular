@@ -9,10 +9,8 @@ import { MiaBaseElementComponent } from '../base-element.component';
 export class RowElementComponent extends MiaBaseElementComponent {
 
   constructor(
-    protected renderer: Renderer2,
-    protected elementRef: ElementRef
   ) {
-    super(renderer, elementRef);
+    super();
   }
 
 }

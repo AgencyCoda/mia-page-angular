@@ -15,10 +15,7 @@ export class MiaBaseElementComponent implements OnInit {
 
   @Output() clickElement = new EventEmitter<MiaElement>();
 
-  constructor(
-    protected renderer: Renderer2,
-    protected elementRef: ElementRef
-  ) {
+  constructor() {
         
   }
 
@@ -34,16 +31,6 @@ export class MiaBaseElementComponent implements OnInit {
   onClick(e: any) {
     this.clickElement.emit(this.element);
     e.stopPropagation();
-  }
-
-  @HostListener('mouseenter', ['$event']) 
-  onMouseEnter($event: any) {
-    
-  }
-
-  @HostListener('mouseleave', ['$event']) 
-  onMouseLeave($event: any) {
-    
   }
 
   public static createElement() {
