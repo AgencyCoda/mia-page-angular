@@ -13,16 +13,22 @@ import { ColumnTwoComponent } from 'projects/agencycoda/mia-page/src/lib/element
 import { ColumnThreeComponent } from 'projects/agencycoda/mia-page/src/lib/elements/column-three/column-three.component';
 import { ColumnOneTwoComponent } from 'projects/agencycoda/mia-page/src/lib/elements/column-one-two/column-one-two.component';
 import { ColumnTwoOneComponent } from 'projects/agencycoda/mia-page/src/lib/elements/column-two-one/column-two-one.component';
+import { ViewerPageComponent } from './viewer-page/viewer-page.component';
+import { EditorPageComponent } from './editor-page/editor-page.component';
+import { MiaPageViewerModule } from 'projects/agencycoda/mia-page-viewer/src/public-api';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ViewerPageComponent,
+    EditorPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MiaPageModule
+    MiaPageModule,
+    MiaPageViewerModule
   ],
   providers: [
     { 
