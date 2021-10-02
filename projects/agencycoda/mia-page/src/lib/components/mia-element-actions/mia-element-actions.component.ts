@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'mia-element-actions',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MiaElementActionsComponent implements OnInit {
 
+  @Output() clickRemove = new EventEmitter<any>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onClickRemove() {
+    this.clickRemove.emit();
+  }
 }

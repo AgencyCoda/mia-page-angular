@@ -22,4 +22,11 @@ export class MiaBaseHasChildElementComponent extends MiaBaseElementComponent imp
     .showAddElementModal()
     .subscribe(ele => element.data.elements.push(ele));
   }
+
+  onClickRemoveChild(element: MiaElement) {
+    let index = this.element.data.elements.indexOf(element);
+    if(index >= 0){
+      this.element.data.elements.splice(index, 1);
+    }
+  }
 }

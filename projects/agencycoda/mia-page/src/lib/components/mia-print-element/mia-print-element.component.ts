@@ -15,6 +15,7 @@ export class MiaPrintElementComponent implements OnInit {
 
   @Input() element!: MiaElement;
   @Output() clickElement = new EventEmitter<MiaElement>();
+  @Output() clickRemove = new EventEmitter<MiaElement>();
 
   constructor(
     protected factoryResolver: ComponentFactoryResolver,
@@ -39,6 +40,7 @@ export class MiaPrintElementComponent implements OnInit {
     (<MiaBaseElementComponent>view.instance).element = this.element;
     (<MiaBaseElementComponent>view.instance).editor = editor;
     (<MiaBaseElementComponent>view.instance).clickElement = this.clickElement;
+    (<MiaBaseElementComponent>view.instance).clickRemove = this.clickRemove;
   }
 
 }

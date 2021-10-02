@@ -14,6 +14,7 @@ export class MiaBaseElementComponent implements OnInit {
   @Input() editor!: MiaEditorElement;
 
   @Output() clickElement = new EventEmitter<MiaElement>();
+  @Output() clickRemove = new EventEmitter<MiaElement>();
 
   constructor() {
         
@@ -25,6 +26,10 @@ export class MiaBaseElementComponent implements OnInit {
 
   onClickElement(element: MiaElement) {
     this.clickElement.emit(element);
+  }
+
+  onClickRemove() {
+    this.clickRemove.emit(this.element);
   }
 
   @HostListener('click', ['$event'])

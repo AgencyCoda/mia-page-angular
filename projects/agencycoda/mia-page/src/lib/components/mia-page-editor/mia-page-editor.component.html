@@ -9,7 +9,7 @@
 </div>
 
 <div class="editor-content">
-    <mia-print-element *ngFor="let element of page.data.elements" [element]="element" (clickElement)="onClickElement($event)"></mia-print-element>
+    <mia-print-element *ngFor="let element of page.data.elements" [element]="element" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemove($event)"></mia-print-element>
 </div>
 
 <button (click)="onClickAddElement()">Add element</button>

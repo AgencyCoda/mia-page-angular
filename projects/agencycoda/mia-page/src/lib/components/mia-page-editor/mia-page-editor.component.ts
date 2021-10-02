@@ -26,6 +26,13 @@ export class MiaPageEditorComponent implements OnInit {
     element.isSelected = true;
   }
 
+  onClickRemove(element: MiaElement) {
+    let index = this.page.data.elements.indexOf(element);
+    if(index >= 0){
+      this.page.data.elements.splice(index, 1);
+    }
+  }
+
   deselectedAll() {
     this.deselectedAllElements(this.page.data.elements);
   }
