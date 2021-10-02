@@ -1,5 +1,5 @@
 import { MiaElement } from "@agencycoda/mia-page-core";
-import { Input } from "@angular/core";
+import { ElementRef, Input, Renderer2 } from "@angular/core";
 import { Component, OnInit } from "@angular/core";
 import { MiaEditorElement } from "../entities/mia-editor-element";
 import { MiaPageEditorService } from "../services/mia-page-editor.service";
@@ -12,9 +12,11 @@ import { MiaBaseElementComponent } from "./base-element.component";
 export class MiaBaseHasChildElementComponent extends MiaBaseElementComponent implements OnInit {
 
   constructor(
-    protected editorService: MiaPageEditorService
+    protected editorService: MiaPageEditorService,
+    protected renderer: Renderer2,
+    protected elementRef: ElementRef
   ) {
-    super();
+    super(renderer, elementRef);
   }
     
   onClickAddElement(element: MiaElement) {

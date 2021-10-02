@@ -3,7 +3,8 @@ import { MiaPage } from "./mia-page";
 export class MiaElement {
     type: string = '';
     classes?: string = '';
-    data: any = {};
+    data: any = { elements: new Array<MiaElement>() };
+    isSelected = false;
 
     static createWithChildren(id: string): MiaElement {
         let element = new MiaElement();

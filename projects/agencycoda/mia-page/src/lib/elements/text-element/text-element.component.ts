@@ -1,5 +1,5 @@
 import { MiaElement } from '@agencycoda/mia-page-core';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { MiaBaseElementComponent } from '../base-element.component';
 
 @Component({
@@ -9,11 +9,17 @@ import { MiaBaseElementComponent } from '../base-element.component';
 })
 export class TextElementComponent extends MiaBaseElementComponent implements OnInit {
 
-  constructor() {
-    super();
+  @ViewChild('actionsComp') actionsComp?: ElementRef;
+
+  constructor(
+    protected renderer: Renderer2,
+    protected elementRef: ElementRef
+  ) {
+    super(renderer, elementRef);
   }
 
   ngOnInit(): void {
+    super.ngOnInit();
   }
 
   public static createElement() {

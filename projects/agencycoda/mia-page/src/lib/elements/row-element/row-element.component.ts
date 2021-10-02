@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { MiaBaseElementComponent } from '../base-element.component';
 
 @Component({
@@ -8,8 +8,11 @@ import { MiaBaseElementComponent } from '../base-element.component';
 })
 export class RowElementComponent extends MiaBaseElementComponent {
 
-  constructor() {
-    super();
+  constructor(
+    protected renderer: Renderer2,
+    protected elementRef: ElementRef
+  ) {
+    super(renderer, elementRef);
   }
 
 }

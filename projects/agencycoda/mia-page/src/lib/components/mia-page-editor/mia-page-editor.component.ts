@@ -1,4 +1,5 @@
 import { nil } from '@agencycoda/mia-core';
+import { MiaElement } from '@agencycoda/mia-page-core';
 import { MiaPage } from '@agencycoda/mia-page-core';
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
@@ -18,6 +19,25 @@ export class MiaPageEditorComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+  }
+
+  onClickElement(element: MiaElement) {
+    this.deselectedAll();
+    element.isSelected = true;
+  }
+
+  deselectedAll() {
+    this.deselectedAllElements(this.page.data.elements);
+  }
+
+  deselectedAllElements(elements: Array<MiaElement>) {
+    for (const ele of elements) {
+      ele.isSelected = false;
+
+      if(ele.data && ele.data.elements){
+        this.deselectedAllElements(ele.data.elements);
+      }
+    }
   }
 
   onClickAddElement() {

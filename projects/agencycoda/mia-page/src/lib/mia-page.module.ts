@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 
 /** OTHER LIBRARIES */
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -24,6 +25,7 @@ import { ColumnTwoComponent } from './elements/column-two/column-two.component';
 import { ColumnThreeComponent } from './elements/column-three/column-three.component';
 import { ColumnOneTwoComponent } from './elements/column-one-two/column-one-two.component';
 import { ColumnTwoOneComponent } from './elements/column-two-one/column-two-one.component';
+import { MiaElementActionsComponent } from './components/mia-element-actions/mia-element-actions.component';
 
 
 
@@ -40,7 +42,8 @@ import { ColumnTwoOneComponent } from './elements/column-two-one/column-two-one.
     ColumnTwoComponent,
     ColumnThreeComponent,
     ColumnOneTwoComponent,
-    ColumnTwoOneComponent
+    ColumnTwoOneComponent,
+    MiaElementActionsComponent
   ],
   imports: [
     // Angular Core
@@ -50,6 +53,7 @@ import { ColumnTwoOneComponent } from './elements/column-two-one/column-two-one.
     MatDialogModule,
     MatTabsModule,
     MatIconModule,
+    MatMenuModule,
 
     // Other Libraries
     FlexLayoutModule,

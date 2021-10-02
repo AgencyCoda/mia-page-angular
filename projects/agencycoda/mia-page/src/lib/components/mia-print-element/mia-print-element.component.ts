@@ -1,5 +1,5 @@
 import { MiaElement } from '@agencycoda/mia-page-core';
-import { Component, ComponentFactoryResolver, ElementRef, Input, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, ComponentFactoryResolver, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild, ViewContainerRef } from '@angular/core';
 import { MiaBaseElementComponent } from '../../elements/base-element.component';
 import { MiaEditorElement } from '../../entities/mia-editor-element';
 import { MiaPageEditorService } from '../../services/mia-page-editor.service';
@@ -14,6 +14,7 @@ export class MiaPrintElementComponent implements OnInit {
   @ViewChild('contentColumn') contentColumn?: ElementRef;
 
   @Input() element!: MiaElement;
+  @Output() clickElement = new EventEmitter<MiaElement>();
 
   constructor(
     protected factoryResolver: ComponentFactoryResolver,
@@ -37,6 +38,7 @@ export class MiaPrintElementComponent implements OnInit {
     const view = this.viewContainerRef.createComponent(component);
     (<MiaBaseElementComponent>view.instance).element = this.element;
     (<MiaBaseElementComponent>view.instance).editor = editor;
+    (<MiaBaseElementComponent>view.instance).clickElement = this.clickElement;
   }
 
 }

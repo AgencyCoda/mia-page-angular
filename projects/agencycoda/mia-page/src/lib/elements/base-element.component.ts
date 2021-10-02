@@ -1,6 +1,7 @@
 import { MiaElement } from "@agencycoda/mia-page-core";
-import { Input } from "@angular/core";
+import { ElementRef, EventEmitter, HostListener, Input, Output, Renderer2, ViewChild } from "@angular/core";
 import { Component, OnInit } from "@angular/core";
+import { MiaElementActionsComponent } from "../components/mia-element-actions/mia-element-actions.component";
 import { MiaEditorElement } from "../entities/mia-editor-element";
 
 @Component({
@@ -12,12 +13,37 @@ export class MiaBaseElementComponent implements OnInit {
   @Input() element!: MiaElement;
   @Input() editor!: MiaEditorElement;
 
-  constructor() {
+  @Output() clickElement = new EventEmitter<MiaElement>();
+
+  constructor(
+    protected renderer: Renderer2,
+    protected elementRef: ElementRef
+  ) {
         
   }
 
   ngOnInit(): void {
         
+  }
+
+  onClickElement(element: MiaElement) {
+    this.clickElement.emit(element);
+  }
+
+  @HostListener('click', ['$event'])
+  onClick(e: any) {
+    this.clickElement.emit(this.element);
+    e.stopPropagation();
+  }
+
+  @HostListener('mouseenter', ['$event']) 
+  onMouseEnter($event: any) {
+    
+  }
+
+  @HostListener('mouseleave', ['$event']) 
+  onMouseLeave($event: any) {
+    
   }
 
   public static createElement() {
