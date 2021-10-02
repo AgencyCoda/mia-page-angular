@@ -2,7 +2,7 @@ import { MiaPage } from '@agencycoda/mia-page-core';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-mia-page-viewer',
+  selector: 'mia-page-viewer',
   templateUrl: './mia-page-viewer.component.html',
   styleUrls: ['./mia-page-viewer.component.css']
 })
@@ -13,6 +13,7 @@ export class MiaPageViewerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.page);
   }
 
 }

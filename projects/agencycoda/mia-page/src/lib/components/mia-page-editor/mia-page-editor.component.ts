@@ -21,6 +21,10 @@ export class MiaPageEditorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onClickSave() {
+    console.log(JSON.stringify(this.page));
+  }
+
   onClickElement(element: MiaElement) {
     this.deselectedAll();
     element.isSelected = true;
