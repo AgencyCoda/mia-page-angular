@@ -11,6 +11,7 @@
  */
 export * from './lib/components/mia-page-viewer/mia-page-viewer.component';
 export * from './lib/components/mia-print-view/mia-print-view.component';
+export * from './lib/components/mia-page-slug-viewer/mia-page-slug-viewer.component';
 /**
  * Services
  */

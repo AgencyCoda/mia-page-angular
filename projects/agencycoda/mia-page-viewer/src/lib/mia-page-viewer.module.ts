@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 /** COMPONENTS */
 import { MiaPageViewerComponent } from './components/mia-page-viewer/mia-page-viewer.component';
 import { MiaPrintViewComponent } from './components/mia-print-view/mia-print-view.component';
+import { MiaPageSlugViewerComponent } from './components/mia-page-slug-viewer/mia-page-slug-viewer.component';
 
 /** ELEMENTS */
 import { ColumnOneViewComponent } from './views/column-one-view/column-one-view.component';
@@ -16,6 +17,7 @@ import { TitleViewComponent } from './views/title-view/title-view.component';
     // Components
     MiaPageViewerComponent,
     MiaPrintViewComponent,
+    MiaPageSlugViewerComponent,
 
     // Elements
     ColumnOneViewComponent,
@@ -30,6 +32,7 @@ import { TitleViewComponent } from './views/title-view/title-view.component';
     // Components
     MiaPageViewerComponent,
     MiaPrintViewComponent,
+    MiaPageSlugViewerComponent
   ]
 })
 export class MiaPageViewerModule { }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { MiaPageViewerModule, MIA_PAGE_VIEWER_CONFIG } from 'projects/agencycoda
 
 import { ColumnOneViewComponent } from 'projects/agencycoda/mia-page-viewer/src/lib/views/column-one-view/column-one-view.component';
 import { TextViewComponent } from 'projects/agencycoda/mia-page-viewer/src/lib/views/text-view/text-view.component';
+import { MIA_AUTH_PROVIDER } from '@agencycoda/mia-auth';
 
 @NgModule({
   declarations: [
@@ -30,10 +32,18 @@ import { TextViewComponent } from 'projects/agencycoda/mia-page-viewer/src/lib/v
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+
     MiaPageModule,
     MiaPageViewerModule
   ],
   providers: [
+    {
+      provide: MIA_AUTH_PROVIDER,
+      useValue: {
+        baseUrl: 'https://iron-radio-322514.uc.r.appspot.com/'
+      }
+    },
     { 
       provide: MIA_PAGE_EDITOR_CONFIG, 
       useValue: {
