@@ -13,6 +13,7 @@
   },
   "private": true,
   "dependencies": {
+    "@agencycoda/mia-auth": "^11.0.37",
     "@agencycoda/mia-core": "^11.0.37",
     "@agencycoda/mia-page-core": "0.0.5",
     "@angular/animations": "~12.0.1",
