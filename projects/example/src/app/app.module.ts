@@ -16,7 +16,7 @@ import { ColumnOneTwoComponent } from 'projects/agencycoda/mia-page/src/lib/elem
 import { ColumnTwoOneComponent } from 'projects/agencycoda/mia-page/src/lib/elements/column-two-one/column-two-one.component';
 import { ViewerPageComponent } from './viewer-page/viewer-page.component';
 import { EditorPageComponent } from './editor-page/editor-page.component';
-import { MiaPageViewerModule, MIA_PAGE_VIEWER_CONFIG } from 'projects/agencycoda/mia-page-viewer/src/public-api';
+import { MiaPageViewerModule, MiaViewerDefault, MIA_PAGE_VIEWER_CONFIG } from 'projects/agencycoda/mia-page-viewer/src/public-api';
 
 import { ColumnOneViewComponent } from 'projects/agencycoda/mia-page-viewer/src/lib/views/column-one-view/column-one-view.component';
 import { TextViewComponent } from 'projects/agencycoda/mia-page-viewer/src/lib/views/text-view/text-view.component';
@@ -78,12 +78,7 @@ import { MIA_AUTH_PROVIDER } from '@agencycoda/mia-auth';
     },
     {
       provide: MIA_PAGE_VIEWER_CONFIG,
-      useValue: {
-        elements: [
-          { id: 'column-one', component: ColumnOneViewComponent },
-          { id: 'element-text', component: TextViewComponent },
-        ]
-      }
+      useValue: MiaViewerDefault.configDefault()
     }
   ],
   bootstrap: [AppComponent]

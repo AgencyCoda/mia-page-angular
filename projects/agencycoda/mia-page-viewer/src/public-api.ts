@@ -6,6 +6,7 @@
  */
  export * from './lib/entities/mia-view-config';
  export * from './lib/entities/mia-view-element-config';
+ export * from './lib/entities/mia-viewer-default';
 /**
  * Components
  */
