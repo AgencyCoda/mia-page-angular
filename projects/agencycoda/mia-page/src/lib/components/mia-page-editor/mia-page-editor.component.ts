@@ -14,6 +14,10 @@ export class MiaPageEditorComponent implements OnInit {
 
   @Input() page = new MiaPage();
 
+  @Input() showHeader = true;
+  @Input() showSaveButton = true;
+  @Input() showAddButton = true;
+
   constructor(
     protected editorService: MiaPageEditorService
   ) { }
