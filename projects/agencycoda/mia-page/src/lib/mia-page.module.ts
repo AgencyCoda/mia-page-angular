@@ -27,12 +27,16 @@ import { ColumnOneTwoComponent } from './elements/column-one-two/column-one-two.
 import { ColumnTwoOneComponent } from './elements/column-two-one/column-two-one.component';
 import { MiaElementActionsComponent } from './components/mia-element-actions/mia-element-actions.component';
 import { TextEditModalComponent } from './edits/text-edit-modal/text-edit-modal.component';
+import { MiaElementSelectorComponent } from './components/mia-element-selector/mia-element-selector.component';
 
 
 
 @NgModule({
   declarations: [
+    // Components
     MiaPageEditorComponent,
+    MiaElementSelectorComponent,
+
     TitleElementComponent,
     RowElementComponent,
 
@@ -64,6 +68,7 @@ import { TextEditModalComponent } from './edits/text-edit-modal/text-edit-modal.
     // Components
     MiaPageEditorComponent,
     MiaPrintElementComponent,
+    MiaElementSelectorComponent,
     
     // Modals
     AddElementModalComponent

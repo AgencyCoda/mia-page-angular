@@ -22,6 +22,7 @@ export * from './lib/elements/text-element/text-element.component';
  */
 export * from './lib/components/mia-page-editor/mia-page-editor.component';
 export * from './lib/components/mia-print-element/mia-print-element.component';
+export * from './lib/components/mia-element-selector/mia-element-selector.component';
 /**
  * Modals
  */
