@@ -1,7 +1,7 @@
-import { MiaEditorElement } from '@agencycoda/mia-page';
 import { Inject } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MiaEditorElement } from '../../entities/mia-editor-element';
 
 @Component({
   selector: 'lib-add-element-modal',

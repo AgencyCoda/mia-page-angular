@@ -2,7 +2,6 @@ import { MiaElement } from '@agencycoda/mia-page-core';
 import { Component, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MiaPageEditorService } from '../../services/mia-page-editor.service';
-import { MiaBaseElementComponent } from '../base-element.component';
 import { MiaBaseHasChildElementComponent } from '../base-has-child-element.component';
 
 @Component({

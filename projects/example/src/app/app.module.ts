@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MiaPageModule, TextElementComponent } from 'projects/agencycoda/mia-page/src/public-api';
 
-import { MIA_PAGE_EDITOR_CONFIG, MiaPageEditorConfigElements } from 'projects/agencycoda/mia-page/src/lib/entities/mia-page-editor-config';
+import { MIA_PAGE_EDITOR_CONFIG } from 'projects/agencycoda/mia-page/src/lib/entities/mia-page-editor-config';
 
 import { ColumnOneComponent } from 'projects/agencycoda/mia-page/src/lib/elements/column-one/column-one.component';
 import { ColumnTwoComponent } from 'projects/agencycoda/mia-page/src/lib/elements/column-two/column-two.component';
@@ -22,6 +22,7 @@ import { ColumnOneViewComponent } from 'projects/agencycoda/mia-page-viewer/src/
 import { TextViewComponent } from 'projects/agencycoda/mia-page-viewer/src/lib/views/text-view/text-view.component';
 import { MIA_AUTH_PROVIDER } from '@agencycoda/mia-auth';
 import { MiaPage } from 'projects/agencycoda/mia-page-core/src/public-api';
+import { MiaPageDefault } from 'projects/agencycoda/mia-page/src/lib/entities/mia-page-default';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import { MiaPage } from 'projects/agencycoda/mia-page-core/src/public-api';
     },
     { 
       provide: MIA_PAGE_EDITOR_CONFIG, 
-      useValue: MiaPageEditorConfigElements.configDefault()
+      useValue: MiaPageDefault.configDefault()
     },
     {
       provide: MIA_PAGE_VIEWER_CONFIG,
