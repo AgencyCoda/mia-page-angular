@@ -6,7 +6,7 @@ export class MiaElement {
     data: any = { elements: new Array<MiaElement>() };
 
     isSelected = false;
-    editComponent: any;
+    editForm: any;
 
     static createWithChildren(id: string): MiaElement {
         let element = new MiaElement();

@@ -4,6 +4,7 @@ import { Component, OnInit } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
 import { MiaElementActionsComponent } from "../components/mia-element-actions/mia-element-actions.component";
 import { MiaEditorElement } from "../entities/mia-editor-element";
+import { MiaField, MiaFormConfig, MiaFormModalComponent, MiaFormModalConfig } from '@agencycoda/mia-form';
 
 @Component({
     selector: 'mia-base-element',
@@ -28,13 +29,29 @@ export class MiaBaseElementComponent implements OnInit {
   }
 
   onClickEdit() {
-    if(this.element.editComponent == undefined){
+    if(this.element.editForm == undefined){
       return;
     }
-    
-    this.dialog.open(this.element.editComponent, {
-      data: this.element
-    })
+
+    let data = new MiaFormModalConfig();
+    data.item = this.element.data;
+    data.titleNew = 'Settings';
+    data.titleEdit = 'Settings';
+
+    let config = new MiaFormConfig();
+    config.hasSubmit = false;
+    config.fields = this.element.editForm;
+    config.errorMessages = [
+      { key: 'required', message: 'The "%label%" is required.' }
+    ];
+
+    data.config = config;
+
+    return this.dialog.open(MiaFormModalComponent, {
+      width: '500px',
+      panelClass: 'modal-full-width-mobile',
+      data: data
+    }).afterClosed();
   }
 
   onClickElement(element: MiaElement) {

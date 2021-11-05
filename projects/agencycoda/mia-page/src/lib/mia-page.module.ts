@@ -18,7 +18,6 @@ import { MiaPageEditorComponent } from './components/mia-page-editor/mia-page-ed
 import { AddElementModalComponent } from './modals/add-element-modal/add-element-modal.component';
 import { MiaPrintElementComponent } from './components/mia-print-element/mia-print-element.component';
 import { MiaElementActionsComponent } from './components/mia-element-actions/mia-element-actions.component';
-import { TextEditModalComponent } from './edits/text-edit-modal/text-edit-modal.component';
 import { MiaElementSelectorComponent } from './components/mia-element-selector/mia-element-selector.component';
 
 /** ELEMENTS */
@@ -51,8 +50,6 @@ import { ImageElementComponent } from './elements/image-element/image-element.co
     ColumnOneTwoComponent,
     ColumnTwoOneComponent,
     MiaElementActionsComponent,
-    TextEditModalComponent,
-    
   ],
   imports: [
     // Angular Core
