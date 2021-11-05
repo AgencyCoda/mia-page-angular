@@ -32,6 +32,7 @@ import { ColumnTwoOneComponent } from './elements/column-two-one/column-two-one.
 import { ImageElementComponent } from './elements/image-element/image-element.component';
 import { VideoElementComponent } from './elements/video-element/video-element.component';
 import { AudioElementComponent } from './elements/audio-element/audio-element.component';
+import { ListElementComponent } from './elements/list-element/list-element.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { AudioElementComponent } from './elements/audio-element/audio-element.co
     ColumnTwoOneComponent,
     MiaElementActionsComponent,
     AudioElementComponent,
+    ListElementComponent,
   ],
   imports: [
     // Angular Core
