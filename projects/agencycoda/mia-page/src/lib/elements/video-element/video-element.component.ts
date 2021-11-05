@@ -4,11 +4,11 @@ import { MatDialog } from '@angular/material/dialog';
 import { MiaBaseElementComponent } from '../base-element.component';
 
 @Component({
-  selector: 'mia-image-element',
-  templateUrl: './image-element.component.html',
-  styleUrls: ['./image-element.component.css']
+  selector: 'mia-video-element',
+  templateUrl: './video-element.component.html',
+  styleUrls: ['./video-element.component.css']
 })
-export class ImageElementComponent extends MiaBaseElementComponent implements OnInit {
+export class VideoElementComponent extends MiaBaseElementComponent implements OnInit {
 
   @ViewChild('actionsComp') actionsComp?: ElementRef;
 
@@ -24,7 +24,7 @@ export class ImageElementComponent extends MiaBaseElementComponent implements On
 
   public static createElement() {
     let element = new MiaElement();
-    element.type = 'element-image';
+    element.type = 'element-video';
     return element;
   }
 }

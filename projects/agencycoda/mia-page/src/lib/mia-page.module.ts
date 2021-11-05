@@ -30,6 +30,7 @@ import { ColumnThreeComponent } from './elements/column-three/column-three.compo
 import { ColumnOneTwoComponent } from './elements/column-one-two/column-one-two.component';
 import { ColumnTwoOneComponent } from './elements/column-two-one/column-two-one.component';
 import { ImageElementComponent } from './elements/image-element/image-element.component';
+import { VideoElementComponent } from './elements/video-element/video-element.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ImageElementComponent } from './elements/image-element/image-element.co
     TitleElementComponent,
     RowElementComponent,
     ImageElementComponent,
+    VideoElementComponent,
 
     AddElementModalComponent,
     MiaPrintElementComponent,
