@@ -6,6 +6,7 @@ import { ColumnOneComponent } from "../elements/column-one/column-one.component"
 import { TextElementComponent } from "../elements/text-element/text-element.component";
 import { ImageElementComponent } from "../elements/image-element/image-element.component";
 import { VideoElementComponent } from "../elements/video-element/video-element.component";
+import { TitleElementComponent } from "../elements/title-element/title-element.component";
 
 export class MiaPageDefault {
     static configDefault() {
@@ -26,6 +27,7 @@ export class MiaPageDefault {
             has_search: true,
             items: [
               { id: 'element-text', title: 'Text', type: 0, icon: 'format_size', component: TextElementComponent },
+              { id: 'element-title', title: 'Heading', type: 0, icon: 'format_size', component: TitleElementComponent },
               { id: 'element-image', title: 'Image', type: 0, icon: 'format_size', component: ImageElementComponent },
               { id: 'element-video', title: 'Video', type: 0, icon: 'format_size', component: VideoElementComponent },
             ]
