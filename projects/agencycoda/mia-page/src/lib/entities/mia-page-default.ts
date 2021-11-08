@@ -9,6 +9,7 @@ import { VideoElementComponent } from "../elements/video-element/video-element.c
 import { TitleElementComponent } from "../elements/title-element/title-element.component";
 import { AudioElementComponent } from "../elements/audio-element/audio-element.component";
 import { ListElementComponent } from "../elements/list-element/list-element.component";
+import { CodeElementComponent } from "../elements/code-element/code-element.component";
 
 export class MiaPageDefault {
     static configDefault() {
@@ -34,6 +35,7 @@ export class MiaPageDefault {
               { id: 'element-video', title: 'Video', type: 0, icon: 'format_size', component: VideoElementComponent },
               { id: 'element-audio', title: 'Audio', type: 0, icon: 'format_size', component: AudioElementComponent },
               { id: 'element-list', title: 'List', type: 0, icon: 'format_size', component: ListElementComponent },
+              { id: 'element-code', title: 'Code', type: 0, icon: 'format_size', component: CodeElementComponent },
             ]
           },
           { 
