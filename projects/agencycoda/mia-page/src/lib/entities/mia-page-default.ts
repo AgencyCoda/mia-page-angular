@@ -16,6 +16,7 @@ import { SpaceElementComponent } from "../elements/space-element/space-element.c
 import { EmbedElementComponent } from "../elements/embed-element/embed-element.component";
 import { ButtonElementComponent } from "../elements/button-element/button-element.component";
 import { GalleryElementComponent } from "../elements/gallery-element/gallery-element.component";
+import { CarouselElementComponent } from "../elements/carousel-element/carousel-element.component";
 
 export class MiaPageDefault {
     static configDefault() {
@@ -48,6 +49,7 @@ export class MiaPageDefault {
               { id: 'element-embed', title: 'Embed', type: 0, icon: 'format_size', component: EmbedElementComponent },
               { id: 'element-button', title: 'Button', type: 0, icon: 'format_size', component: ButtonElementComponent },
               { id: 'element-gallery', title: 'Gallery', type: 0, icon: 'format_size', component: GalleryElementComponent },
+              { id: 'element-carousel', title: 'Carousel', type: 0, icon: 'format_size', component: CarouselElementComponent },
             ]
           },
           { 

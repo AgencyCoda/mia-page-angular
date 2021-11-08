@@ -40,6 +40,7 @@ import { SpaceElementComponent } from './elements/space-element/space-element.co
 import { EmbedElementComponent } from './elements/embed-element/embed-element.component';
 import { ButtonElementComponent } from './elements/button-element/button-element.component';
 import { GalleryElementComponent } from './elements/gallery-element/gallery-element.component';
+import { CarouselElementComponent } from './elements/carousel-element/carousel-element.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { GalleryElementComponent } from './elements/gallery-element/gallery-elem
     EmbedElementComponent,
     ButtonElementComponent,
     GalleryElementComponent,
+    CarouselElementComponent,
   ],
   imports: [
     // Angular Core
