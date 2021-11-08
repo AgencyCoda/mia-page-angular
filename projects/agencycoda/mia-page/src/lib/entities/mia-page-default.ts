@@ -13,6 +13,7 @@ import { CodeElementComponent } from "../elements/code-element/code-element.comp
 import { DividerElementComponent } from "../elements/divider-element/divider-element.component";
 import { QuoteElementComponent } from "../elements/quote-element/quote-element.component";
 import { SpaceElementComponent } from "../elements/space-element/space-element.component";
+import { EmbedElementComponent } from "../elements/embed-element/embed-element.component";
 
 export class MiaPageDefault {
     static configDefault() {
@@ -42,6 +43,7 @@ export class MiaPageDefault {
               { id: 'element-divider', title: 'Line', type: 0, icon: 'format_size', component: DividerElementComponent },
               { id: 'element-quote', title: 'Quote', type: 0, icon: 'format_size', component: QuoteElementComponent },
               { id: 'element-space', title: 'Quote', type: 0, icon: 'format_size', component: SpaceElementComponent },
+              { id: 'element-embed', title: 'Embed', type: 0, icon: 'format_size', component: EmbedElementComponent },
             ]
           },
           { 
