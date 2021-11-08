@@ -14,6 +14,7 @@ import { DividerElementComponent } from "../elements/divider-element/divider-ele
 import { QuoteElementComponent } from "../elements/quote-element/quote-element.component";
 import { SpaceElementComponent } from "../elements/space-element/space-element.component";
 import { EmbedElementComponent } from "../elements/embed-element/embed-element.component";
+import { ButtonElementComponent } from "../elements/button-element/button-element.component";
 
 export class MiaPageDefault {
     static configDefault() {
@@ -44,6 +45,7 @@ export class MiaPageDefault {
               { id: 'element-quote', title: 'Quote', type: 0, icon: 'format_size', component: QuoteElementComponent },
               { id: 'element-space', title: 'Quote', type: 0, icon: 'format_size', component: SpaceElementComponent },
               { id: 'element-embed', title: 'Embed', type: 0, icon: 'format_size', component: EmbedElementComponent },
+              { id: 'element-button', title: 'Button', type: 0, icon: 'format_size', component: ButtonElementComponent },
             ]
           },
           { 

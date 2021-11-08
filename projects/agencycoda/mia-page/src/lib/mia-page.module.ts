@@ -38,6 +38,7 @@ import { DividerElementComponent } from './elements/divider-element/divider-elem
 import { QuoteElementComponent } from './elements/quote-element/quote-element.component';
 import { SpaceElementComponent } from './elements/space-element/space-element.component';
 import { EmbedElementComponent } from './elements/embed-element/embed-element.component';
+import { ButtonElementComponent } from './elements/button-element/button-element.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { EmbedElementComponent } from './elements/embed-element/embed-element.co
     QuoteElementComponent,
     SpaceElementComponent,
     EmbedElementComponent,
+    ButtonElementComponent,
   ],
   imports: [
     // Angular Core
