@@ -41,6 +41,7 @@ import { EmbedElementComponent } from './elements/embed-element/embed-element.co
 import { ButtonElementComponent } from './elements/button-element/button-element.component';
 import { GalleryElementComponent } from './elements/gallery-element/gallery-element.component';
 import { CarouselElementComponent } from './elements/carousel-element/carousel-element.component';
+import { MapElementComponent } from './elements/map-element/map-element.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { CarouselElementComponent } from './elements/carousel-element/carousel-e
     ButtonElementComponent,
     GalleryElementComponent,
     CarouselElementComponent,
+    MapElementComponent,
   ],
   imports: [
     // Angular Core

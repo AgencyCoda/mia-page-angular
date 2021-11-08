@@ -17,6 +17,7 @@ import { EmbedElementComponent } from "../elements/embed-element/embed-element.c
 import { ButtonElementComponent } from "../elements/button-element/button-element.component";
 import { GalleryElementComponent } from "../elements/gallery-element/gallery-element.component";
 import { CarouselElementComponent } from "../elements/carousel-element/carousel-element.component";
+import { MapElementComponent } from "../elements/map-element/map-element.component";
 
 export class MiaPageDefault {
     static configDefault() {
@@ -50,6 +51,7 @@ export class MiaPageDefault {
               { id: 'element-button', title: 'Button', type: 0, icon: 'format_size', component: ButtonElementComponent },
               { id: 'element-gallery', title: 'Gallery', type: 0, icon: 'format_size', component: GalleryElementComponent },
               { id: 'element-carousel', title: 'Carousel', type: 0, icon: 'format_size', component: CarouselElementComponent },
+              { id: 'element-map', title: 'Map', type: 0, icon: 'format_size', component: MapElementComponent },
             ]
           },
           { 
