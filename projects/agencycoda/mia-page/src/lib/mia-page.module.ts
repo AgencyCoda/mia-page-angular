@@ -34,6 +34,7 @@ import { VideoElementComponent } from './elements/video-element/video-element.co
 import { AudioElementComponent } from './elements/audio-element/audio-element.component';
 import { ListElementComponent } from './elements/list-element/list-element.component';
 import { CodeElementComponent } from './elements/code-element/code-element.component';
+import { DividerElementComponent } from './elements/divider-element/divider-element.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { CodeElementComponent } from './elements/code-element/code-element.compo
     AudioElementComponent,
     ListElementComponent,
     CodeElementComponent,
+    DividerElementComponent,
   ],
   imports: [
     // Angular Core
