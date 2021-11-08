@@ -35,6 +35,7 @@ import { AudioElementComponent } from './elements/audio-element/audio-element.co
 import { ListElementComponent } from './elements/list-element/list-element.component';
 import { CodeElementComponent } from './elements/code-element/code-element.component';
 import { DividerElementComponent } from './elements/divider-element/divider-element.component';
+import { QuoteElementComponent } from './elements/quote-element/quote-element.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { DividerElementComponent } from './elements/divider-element/divider-elem
     ListElementComponent,
     CodeElementComponent,
     DividerElementComponent,
+    QuoteElementComponent,
   ],
   imports: [
     // Angular Core

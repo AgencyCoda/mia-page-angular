@@ -11,6 +11,7 @@ import { AudioElementComponent } from "../elements/audio-element/audio-element.c
 import { ListElementComponent } from "../elements/list-element/list-element.component";
 import { CodeElementComponent } from "../elements/code-element/code-element.component";
 import { DividerElementComponent } from "../elements/divider-element/divider-element.component";
+import { QuoteElementComponent } from "../elements/quote-element/quote-element.component";
 
 export class MiaPageDefault {
     static configDefault() {
@@ -38,6 +39,7 @@ export class MiaPageDefault {
               { id: 'element-list', title: 'List', type: 0, icon: 'format_size', component: ListElementComponent },
               { id: 'element-code', title: 'Code', type: 0, icon: 'format_size', component: CodeElementComponent },
               { id: 'element-divider', title: 'Line', type: 0, icon: 'format_size', component: DividerElementComponent },
+              { id: 'element-quote', title: 'Quote', type: 0, icon: 'format_size', component: QuoteElementComponent },
             ]
           },
           { 
