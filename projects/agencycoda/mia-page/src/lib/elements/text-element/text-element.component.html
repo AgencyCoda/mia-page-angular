@@ -1,3 +1,6 @@
-<p>alskjd alskjd aslkjd aslkdj sakldj salkd jsaklj alks jdsakl jdsalkdjlksa</p>
+<div>
+    <p *ngIf="element.data && (element.data.text == '' || element.data.text == undefined)">Empty text</p>
+    <p *ngIf="element.data && (element.data.text != '' && element.data.text != undefined)">{{ element.data.text }}</p>
+</div>
 
 <mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()"></mia-element-actions>

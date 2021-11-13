@@ -37,6 +37,8 @@ export class MiaBaseElementComponent implements OnInit {
     data.item = this.element.data;
     data.titleNew = 'Settings';
     data.titleEdit = 'Settings';
+    data.showButtons = false;
+    data.showHeader = false;
 
     let config = new MiaFormConfig();
     config.hasSubmit = false;
@@ -51,7 +53,9 @@ export class MiaBaseElementComponent implements OnInit {
       width: '500px',
       panelClass: 'modal-full-width-mobile',
       data: data
-    }).afterClosed();
+    }).afterClosed().subscribe(res => {
+      this.element.isSelected = false;
+    });
   }
 
   onClickElement(element: MiaElement) {
