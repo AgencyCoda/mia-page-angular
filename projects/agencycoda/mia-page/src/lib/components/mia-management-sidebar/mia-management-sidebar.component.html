@@ -1,0 +1,89 @@
+<div class="sidebar">
+
+    <div class="header-settings">
+      <button mat-button [routerLink]="['/']"><mat-icon>keyboard_backspace</mat-icon> Admin Panel</button>
+      <button mat-icon-button matTooltip="Searcn"><mat-icon>find_in_page</mat-icon></button>
+    </div>
+  
+  
+    <div class="pages">
+      <div class="pages_header">
+        <div class="overline">MAIN NAVIGATION</div>
+        <button mat-icon-button matTooltip="Add new" [matMenuTriggerFor]="addNew"><mat-icon>add</mat-icon></button>
+      </div>
+      <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  
+        <ng-container *ngFor="let page of pages">
+
+            <button *ngIf="page.type == 0" mat-button class="item"  cdkDrag cdkDragLockAxis="y">
+                <button mat-icon-button matTooltip="Delete" class="item_delete" color="warn"><mat-icon>delete</mat-icon></button>
+                <mat-icon class="item_type">upload_file</mat-icon>
+                <div class="item_title">{{ page.title }}</div>
+                <button mat-icon-button matTooltip="Settings" class="item_settings" (click)="onClickSetting(page)"><mat-icon>settings</mat-icon></button>
+            </button>
+
+            <mat-expansion-panel *ngIf="page.type == 1" class="item item-folder" cdkDrag cdkDragLockAxis="y">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <mat-icon class="item_type">folder_open</mat-icon>
+                    <div class="item_title">{{ page.title }}</div>
+                  </mat-panel-title>
+                  <button mat-icon-button matTooltip="Settings" class="item_settings" (click)="onClickEditFolder(page); $event.stopPropagation()"><mat-icon>settings</mat-icon></button>
+                </mat-expansion-panel-header>
+
+                <button *ngFor="let subpage of page.nested_children" mat-button class="item"  cdkDrag cdkDragLockAxis="y">
+                    <button mat-icon-button matTooltip="Delete" class="item_delete" color="warn"><mat-icon>delete</mat-icon></button>
+                    <mat-icon class="item_type">upload_file</mat-icon>
+                    <div class="item_title">{{ subpage.title }}</div>
+                    <button mat-icon-button matTooltip="Settings" class="item_settings" (click)="onClickSetting(subpage)"><mat-icon>settings</mat-icon></button>
+                </button>
+
+                <button mat-stroked-button class="btn-empty">Add new Page</button>
+            </mat-expansion-panel>
+
+        </ng-container>
+
+    
+
+        
+  
+        
+  
+      </div>
+    </div>
+  
+    <button mat-button class="btn-deleted-pages" (click)="onClickDeletedPages()">
+      <mat-icon>delete_outline</mat-icon>
+      <div>Deleted Pages</div>
+    </button>
+  </div>
+  
+  <mat-menu #addNew="matMenu">
+    <mat-action-list>
+        <div mat-subheader>Pages</div>
+        <mat-list-item>
+          <mat-icon mat-list-icon>upload_file</mat-icon>
+          <div mat-line><b>Blank Page</b></div>
+          <div mat-line>Start with a blank page</div>
+        </mat-list-item>
+        <!--<mat-list-item>
+          <mat-icon mat-list-icon>description</mat-icon>
+          <div mat-line><b>Page Layouts (Coming soon)</b></div>
+          <div mat-line>Use a designer layout</div>
+        </mat-list-item>-->
+        <mat-divider></mat-divider>
+        <div mat-subheader>More</div>
+        <mat-list-item (click)="onClickNewFolder()">
+          <mat-icon mat-list-icon>folder_open</mat-icon>
+          <div mat-line><b>Folder</b></div>
+          <div mat-line>Organize your site navigation</div>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>link</mat-icon>
+          <div mat-line><b>Link</b></div>
+          <div mat-line>Link to pages or external sites</div>
+        </mat-list-item>
+      </mat-action-list>
+      
+  </mat-menu>
+  

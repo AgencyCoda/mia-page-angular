@@ -43,7 +43,8 @@ import { MiaPageDefault } from 'projects/agencycoda/mia-page/src/lib/entities/mi
     {
       provide: MIA_AUTH_PROVIDER,
       useValue: {
-        baseUrl: 'https://iron-radio-322514.uc.r.appspot.com/'
+        //baseUrl: 'https://iron-radio-322514.uc.r.appspot.com/'
+        baseUrl: 'http://0.0.0.0:8080/'
       }
     },
     { 

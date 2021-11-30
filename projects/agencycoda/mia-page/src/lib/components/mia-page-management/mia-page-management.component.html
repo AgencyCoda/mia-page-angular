@@ -1,0 +1,31 @@
+<div class="web-management-layout">
+    <div class="container-sidebars">
+      <mia-management-sidebar *ngIf="typeSidebarView == 0" (goToDeletedPagesSidebar)="typeSidebarView = 1"></mia-management-sidebar>
+      <mia-management-deleted-sidebar *ngIf="typeSidebarView == 1" (backToPagesSidebar)="typeSidebarView = 0"></mia-management-deleted-sidebar>
+    </div>
+  
+    <div class="content">
+  
+      <div class="toolbar-page">
+        <div class="edit-button">
+          <button mat-button>EDIT</button>
+        </div>
+        <div class="texts">
+          <div class="title">[name_page]</div>
+          <div class="subtitle"><small>Page - Published</small></div>
+        </div>
+        <div class="layout_view">
+          <button mat-icon-button matTooltip="Mobile" (click)="typePageView = 2"><mat-icon>smartphone</mat-icon></button>
+          <button mat-icon-button matTooltip="Tablet" (click)="typePageView = 1"><mat-icon>tablet_mac</mat-icon></button>
+          <button mat-icon-button matTooltip="Desktop" (click)="typePageView = 0"><mat-icon>desktop_windows</mat-icon></button>
+        </div>
+      </div>
+  
+      <div class="content-page view-desktop" [ngClass]="{'view-desktop': typePageView == 0, 'view-tablet': typePageView == 1, 'view-mobile': typePageView == 2 }">
+        <h1>PAGE PREVIEW</h1>
+      </div>
+  
+    </div>
+  
+  </div>
+  

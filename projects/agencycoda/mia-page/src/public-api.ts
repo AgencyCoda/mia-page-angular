@@ -25,6 +25,7 @@ export * from './lib/elements/image-element/image-element.component';
 export * from './lib/components/mia-page-editor/mia-page-editor.component';
 export * from './lib/components/mia-print-element/mia-print-element.component';
 export * from './lib/components/mia-element-selector/mia-element-selector.component';
+export * from './lib/components/mia-page-management/mia-page-management.component';
 /**
  * Modals
  */

@@ -10,9 +10,14 @@ export class MiaPage {
     seo_description: string = '';
     status: number = 0;
     visibility: number = 0;
-    published_date: string = '';
+    published_date?: string;
     is_archive: number = 0;
     last_updated_user: number = 0;
+    type: number = 0;
+    ord: number = 0;
+    parent_id?: number;
     created_at: string = '';
     updated_at: string = '';
+
+    nested_children?: Array<MiaPage>;
 }

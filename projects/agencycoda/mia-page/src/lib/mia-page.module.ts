@@ -1,6 +1,7 @@
 /** ANGULAR */
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 /** AGENCY CODA */
 
@@ -9,6 +10,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatListModule } from '@angular/material/list';
 
 /** OTHER LIBRARIES */
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -19,6 +23,10 @@ import { AddElementModalComponent } from './modals/add-element-modal/add-element
 import { MiaPrintElementComponent } from './components/mia-print-element/mia-print-element.component';
 import { MiaElementActionsComponent } from './components/mia-element-actions/mia-element-actions.component';
 import { MiaElementSelectorComponent } from './components/mia-element-selector/mia-element-selector.component';
+
+import { MiaPageManagementComponent } from './components/mia-page-management/mia-page-management.component';
+import { MiaManagementSidebarComponent } from './components/mia-management-sidebar/mia-management-sidebar.component';
+import { MiaManagementDeletedSidebarComponent } from './components/mia-management-deleted-sidebar/mia-management-deleted-sidebar.component';
 
 /** ELEMENTS */
 import { TitleElementComponent } from './elements/title-element/title-element.component';
@@ -42,12 +50,18 @@ import { ButtonElementComponent } from './elements/button-element/button-element
 import { GalleryElementComponent } from './elements/gallery-element/gallery-element.component';
 import { CarouselElementComponent } from './elements/carousel-element/carousel-element.component';
 import { MapElementComponent } from './elements/map-element/map-element.component';
+import { RouterModule } from '@angular/router';
+
+
 
 @NgModule({
   declarations: [
     // Components
     MiaPageEditorComponent,
     MiaElementSelectorComponent,
+    MiaPageManagementComponent,
+    MiaManagementSidebarComponent,
+    MiaManagementDeletedSidebarComponent,
     // Elements
     TitleElementComponent,
     RowElementComponent,
@@ -78,12 +92,17 @@ import { MapElementComponent } from './elements/map-element/map-element.componen
   imports: [
     // Angular Core
     CommonModule,
+    DragDropModule,
+    RouterModule,
 
     // Angular Material
     MatDialogModule,
     MatTabsModule,
     MatIconModule,
     MatMenuModule,
+    MatButtonModule,
+    MatExpansionModule,
+    MatListModule,
 
     // Other Libraries
     FlexLayoutModule,
@@ -93,6 +112,7 @@ import { MapElementComponent } from './elements/map-element/map-element.componen
     MiaPageEditorComponent,
     MiaPrintElementComponent,
     MiaElementSelectorComponent,
+    MiaPageManagementComponent,
     
     // Modals
     AddElementModalComponent
