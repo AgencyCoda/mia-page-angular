@@ -1,4 +1,4 @@
-import { MiaField, MiaFormConfig, MiaFormModalComponent, MiaFormModalConfig } from '@agencycoda/mia-form';
+import { MiaField, MiaFormConfig, MiaFormModalComponent, MiaFormModalConfig, MiaFormModalV2Config, MiaFormModalV2Component } from '@agencycoda/mia-form';
 import { MiaPageHttpService } from '@agencycoda/mia-page-core';
 import { MiaPage } from '@agencycoda/mia-page-core';
 import { Injectable } from '@angular/core';
@@ -18,11 +18,14 @@ export class MiaPageFolderModalService {
   open(item: MiaPage): Observable<any> {
     item.type = 1;
 
-    let data = new MiaFormModalConfig();
+    let data = new MiaFormModalV2Config();
     data.item = item;
     data.service = this.pageService;
-    data.titleNew = 'New Folder';
-    data.titleEdit = 'Configure Folder';
+    if(item.id > 0){
+      data.title = 'Configure Folder';
+    } else {
+      data.title = 'New Folder';
+    }
 
     let config = new MiaFormConfig();
     config.hasSubmit = false;
@@ -35,7 +38,7 @@ export class MiaPageFolderModalService {
 
     data.config = config;
 
-    return this.dialog.open(MiaFormModalComponent, {
+    return this.dialog.open(MiaFormModalV2Component, {
       width: '500px',
       panelClass: 'modal-full-width-mobile',
       data: data
