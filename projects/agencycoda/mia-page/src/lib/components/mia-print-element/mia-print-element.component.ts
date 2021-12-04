@@ -36,6 +36,8 @@ export class MiaPrintElementComponent implements OnInit {
 
     const component = this.factoryResolver.resolveComponentFactory(editor.component);
     
+    this.element.editForm = editor.component.getEditForm();
+
     const view = this.viewContainerRef.createComponent(component);
     (<MiaBaseElementComponent>view.instance).element = this.element;
     (<MiaBaseElementComponent>view.instance).editor = editor;

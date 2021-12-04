@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 /** AGENCY CODA */
+import { MiaFormModule } from '@agencycoda/mia-form';
 
 /** ANGULAR MATERIAL */
 import { MatDialogModule } from '@angular/material/dialog';
@@ -108,6 +109,9 @@ import { MapElementComponent } from './elements/map-element/map-element.componen
     MatButtonModule,
     MatExpansionModule,
     MatListModule,
+
+    // Agency Coda
+    MiaFormModule,
 
     // Other Libraries
     FlexLayoutModule,

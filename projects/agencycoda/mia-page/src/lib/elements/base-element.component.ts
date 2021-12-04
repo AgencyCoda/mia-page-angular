@@ -76,4 +76,8 @@ export class MiaBaseElementComponent implements OnInit {
     let element = new MiaElement();
     return element;
   }
+
+  public static getEditForm(): Array<any> {
+    return [];
+  }
 }
