@@ -47,6 +47,19 @@ export class MiaManagementSidebarComponent implements OnInit {
     this.folderModal.open(folder).pipe(nil()).subscribe(res => this.loadPages());
   }
 
+  onClickNewPage() {
+    let page = new MiaPage();
+    page.title = 'New Page empty';
+    this.pageService.saveOb(page).subscribe(res => this.loadPages());
+  }
+
+  onClickNewPageInFolder(folder: MiaPage) {
+    let page = new MiaPage();
+    page.title = 'New Page empty';
+    page.parent_id = folder.id;
+    this.pageService.saveOb(page).subscribe(res => this.loadPages());
+  }
+
   onClickNewFolder() {
     this.folderModal.open(new MiaPage()).pipe(nil()).subscribe(res => this.loadPages());
   }

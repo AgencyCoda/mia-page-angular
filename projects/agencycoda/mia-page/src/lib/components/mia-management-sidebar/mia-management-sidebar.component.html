@@ -38,7 +38,7 @@
                     <button mat-icon-button matTooltip="Settings" class="item_settings" (click)="onClickSetting(subpage)"><mat-icon>settings</mat-icon></button>
                 </button>
 
-                <button mat-stroked-button class="btn-empty">Add new Page</button>
+                <button mat-stroked-button class="btn-empty" (click)="onClickNewPageInFolder(page)">Add new Page</button>
             </mat-expansion-panel>
 
         </ng-container>
@@ -61,7 +61,7 @@
   <mat-menu #addNew="matMenu">
     <mat-action-list>
         <div mat-subheader>Pages</div>
-        <mat-list-item>
+        <mat-list-item (click)="onClickNewPage()">
           <mat-icon mat-list-icon>upload_file</mat-icon>
           <div mat-line><b>Blank Page</b></div>
           <div mat-line>Start with a blank page</div>
