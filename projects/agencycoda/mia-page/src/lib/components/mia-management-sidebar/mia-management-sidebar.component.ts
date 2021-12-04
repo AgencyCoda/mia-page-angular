@@ -1,4 +1,5 @@
 import { nil } from '@agencycoda/mia-core';
+import { MiaField, MiaFormModalsService, MiaFormModalV3Config } from '@agencycoda/mia-form';
 import { MiaPageHttpService } from '@agencycoda/mia-page-core';
 import { MiaPage } from '@agencycoda/mia-page-core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
@@ -20,7 +21,8 @@ export class MiaManagementSidebarComponent implements OnInit {
 
   constructor(
     protected pageService: MiaPageHttpService,
-    protected folderModal: MiaPageFolderModalService
+    protected folderModal: MiaPageFolderModalService,
+    protected formModal: MiaFormModalsService
   ) { }
 
   ngOnInit(): void {
@@ -37,6 +39,21 @@ export class MiaManagementSidebarComponent implements OnInit {
 
   onClickSetting(page: MiaPage) {
 
+    let config = new MiaFormModalV3Config();
+    config.title = 'Page Settings';
+    config.service = this.pageService;
+    config.item = page;
+    config.tabs = [
+      { title: 'General', fields: [
+        { key: 'seo_title', type: MiaField.TYPE_STRING, label: 'Page Title', placeholder: '', caption: 'The page title appears in the top of the browser windows.' },
+        { key: 'title', type: MiaField.TYPE_STRING, label: 'Navigation Title', placeholder: '', caption: 'The navigation title is the page’s name in the navigation menu.' },
+        
+      ] },
+      { title: 'SEO', fields: [] },
+      { title: 'Advanced', fields: [] },
+    ];
+
+    this.formModal.openV3(config).subscribe();
   }
 
   onClickDeletedPages() {
