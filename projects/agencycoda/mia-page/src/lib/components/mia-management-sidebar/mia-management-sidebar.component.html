@@ -15,7 +15,7 @@
   
         <ng-container *ngFor="let page of pages">
 
-            <button *ngIf="page.type == 0" mat-button class="item"  cdkDrag cdkDragLockAxis="y">
+            <button *ngIf="page.type == 0" mat-button class="item"  cdkDrag cdkDragLockAxis="y" (click)="onClickPage(page)">
                 <button mat-icon-button matTooltip="Delete" class="item_delete" color="warn"><mat-icon>delete</mat-icon></button>
                 <mat-icon class="item_type">upload_file</mat-icon>
                 <div class="item_title">{{ page.title }}</div>
@@ -31,7 +31,7 @@
                   <button mat-icon-button matTooltip="Settings" class="item_settings" (click)="onClickEditFolder(page); $event.stopPropagation()"><mat-icon>settings</mat-icon></button>
                 </mat-expansion-panel-header>
 
-                <button *ngFor="let subpage of page.nested_children" mat-button class="item"  cdkDrag cdkDragLockAxis="y">
+                <button *ngFor="let subpage of page.nested_children" mat-button class="item"  cdkDrag cdkDragLockAxis="y" (click)="onClickPage(subpage)">
                     <button mat-icon-button matTooltip="Delete" class="item_delete" color="warn"><mat-icon>delete</mat-icon></button>
                     <mat-icon class="item_type">upload_file</mat-icon>
                     <div class="item_title">{{ subpage.title }}</div>

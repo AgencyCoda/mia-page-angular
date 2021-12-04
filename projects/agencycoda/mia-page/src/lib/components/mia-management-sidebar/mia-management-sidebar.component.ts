@@ -2,7 +2,7 @@ import { nil } from '@agencycoda/mia-core';
 import { MiaPageHttpService } from '@agencycoda/mia-page-core';
 import { MiaPage } from '@agencycoda/mia-page-core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MiaPageFolderModalService } from '../../services/mia-page-folder-modal.service';
 
 @Component({
@@ -13,6 +13,8 @@ import { MiaPageFolderModalService } from '../../services/mia-page-folder-modal.
 export class MiaManagementSidebarComponent implements OnInit {
 
   @Input() backUrl: string = '/';
+
+  @Output() pageSelected = new EventEmitter<MiaPage>();
 
   pages = new Array<MiaPage>();
 
@@ -27,6 +29,10 @@ export class MiaManagementSidebarComponent implements OnInit {
 
   loadPages() {
     this.pageService.tree().subscribe(res => this.pages = res);
+  }
+
+  onClickPage(page: MiaPage) {
+    this.pageSelected.emit(page);
   }
 
   onClickSetting(page: MiaPage) {
