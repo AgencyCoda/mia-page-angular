@@ -41,8 +41,6 @@ export class ColumnOneComponent extends MiaBaseHasChildElementComponent implemen
             { key: 'margin', type: MiaField.TYPE_CUSTOM, extra: { component: PositionFieldComponent } },
             { key: 'padding_title', type: MiaField.TYPE_LABEL, label: 'Padding', classes: 'label-custom' },
             { key: 'padding', type: MiaField.TYPE_CUSTOM, extra: { component: PositionFieldComponent } },
-            //{ key: 'address', type: 'string', label: 'Address' },
-            //{ key: 'testing-two', type: 'string', label: 'Testing Two' },
           ] }
         ]}
       }
