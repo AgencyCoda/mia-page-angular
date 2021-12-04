@@ -70,6 +70,9 @@
               "projects/example/src/assets"
             ],
             "styles": [
+              "./node_modules/quill/dist/quill.core.css",
+              "./node_modules/quill/dist/quill.bubble.css",
+              "./node_modules/quill/dist/quill.snow.css",
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/agencycoda/mia-page/assets/css/styles.scss",
               "projects/example/src/styles.scss"

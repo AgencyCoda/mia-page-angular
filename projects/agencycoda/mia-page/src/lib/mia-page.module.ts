@@ -2,6 +2,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 /** AGENCY CODA */
 
@@ -16,6 +18,7 @@ import { MatListModule } from '@angular/material/list';
 
 /** OTHER LIBRARIES */
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { QuillModule } from 'ngx-quill';
 
 /** COMPONENTS */
 import { MiaPageEditorComponent } from './components/mia-page-editor/mia-page-editor.component';
@@ -50,7 +53,8 @@ import { ButtonElementComponent } from './elements/button-element/button-element
 import { GalleryElementComponent } from './elements/gallery-element/gallery-element.component';
 import { CarouselElementComponent } from './elements/carousel-element/carousel-element.component';
 import { MapElementComponent } from './elements/map-element/map-element.component';
-import { RouterModule } from '@angular/router';
+
+
 
 
 
@@ -92,6 +96,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     // Angular Core
     CommonModule,
+    FormsModule,
     DragDropModule,
     RouterModule,
 
@@ -106,6 +111,7 @@ import { RouterModule } from '@angular/router';
 
     // Other Libraries
     FlexLayoutModule,
+    QuillModule
   ],
   exports: [
     // Components

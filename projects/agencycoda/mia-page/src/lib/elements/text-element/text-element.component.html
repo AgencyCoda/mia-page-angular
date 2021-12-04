@@ -1,6 +1,5 @@
 <div>
-    <p *ngIf="element.data && (element.data.text == '' || element.data.text == undefined)">Empty text</p>
-    <p *ngIf="element.data && (element.data.text != '' && element.data.text != undefined)">{{ element.data.text }}</p>
+    <quill-editor theme="bubble" [placeholder]="'Empty text'" [(ngModel)]="element.data.text"></quill-editor>
 </div>
 
 <mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()"></mia-element-actions>
