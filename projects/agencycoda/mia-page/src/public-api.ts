@@ -8,6 +8,7 @@
  export * from './lib/entities/mia-editor-tab';
  export * from './lib/entities/mia-page-editor-config';
  export * from './lib/entities/mia-page-default';
+ export * from './lib/entities/mia-page-management-config';
  /**
  * Services
  */

@@ -1,6 +1,6 @@
 <div class="web-management-layout">
     <div class="container-sidebars">
-      <mia-management-sidebar *ngIf="typeSidebarView == 0" (goToDeletedPagesSidebar)="typeSidebarView = 1"></mia-management-sidebar>
+      <mia-management-sidebar *ngIf="typeSidebarView == 0" [backUrl]="config.backUrl" (goToDeletedPagesSidebar)="typeSidebarView = 1"></mia-management-sidebar>
       <mia-management-deleted-sidebar *ngIf="typeSidebarView == 1" (backToPagesSidebar)="typeSidebarView = 0"></mia-management-deleted-sidebar>
     </div>
   

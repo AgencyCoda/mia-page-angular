@@ -2,7 +2,7 @@ import { nil } from '@agencycoda/mia-core';
 import { MiaPageHttpService } from '@agencycoda/mia-page-core';
 import { MiaPage } from '@agencycoda/mia-page-core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MiaPageFolderModalService } from '../../services/mia-page-folder-modal.service';
 
 @Component({
@@ -11,6 +11,8 @@ import { MiaPageFolderModalService } from '../../services/mia-page-folder-modal.
   styleUrls: ['./mia-management-sidebar.component.scss']
 })
 export class MiaManagementSidebarComponent implements OnInit {
+
+  @Input() backUrl: string = '/';
 
   pages = new Array<MiaPage>();
 
