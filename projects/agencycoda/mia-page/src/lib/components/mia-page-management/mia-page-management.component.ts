@@ -1,6 +1,6 @@
 import { MiaPage } from '@agencycoda/mia-page-core';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MiaPageManagementConfig } from '../../entities/mia-page-management-config';
 
 @Component({
@@ -18,11 +18,16 @@ export class MiaPageManagementComponent implements OnInit {
   typeSidebarView = 0; // 0 = Sidebar, 1 = Deleted Sidebar
 
   constructor(
-    protected route: ActivatedRoute
+    protected route: ActivatedRoute,
+    protected navigator: Router
   ) { }
 
   ngOnInit(): void {
     this.loadParams();
+  }
+
+  onClickEdit() {
+    this.navigator.navigateByUrl('mia-page-editor/' + this.page!.id);
   }
 
   onPageSelected(page: MiaPage) {

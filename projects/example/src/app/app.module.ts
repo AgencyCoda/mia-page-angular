@@ -15,7 +15,6 @@ import { ColumnThreeComponent } from 'projects/agencycoda/mia-page/src/lib/eleme
 import { ColumnOneTwoComponent } from 'projects/agencycoda/mia-page/src/lib/elements/column-one-two/column-one-two.component';
 import { ColumnTwoOneComponent } from 'projects/agencycoda/mia-page/src/lib/elements/column-two-one/column-two-one.component';
 import { ViewerPageComponent } from './viewer-page/viewer-page.component';
-import { EditorPageComponent } from './editor-page/editor-page.component';
 import { MiaPageViewerModule, MiaViewerDefault, MIA_PAGE_VIEWER_CONFIG } from 'projects/agencycoda/mia-page-viewer/src/public-api';
 
 import { ColumnOneViewComponent } from 'projects/agencycoda/mia-page-viewer/src/lib/views/column-one-view/column-one-view.component';
@@ -27,8 +26,7 @@ import { MiaPageDefault } from 'projects/agencycoda/mia-page/src/lib/entities/mi
 @NgModule({
   declarations: [
     AppComponent,
-    ViewerPageComponent,
-    EditorPageComponent
+    ViewerPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MiaPageManagementComponent, MiaPageManagementConfig } from 'projects/agencycoda/mia-page/src/public-api';
-import { EditorPageComponent } from './editor-page/editor-page.component';
+import { MiaPageEditorComponent, MiaPageManagementComponent, MiaPageManagementConfig } from 'projects/agencycoda/mia-page/src/public-api';
 import { ViewerPageComponent } from './viewer-page/viewer-page.component';
 
 const routes: Routes = [
-  { path: 'editor', component: EditorPageComponent },
+  { path: 'mia-page-editor/:id', component: MiaPageEditorComponent },
   { path: 'viewer', component: ViewerPageComponent },
   { 
     path: 'management', 

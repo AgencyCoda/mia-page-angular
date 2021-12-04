@@ -8,7 +8,7 @@
   
       <div *ngIf="page != undefined" class="toolbar-page">
         <div class="edit-button">
-          <button mat-button>EDIT</button>
+          <button mat-button (click)="onClickEdit()">EDIT</button>
         </div>
         <div class="texts">
           <div class="title">{{ page.title }}</div>
