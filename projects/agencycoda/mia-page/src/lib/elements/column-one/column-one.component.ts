@@ -48,4 +48,12 @@ export class ColumnOneComponent extends MiaBaseHasChildElementComponent implemen
       }
     ];
   }
+
+  public static createWithChildren(): MiaElement {
+    let element = new MiaElement();
+    element.type = 'column-one';
+    element.data = { elements: new Array<MiaElement>(), margin: { top: 0, right: 0, bottom: 0, left: 0 }, padding: { top: 15, right: 15, bottom: 15, left: 15 } };
+    element.editForm = ColumnOneComponent.getEditForm();
+    return element;
+  }
 }

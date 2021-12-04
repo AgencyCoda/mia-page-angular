@@ -3,6 +3,7 @@ import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MiaPageEditorService } from '../../services/mia-page-editor.service';
 import { MiaBaseHasChildElementComponent } from '../base-has-child-element.component';
+import { ColumnOneComponent } from '../column-one/column-one.component';
 
 @Component({
   selector: 'mia-column-one-two',
@@ -26,8 +27,8 @@ export class ColumnOneTwoComponent extends MiaBaseHasChildElementComponent imple
     element.type = 'column-one-two';
     element.data = { 
       elements: [
-        MiaElement.createWithChildren('column-one'),
-        MiaElement.createWithChildren('column-one'),
+        ColumnOneComponent.createWithChildren(),
+        ColumnOneComponent.createWithChildren(),
       ]
     };
     return element;
