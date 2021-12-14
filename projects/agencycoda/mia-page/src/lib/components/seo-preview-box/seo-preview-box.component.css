@@ -1,0 +1,36 @@
+.overline{
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.preview-box{
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  border: 1px solid #e4e4e4;
+  /* border: 1px solid rgba($color: #000000, $alpha: 0.1); */
+  border-radius: 0.5em;
+}
+
+mat-divider{
+  margin: 1em 0;
+}
+
+.preview-box .title{
+  margin: 0;
+}
+
+.preview-box .title a{
+  color: #0071BD;
+}
+
+.preview-box .url a{
+  color: #085B11;
+}
+
+.preview-box p{
+  margin: 0;
+}
+
+.preview-box a{
+  text-decoration: none;
+}

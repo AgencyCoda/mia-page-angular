@@ -1,1 +1,41 @@
-<p>audio-element works!</p>
+<div class="container">
+  <div class="audio-element">
+
+    <div class="header">
+
+      <button mat-fab color="primary" class="btn-play" (click)="isPlaying = !isPlaying">
+        <mat-icon *ngIf="!isPlaying">play_arrow</mat-icon>
+        <mat-icon *ngIf="isPlaying">pause</mat-icon>
+      </button>
+
+      <div class="texts">
+        <p><b>Indirect Tax: Priorities for 2021 and Beyond</b></p>
+        <p><small>Author: [name_author]</small></p>
+      </div>
+
+      <div class="details">
+        <p>00:01</p>
+
+        <div class="separate-line-vert"></div>
+
+        <button mat-icon-button (click)="isMuted = !isMuted">
+          <mat-icon *ngIf="!isMuted">volume_up</mat-icon>
+          <mat-icon *ngIf="isMuted">volume_off</mat-icon>
+        </button>
+
+        <button mat-icon-button [matMenuTriggerFor]="settings"><mat-icon>more_horiz</mat-icon></button>
+      </div>
+    </div>
+
+    <!-- <mat-slider [(ngModel)]="value"></mat-slider> -->
+    <mat-progress-bar
+      mode="determinate"
+      [value]="value">
+    </mat-progress-bar>
+
+  </div>
+</div>
+
+<mat-menu #settings="matMenu">
+  <button mat-menu-item><mat-icon>cloud_download</mat-icon> Download</button>
+</mat-menu>

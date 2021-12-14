@@ -10,6 +10,10 @@ import { MiaBaseElementComponent } from '../base-element.component';
 })
 export class AudioElementComponent extends MiaBaseElementComponent implements OnInit {
 
+  isPlaying = false;
+  isMuted = false;
+  value = 50;
+
   @ViewChild('actionsComp') actionsComp?: ElementRef;
 
   constructor(
