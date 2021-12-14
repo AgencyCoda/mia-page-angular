@@ -3,9 +3,9 @@
       <mia-management-sidebar *ngIf="typeSidebarView == 0" [backUrl]="config.backUrl" (pageSelected)="onPageSelected($event)" (goToDeletedPagesSidebar)="typeSidebarView = 1"></mia-management-sidebar>
       <mia-management-deleted-sidebar *ngIf="typeSidebarView == 1" (backToPagesSidebar)="typeSidebarView = 0"></mia-management-deleted-sidebar>
     </div>
-  
+
     <div class="content">
-  
+
       <div *ngIf="page != undefined" class="toolbar-page">
         <div class="edit-button">
           <button mat-button (click)="onClickEdit()">EDIT</button>
@@ -20,16 +20,17 @@
           <button mat-icon-button matTooltip="Desktop" (click)="typePageView = 0"><mat-icon>desktop_windows</mat-icon></button>
         </div>
       </div>
-  
+
       <div *ngIf="page != undefined" class="content-page view-desktop" [ngClass]="{'view-desktop': typePageView == 0, 'view-tablet': typePageView == 1, 'view-mobile': typePageView == 2 }">
         <h1>PAGE PREVIEW</h1>
+        <mia-audio-element></mia-audio-element>
       </div>
 
+      <!-- Autoselect Homepage and not show this code -->
       <div *ngIf="page == undefined" class="content-page view-desktop" [ngClass]="{'view-desktop': typePageView == 0, 'view-tablet': typePageView == 1, 'view-mobile': typePageView == 2 }">
         <h1>NOT SELECTED</h1>
       </div>
-  
+
     </div>
-  
+
   </div>
-  

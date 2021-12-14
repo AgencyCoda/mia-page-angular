@@ -1,0 +1,68 @@
+@import "../../components/mia-page-management/web-management-general-styles.scss";
+
+.audio-element{
+  background-color: white;
+  border-radius: 0.5em;
+  padding: 1em;
+  box-shadow: 0 3px 3px 0 #dfdfdf, 0px 7px 20px 0 #dfdfdf;
+  width: 700px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.audio-element .separate-line-vert{
+  width: 1px;
+  min-width: 1px;
+  max-width: 1px;
+  height: 20px;
+  background-color: #dfdfdf;
+  margin: 0 1em;
+}
+
+.audio-element .header{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.audio-element .header .texts{
+  width: 100%;
+  margin-right: 4em;
+  margin-left: 1em;
+}
+
+.audio-element .header .details{
+  display: flex;
+  align-items: center;
+}
+
+.audio-element p{
+  margin: 0;
+}
+
+.audio-element .btn-play{
+}
+
+.audio-element{
+
+}
+
+.audio-element{
+
+}
+
+.audio-element{
+
+}
+
+.audio-element{
+
+}
+
+.audio-element{
+
+}
+
+.audio-element{
+
+}

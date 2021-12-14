@@ -16,6 +16,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+
 
 /** OTHER LIBRARIES */
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -31,6 +33,8 @@ import { MiaElementSelectorComponent } from './components/mia-element-selector/m
 import { MiaPageManagementComponent } from './components/mia-page-management/mia-page-management.component';
 import { MiaManagementSidebarComponent } from './components/mia-management-sidebar/mia-management-sidebar.component';
 import { MiaManagementDeletedSidebarComponent } from './components/mia-management-deleted-sidebar/mia-management-deleted-sidebar.component';
+
+import { SeoPreviewBoxComponent } from './components/seo-preview-box/seo-preview-box.component';
 
 /** ELEMENTS */
 import { TitleElementComponent } from './elements/title-element/title-element.component';
@@ -67,6 +71,7 @@ import { MapElementComponent } from './elements/map-element/map-element.componen
     MiaPageManagementComponent,
     MiaManagementSidebarComponent,
     MiaManagementDeletedSidebarComponent,
+    SeoPreviewBoxComponent,
     // Elements
     TitleElementComponent,
     RowElementComponent,
@@ -109,6 +114,7 @@ import { MapElementComponent } from './elements/map-element/map-element.componen
     MatButtonModule,
     MatExpansionModule,
     MatListModule,
+    MatProgressBarModule,
 
     // Agency Coda
     MiaFormModule,
@@ -123,7 +129,7 @@ import { MapElementComponent } from './elements/map-element/map-element.componen
     MiaPrintElementComponent,
     MiaElementSelectorComponent,
     MiaPageManagementComponent,
-    
+
     // Modals
     AddElementModalComponent
   ]
