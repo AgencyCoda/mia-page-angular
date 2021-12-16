@@ -69,6 +69,13 @@ export class MiaPageEditorComponent implements OnInit {
   }
 
   onClickAddElement() {
+    if(this.page.data == undefined || Array.isArray(this.page.data)){
+      this.page.data = {};
+    }
+    if(this.page.data.elements == undefined){
+      this.page.data.elements = [];
+    }
+
     this.editorService
     .showAddElementModal()
     .subscribe(ele => this.page.data.elements.push(ele));

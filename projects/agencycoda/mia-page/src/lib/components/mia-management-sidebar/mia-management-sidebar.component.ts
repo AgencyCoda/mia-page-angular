@@ -49,7 +49,7 @@ export class MiaManagementSidebarComponent implements OnInit {
         { key: 'seo_title', type: MiaField.TYPE_STRING, label: 'PAGE TITLE', placeholder: '', caption: 'The page title appears in the top of the browser windows.' },
         { key: 'title', type: MiaField.TYPE_STRING, label: 'NAVIGATION TITLE', placeholder: '', caption: 'The navigation title is the page’s name in the navigation menu.' },
         { key: 'url', type: MiaField.TYPE_STRING, label: 'URL SLUG', placeholder: '', caption: 'The unique location slug for this page.' },
-        { key: 'permissions', type: 'select', label: 'PERMISSIONS', extra: {
+        { key: 'permissions', type: MiaField.TYPE_SELECT, label: 'PERMISSIONS', extra: {
           options: [
             { id: 0, title: 'All users' },
             { id: 1, title: 'All members' },
@@ -64,14 +64,14 @@ export class MiaManagementSidebarComponent implements OnInit {
         { key: '', type: MiaField.TYPE_LABEL, label: '<p>Search engine optimization (SEO) allows you to improve your ranking in search results. Use these features to make it easier for users to find your page when they search for it. <a href="">Learn More</a></p>', classes: 'label-custom' },
         { key: 'custom_example', type: MiaField.TYPE_CUSTOM, extra: { component: SeoPreviewBoxComponent } },
         { key: 'seo_title', type: MiaField.TYPE_STRING, label: 'SEO TITLE (OPTIONAL)', placeholder: '', caption: '60/150' },
-        { key: 'seo_description', type: "text", label: 'SEO DESCRIPTION (OPTIONAL)', placeholder: '', caption: '226/300' },
+        { key: 'seo_description', type: MiaField.TYPE_TEXT, label: 'SEO DESCRIPTION (OPTIONAL)', placeholder: '', caption: '226/300' },
         { key: 'switch', type: MiaField.TYPE_CUSTOM, label: 'Hide Page from Search Results', caption: '', extra: { component: SwitchFieldComponent } },
       ] },
 
       { title: 'Advanced', fields: [
         { key: '', type: MiaField.TYPE_LABEL, label: '<p>Inject custom code or scripts to enhance specific parts of your page. <a href="">Learn More</a></p>', classes: 'label-custom' },
-        { key: 'header_code_injection', type: "text", label: 'PAGE HEADER CODE INJECTION', placeholder: '', caption: 'Inject code in the page’s <head> tag.' },
-        { key: 'header_code_injection', type: "text", label: 'PAGE BODY CODE INJECTION', placeholder: '', caption: 'Inject code in the page’s <body> tag.' },
+        { key: 'header_code_injection', type: MiaField.TYPE_TEXT, label: 'PAGE HEADER CODE INJECTION', placeholder: '', caption: 'Inject code in the page’s <head> tag.' },
+        { key: 'header_code_injection', type: MiaField.TYPE_TEXT, label: 'PAGE BODY CODE INJECTION', placeholder: '', caption: 'Inject code in the page’s <body> tag.' },
       ] },
     ];
 
