@@ -34,7 +34,7 @@
 
   .content{
     display: flex;
-    align-items: center;
+    align-items: initial;
     justify-content: center;
     flex-direction: column;
     width: 100%;
@@ -93,7 +93,7 @@
       position: relative;
       z-index: 1;
       display: flex;
-      align-items: center;
+      /* align-items: center; */
       justify-content: center;
       overflow: hidden;
       margin: auto;
