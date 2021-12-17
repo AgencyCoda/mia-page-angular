@@ -1,3 +1,7 @@
-<div class="column-elements" fxLayout="row">
+<div class="column-elements">
+  <div class="container">
+
     <mia-print-element *ngFor="let subelement of element.data.elements" [element]="subelement" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemoveChild($event)"></mia-print-element>
+
+  </div>
 </div>

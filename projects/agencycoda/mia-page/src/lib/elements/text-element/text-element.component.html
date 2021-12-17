@@ -1,4 +1,4 @@
-<div>
+<div class="text-element" [ngClass]="{'is-element-active': element.isSelected}">
     <quill-editor theme="bubble" [placeholder]="'Empty text'" [(ngModel)]="element.data.text"></quill-editor>
 </div>
 

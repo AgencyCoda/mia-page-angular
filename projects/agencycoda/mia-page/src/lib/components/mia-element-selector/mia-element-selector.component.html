@@ -1,23 +1,27 @@
 <mat-tab-group>
-    <mat-tab *ngFor="let tab of config.tabs" [label]="tab.title">
-        
-        <div *ngIf="tab.has_search" class="mia-element-search">
-            <input type="text" placeholder="Search..." />
-        </div>
+  <mat-tab *ngFor="let tab of config.tabs" [label]="tab.title" dynamicHeight>
 
-        <div *ngFor="let item of tab.items" class="mia-element-button">
-            <ng-container  *ngTemplateOutlet="elementButton; context:{ element: item }"></ng-container>
-        </div>
+    <div class="container-tab">
+      <div *ngIf="tab.has_search" class="mia-element-search">
+        <mat-icon>search</mat-icon>
+        <input type="text" placeholder="Search..." />
+      </div>
 
-    </mat-tab>
+      <div *ngFor="let item of tab.items" class="mia-element-button">
+        <ng-container  *ngTemplateOutlet="elementButton; context:{ element: item }"></ng-container>
+      </div>
+    </div>
+
+  </mat-tab>
 </mat-tab-group>
 
 <ng-template #elementButton let-element="element">
-
+  <div class="container-tab">
     <img *ngIf="element.type == 1" [src]="element.image" (click)="onSelectElement(element)" />
 
     <div *ngIf="element.type == 0" class="" (click)="onSelectElement(element)">
-        <mat-icon>{{ element.icon }}</mat-icon> {{ element.title }}
+      <mat-icon>{{ element.icon }}</mat-icon> &nbsp;
+      {{ element.title }}
     </div>
-    
+  </div>
 </ng-template>

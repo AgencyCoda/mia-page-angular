@@ -1,0 +1,54 @@
+mat-tab-group{
+  width: 520px;
+  max-width: 100%;
+}
+
+.mia-element-search{
+  width: 100%;
+  position: relative;
+  margin-top: 1em;
+}
+
+.mia-element-search input{
+  width: 100%;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  padding: 0.7em 1em;
+  padding-left: 40px;
+}
+
+.mia-element-search mat-icon{
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  color: #bdbdbd;
+}
+
+.mia-element-search input:hover{
+}
+
+.container-tab{
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.container-tab .mia-element-button{
+  width: auto;
+  min-width: calc(33.3% - 10px);
+  cursor: pointer;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.container-tab .mia-element-button:hover{
+  background-color: #ececec;
+}
+
+.container-tab .mia-element-button mat-icon{
+  transform: translateY(6px);
+  line-height: 12px;
+}

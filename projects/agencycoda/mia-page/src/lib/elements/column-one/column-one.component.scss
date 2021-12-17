@@ -4,4 +4,20 @@
     border-style: dotted;
     border-width: 1px;
     border-color: #ddd;
+    box-sizing: border-box;
+    display: block;
+
+    &:hover{
+      .btn-add-element{
+        opacity: 1 !important;
+      }
+    }
+}
+
+.btn-add-element{
+  opacity: 0;
+  transition: all 0.3s ease;
+  margin: auto;
+  margin-top: 1em;
+  display: block;
 }
