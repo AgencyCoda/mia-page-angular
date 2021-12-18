@@ -26,7 +26,7 @@
 
 
 .web-management-layout{
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -34,12 +34,21 @@
 
   .content{
     display: flex;
-    align-items: center;
+    align-items: initial;
     justify-content: center;
     flex-direction: column;
     width: 100%;
     height: 100%;
     overflow: hidden !important;
+
+    .btn-add-section{
+      display: block;
+      margin: auto;
+      margin-top: 2em;
+      /* transform: translateY(-20px); */
+      z-index: 4;
+      border-radius: 200px;
+    }
 
     .toolbar-page{
       background-color: white;
@@ -89,7 +98,7 @@
       border-radius: 12px;
     }
 
-    .content-page{
+    /* .content-page{
       position: relative;
       z-index: 1;
       display: flex;
@@ -101,7 +110,7 @@
       max-height: 100%;
       box-shadow: 0px 4px 20px -5px rgba($color: #000000, $alpha: 0.25);
       transition: all 0.3s ease;
-    }
+    } */
   }
 }
 

@@ -1,1 +1,6 @@
-<p>video-element works!</p>
+
+<div class="video-element" [ngClass]="{'is-element-active': element.isSelected}">
+  <p>video-element works!</p>
+  <mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()"></mia-element-actions>
+</div>
+

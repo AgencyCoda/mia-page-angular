@@ -1,3 +1,7 @@
 .column-print-two {
     width: 50%;
 }
+
+mia-print-element{
+  border: 3px solid blue;
+}

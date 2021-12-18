@@ -1,4 +1,8 @@
-<div class="column-elements" fxLayout="row">
-    <mia-print-element fxFlex="20" [element]="element.data.elements[0]" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemoveChild($event)"></mia-print-element>
-    <mia-print-element fxFlex [element]="element.data.elements[1]" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemoveChild($event)"></mia-print-element>
+<div class="column-elements">
+  <div class="container">
+
+    <mia-print-element [element]="element.data.elements[0]" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemoveChild($event)"></mia-print-element>
+    <mia-print-element [element]="element.data.elements[1]" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemoveChild($event)"></mia-print-element>
+
+  </div>
 </div>

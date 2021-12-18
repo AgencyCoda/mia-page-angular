@@ -18,7 +18,7 @@
 
         <div *ngIf="page != undefined" class="view-desktop" [ngClass]="{'view-desktop': typePageView == 0, 'view-tablet': typePageView == 1, 'view-mobile': typePageView == 2 }">
             <mia-print-element *ngFor="let element of page.data.elements" [element]="element" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemove($event)"></mia-print-element>
-            <button *ngIf="showAddButton" mat-mini-fab color="primary" class="btn-add-column" matTooltip="Add element" (click)="onClickAddElement()"><mat-icon>add</mat-icon></button>
+            <button *ngIf="showAddButton" mat-flat-button color="primary" class="btn-add-section" (click)="onClickAddElement()">ADD SECTION</button>
         </div>
     </div>
 </div>

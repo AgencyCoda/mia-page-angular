@@ -1,0 +1,78 @@
+@import "../../../../assets/css/_typography.scss";
+
+.text-element::before{
+  content: 'TEXT';
+}
+
+::ng-deep .ql-container{
+  font-size: 16px !important;
+  font: 16px !important;
+}
+
+::ng-deep quill-editor .display1, .display2, .display3, h1, h2, h3, h4, h5 {
+  margin: 1em 0 1em !important;
+  font-family: 'Noto Serif', serif !important;
+  font-weight: 400 !important;
+  line-height: 1.3 !important;
+}
+
+::ng-deep quill-editor .display1{
+  font-size: 5.95em !important;
+  margin-top: 0;
+}
+
+::ng-deep quill-editor .display2{
+  font-size: 4.768em !important;
+}
+
+::ng-deep quill-editor .display3{
+  font-size: 3.815em !important;
+}
+
+::ng-deep quill-editor h1 {
+  font-size: 3.052em !important;
+  margin-top: 0 !important;
+}
+
+::ng-deep quill-editor h2 {
+  font-size: 2.441em !important;
+}
+
+::ng-deep quill-editor h3 {
+  font-size: 1.953em !important;
+}
+
+::ng-deep quill-editor h4 {
+  font-size: 1.563em !important;
+}
+
+::ng-deep quill-editor h5 {
+  font-size: 1.25em !important;
+}
+
+::ng-deep quill-editor h6 {
+  text-transform: uppercase !important;
+  font-size: 1em !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+::ng-deep quill-editor p {
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+::ng-deep quill-editor small, .text_small, .body-2{
+  font-size: 0.8em !important;
+}
+
+::ng-deep quill-editor textarea {
+  font-family: 'DM Sans', sans-serif !important;
+  letter-spacing: 0px !important;
+  line-height: 1.5 !important;
+  font-size: 1em !important;
+}
+
+::ng-deep quill-editor button {
+  font-weight: 600 !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 1.25em !important;
+}

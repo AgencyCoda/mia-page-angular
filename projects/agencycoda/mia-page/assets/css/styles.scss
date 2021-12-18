@@ -1,3 +1,22 @@
+@import "./typography";
+
+html, body { height: 100%; font-size: 100%; }
+body {
+  font-size: 16px;
+  font: 16px;
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  /* @include xs { font-size: 14px; }
+  @include sm { font-size: 15px; }
+  @include md { font-size: 15.5px; } */
+}
+
+.container{
+  width: 1200px;
+  margin: auto;
+  max-width: 100%;
+}
+
 mia-column-one, mia-column-two, mia-text-element {
     display: block;
     position: relative;
@@ -5,7 +24,114 @@ mia-column-one, mia-column-two, mia-text-element {
 
 mia-element-actions {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -60px;
+    right: 0;
     display: block;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 10px 0 rgba($color: #000000, $alpha: 0.2);
+    z-index: 5;
+    transition: all 0.3s ease;
+}
+
+mia-column-three, mia-column-two, mia-column-one-two, mia-column-two-one, lib-column-two-one{
+  .column-elements{
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    height: 100%;
+    padding: 3em 0;
+    &:hover{
+      border-top-color: rgba($color: blue, $alpha: 0.5);
+      border-bottom-color: rgba($color: blue, $alpha: 0.5);
+    }
+
+    .container{
+      display: flex;
+
+      .container{
+        width: initial;
+        max-width: initial;
+        margin: initial;
+        display: block;
+      }
+    }
+
+    mia-print-element{
+      display: none;
+    }
+  }
+}
+
+mia-column-one{
+}
+
+mia-column-three{
+  mia-column-one{
+    width: 33.3%;
+  }
+}
+
+mia-column-two{
+  mia-column-one{
+    width: 50%;
+  }
+}
+
+mia-column-one-two{
+  mia-column-one{
+    &:nth-of-type(1){
+      width: 33.3%;
+    }
+    &:nth-of-type(2){
+      width: 66.6%;
+    }
+  }
+}
+
+mia-column-two-one, lib-column-two-one{
+  mia-column-one{
+    &:nth-of-type(1){
+      width: 66.6%;
+    }
+    &:nth-of-type(2){
+      width: 33.3%;
+    }
+  }
+}
+
+.image-element,.text-element,.button-element,.video-element{
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+
+  &::before{
+    content: 'LOREM IPSUM';
+    position: absolute;
+    top: -24px;
+    left: -2px;
+    text-transform: uppercase;
+    color: white;
+    background-color: blue;
+    opacity: 0;
+    border: 2px solid blue;
+    font-size: 0.8em;
+    padding: 0.2em 0.5em;
+    transition: all 0.3s ease;
+  }
+
+  &:hover{
+    border-color: blue;
+    &::before{
+      opacity: 1;
+    }
+  }
+}
+
+.is-element-active{
+  z-index: 6;
+  border-color: blue !important;
+
+  &::before{
+    opacity: 1 !important;
+  }
 }

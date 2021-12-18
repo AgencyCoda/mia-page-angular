@@ -1,1 +1,5 @@
-<p>button-element works!</p>
+<div class="button-element" [ngClass]="{'is-element-active': element.isSelected}">
+  <button mat-flat-button color="primary">Button Text</button>
+  <mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()"></mia-element-actions>
+</div>
+

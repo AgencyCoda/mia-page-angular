@@ -23,39 +23,39 @@ export class MiaPageDefault {
     static configDefault() {
       return {
         tabs: [
-          { 
-            title: 'Columns', 
+          {
+            title: 'Columns',
             items: [
               { id: 'column-one', title: 'Column 1/1', type: 1, image: 'assets/mia_elements/element_column_one.png', component: ColumnOneComponent },
               { id: 'column-two', title: 'Column 1/2 - 1/2', type: 1, image: 'assets/mia_elements/element_column_two.png', component: ColumnTwoComponent },
               { id: 'column-three', title: 'Column 1/3 - 1/3 - 1/3', type: 1, image: 'assets/mia_elements/element_column_three.png', component: ColumnThreeComponent },
               { id: 'column-one-two', title: 'Column 1/3 - 2/3', type: 1, image: 'assets/mia_elements/element_column_one_two.png', component: ColumnOneTwoComponent },
               { id: 'column-two-one', title: 'Column 2/3 - 1/3', type: 1, image: 'assets/mia_elements/element_column_two_one.png', component: ColumnTwoOneComponent },
-            ] 
-          },
-          { 
-            title: 'Elements', 
-            has_search: true,
-            items: [
-              { id: 'element-text', title: 'Text', type: 0, icon: 'format_size', component: TextElementComponent },
-              { id: 'element-title', title: 'Heading', type: 0, icon: 'format_size', component: TitleElementComponent },
-              { id: 'element-image', title: 'Image', type: 0, icon: 'format_size', component: ImageElementComponent },
-              { id: 'element-video', title: 'Video', type: 0, icon: 'format_size', component: VideoElementComponent },
-              { id: 'element-audio', title: 'Audio', type: 0, icon: 'format_size', component: AudioElementComponent },
-              { id: 'element-list', title: 'List', type: 0, icon: 'format_size', component: ListElementComponent },
-              { id: 'element-code', title: 'Code', type: 0, icon: 'format_size', component: CodeElementComponent },
-              { id: 'element-divider', title: 'Line', type: 0, icon: 'format_size', component: DividerElementComponent },
-              { id: 'element-quote', title: 'Quote', type: 0, icon: 'format_size', component: QuoteElementComponent },
-              { id: 'element-space', title: 'Quote', type: 0, icon: 'format_size', component: SpaceElementComponent },
-              { id: 'element-embed', title: 'Embed', type: 0, icon: 'format_size', component: EmbedElementComponent },
-              { id: 'element-button', title: 'Button', type: 0, icon: 'format_size', component: ButtonElementComponent },
-              { id: 'element-gallery', title: 'Gallery', type: 0, icon: 'format_size', component: GalleryElementComponent },
-              { id: 'element-carousel', title: 'Carousel', type: 0, icon: 'format_size', component: CarouselElementComponent },
-              { id: 'element-map', title: 'Map', type: 0, icon: 'format_size', component: MapElementComponent },
             ]
           },
-          { 
-            title: 'Custom', 
+          {
+            title: 'Elements',
+            has_search: true,
+            items: [
+              { id: 'element-title', title: 'Heading', type: 0, icon: 'title', component: TitleElementComponent },
+              { id: 'element-text', title: 'Text', type: 0, icon: 'format_size', component: TextElementComponent },
+              { id: 'element-image', title: 'Image', type: 0, icon: 'image', component: ImageElementComponent },
+              { id: 'element-video', title: 'Video', type: 0, icon: 'video_library', component: VideoElementComponent },
+              { id: 'element-audio', title: 'Audio', type: 0, icon: 'audiotrack', component: AudioElementComponent },
+              { id: 'element-list', title: 'List', type: 0, icon: 'format_list_numbered', component: ListElementComponent },
+              { id: 'element-code', title: 'Code', type: 0, icon: 'code', component: CodeElementComponent },
+              { id: 'element-divider', title: 'Line', type: 0, icon: 'remove', component: DividerElementComponent },
+              { id: 'element-quote', title: 'Quote', type: 0, icon: 'format_quote', component: QuoteElementComponent },
+              { id: 'element-space', title: 'Space', type: 0, icon: 'check_box_outline_blank', component: SpaceElementComponent },
+              { id: 'element-embed', title: 'Embed', type: 0, icon: 'integration_instructions', component: EmbedElementComponent },
+              { id: 'element-button', title: 'Button', type: 0, icon: 'check_box_outline', component: ButtonElementComponent },
+              { id: 'element-gallery', title: 'Gallery', type: 0, icon: 'collections', component: GalleryElementComponent },
+              { id: 'element-carousel', title: 'Carousel', type: 0, icon: 'view_carousel', component: CarouselElementComponent },
+              { id: 'element-map', title: 'Map', type: 0, icon: 'location_on', component: MapElementComponent },
+            ]
+          },
+          {
+            title: 'Custom',
             has_search: true,
             has_group: true,
             items: [

@@ -17,6 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatDividerModule } from '@angular/material/divider';
 
 
 /** OTHER LIBRARIES */
@@ -115,6 +116,7 @@ import { MapElementComponent } from './elements/map-element/map-element.componen
     MatExpansionModule,
     MatListModule,
     MatProgressBarModule,
+    MatDividerModule,
 
     // Agency Coda
     MiaFormModule,
