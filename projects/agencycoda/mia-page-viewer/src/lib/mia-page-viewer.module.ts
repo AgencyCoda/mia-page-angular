@@ -1,6 +1,7 @@
 /** ANGULAR */
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { QuillModule } from 'ngx-quill';
 
 /** COMPONENTS */
 import { MiaPageViewerComponent } from './components/mia-page-viewer/mia-page-viewer.component';
@@ -12,7 +13,6 @@ import { ColumnOneViewComponent } from './views/column-one-view/column-one-view.
 import { TextViewComponent } from './views/text-view/text-view.component';
 import { TitleViewComponent } from './views/title-view/title-view.component';
 import { ColumnTwoViewComponent } from './views/column-two-view/column-two-view.component';
-import { QuillModule } from 'ngx-quill';
 import { ImageViewComponent } from './views/image-view/image-view.component';
 import { ButtonViewComponent } from './views/button-view/button-view.component';
 
@@ -34,7 +34,7 @@ import { ButtonViewComponent } from './views/button-view/button-view.component';
   imports: [
     // Angular Core
     CommonModule,
-    QuillModule.forRoot()
+    QuillModule
   ],
   exports: [
     // Components

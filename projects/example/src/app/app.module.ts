@@ -5,23 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MiaPageModule, TextElementComponent } from 'projects/agencycoda/mia-page/src/public-api';
 
-import { MIA_PAGE_EDITOR_CONFIG } from 'projects/agencycoda/mia-page/src/lib/entities/mia-page-editor-config';
-
-import { ColumnOneComponent } from 'projects/agencycoda/mia-page/src/lib/elements/column-one/column-one.component';
-import { ColumnTwoComponent } from 'projects/agencycoda/mia-page/src/lib/elements/column-two/column-two.component';
-import { ColumnThreeComponent } from 'projects/agencycoda/mia-page/src/lib/elements/column-three/column-three.component';
-import { ColumnOneTwoComponent } from 'projects/agencycoda/mia-page/src/lib/elements/column-one-two/column-one-two.component';
-import { ColumnTwoOneComponent } from 'projects/agencycoda/mia-page/src/lib/elements/column-two-one/column-two-one.component';
 import { ViewerPageComponent } from './viewer-page/viewer-page.component';
-import { MiaPageViewerModule, MiaViewerDefault, MIA_PAGE_VIEWER_CONFIG } from 'projects/agencycoda/mia-page-viewer/src/public-api';
+import { MiaPageViewerModule, MiaViewerDefault, MIA_PAGE_VIEWER_CONFIG } from '@agencycoda/mia-page-viewer';
 
-import { ColumnOneViewComponent } from 'projects/agencycoda/mia-page-viewer/src/lib/views/column-one-view/column-one-view.component';
-import { TextViewComponent } from 'projects/agencycoda/mia-page-viewer/src/lib/views/text-view/text-view.component';
 import { MIA_AUTH_PROVIDER } from '@agencycoda/mia-auth';
-import { MiaPage } from 'projects/agencycoda/mia-page-core/src/public-api';
-import { MiaPageDefault } from 'projects/agencycoda/mia-page/src/lib/entities/mia-page-default';
+import { QuillModule } from 'ngx-quill';
+import { MiaPageDefault, MiaPageModule, MIA_PAGE_EDITOR_CONFIG } from '@agencycoda/mia-page';
 
 @NgModule({
   declarations: [
@@ -33,6 +23,7 @@ import { MiaPageDefault } from 'projects/agencycoda/mia-page/src/lib/entities/mi
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    QuillModule.forRoot(),
 
     MiaPageModule,
     MiaPageViewerModule

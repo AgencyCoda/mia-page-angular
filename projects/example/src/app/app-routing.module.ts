@@ -1,6 +1,6 @@
+import { MiaPageEditorComponent, MiaPageManagementComponent, MiaPageManagementConfig } from '@agencycoda/mia-page';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MiaPageEditorComponent, MiaPageManagementComponent, MiaPageManagementConfig } from 'projects/agencycoda/mia-page/src/public-api';
 import { ViewerPageComponent } from './viewer-page/viewer-page.component';
 
 const routes: Routes = [
