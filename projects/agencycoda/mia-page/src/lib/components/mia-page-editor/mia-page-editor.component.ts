@@ -37,7 +37,6 @@ export class MiaPageEditorComponent implements OnInit {
   }
 
   onClickSave() {
-    //console.log(JSON.stringify(this.page));
     this.pageService.saveOb(this.page).subscribe();
   }
 

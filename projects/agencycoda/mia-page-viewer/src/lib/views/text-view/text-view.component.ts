@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MiaBaseViewComponent } from '../base-view.component';
 
 @Component({
-  selector: 'lib-text-view',
+  selector: 'mia-text-view',
   templateUrl: './text-view.component.html',
   styleUrls: ['./text-view.component.css']
 })

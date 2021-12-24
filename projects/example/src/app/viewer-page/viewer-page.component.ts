@@ -17,7 +17,7 @@ export class ViewerPageComponent implements OnInit {
   }
 
   loadTestPage() {
-    this.page.title = "Test Page";
-    this.page.data = {"elements":[{"type":"column-one","classes":"","data":{"elements":[{"type":"element-text","classes":"","data":{"elements":[]},"isSelected":false}]},"isSelected":false}]};
+    //this.page.title = "Test Page";
+    //this.page.data = {"elements":[{"type":"column-one","classes":"","data":{"elements":[{"type":"element-text","classes":"","data":{"elements":[]},"isSelected":false}]},"isSelected":false}]};
   }
 }
