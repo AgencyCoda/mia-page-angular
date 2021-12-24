@@ -16,6 +16,9 @@ import { ColumnTwoViewComponent } from './views/column-two-view/column-two-view.
 import { ImageViewComponent } from './views/image-view/image-view.component';
 import { ButtonViewComponent } from './views/button-view/button-view.component';
 
+/** PROVIDERS */
+import { MiaPageViewConfig, MIA_PAGE_VIEWER_CONFIG } from './entities/mia-view-config';
+
 @NgModule({
   declarations: [
     // Components
@@ -41,6 +44,12 @@ import { ButtonViewComponent } from './views/button-view/button-view.component';
     MiaPageViewerComponent,
     MiaPrintViewComponent,
     MiaPageSlugViewerComponent
+  ],
+  providers: [
+    {
+      provide: MIA_PAGE_VIEWER_CONFIG,
+      useClass: MiaPageViewConfig
+    },
   ]
 })
 export class MiaPageViewerModule { }

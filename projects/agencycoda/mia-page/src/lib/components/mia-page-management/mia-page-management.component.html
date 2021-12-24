@@ -23,6 +23,7 @@
 
       <div *ngIf="page != undefined" class="content-page view-desktop" [ngClass]="{'view-desktop': typePageView == 0, 'view-tablet': typePageView == 1, 'view-mobile': typePageView == 2 }">
         <mia-page-slug-viewer [slug]="page.slug"></mia-page-slug-viewer>
+        <!--<mia-page-viewer [page]="page"></mia-page-viewer>-->
       </div>
 
       <!-- Autoselect Homepage and not show this code -->

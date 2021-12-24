@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { MiaPageHttpService, MiaPage } from '@agencycoda/mia-page-core';
 import { tap } from 'rxjs/operators';
 
@@ -7,7 +7,7 @@ import { tap } from 'rxjs/operators';
   templateUrl: './mia-page-slug-viewer.component.html',
   styleUrls: ['./mia-page-slug-viewer.component.css']
 })
-export class MiaPageSlugViewerComponent implements OnInit {
+export class MiaPageSlugViewerComponent implements OnInit, OnChanges {
 
   @Input() slug!: string;
 
@@ -20,6 +20,12 @@ export class MiaPageSlugViewerComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadPage();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if(changes.slug){
+      this.loadPage();
+    }
   }
 
   loadPage() {

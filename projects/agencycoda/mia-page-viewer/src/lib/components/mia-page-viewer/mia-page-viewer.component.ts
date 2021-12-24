@@ -13,7 +13,12 @@ export class MiaPageViewerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.page);
+    this.verifyValidPage();
   }
-
+  
+  verifyValidPage() {
+    if(this.page.data == undefined){
+      this.page.data = { elements: [] };
+    }
+   }
 }

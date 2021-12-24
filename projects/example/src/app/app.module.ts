@@ -7,11 +7,11 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ViewerPageComponent } from './viewer-page/viewer-page.component';
-import { MiaPageViewerModule, MiaViewerDefault, MIA_PAGE_VIEWER_CONFIG } from '@agencycoda/mia-page-viewer';
+import { MiaPageViewerModule, MiaViewerDefault, MIA_PAGE_VIEWER_CONFIG } from 'projects/agencycoda/mia-page-viewer/src/public-api';
 
 import { MIA_AUTH_PROVIDER } from '@agencycoda/mia-auth';
 import { QuillModule } from 'ngx-quill';
-import { MiaPageDefault, MiaPageModule, MIA_PAGE_EDITOR_CONFIG } from '@agencycoda/mia-page';
+import { MiaPageDefault, MiaPageModule, MIA_PAGE_EDITOR_CONFIG } from 'projects/agencycoda/mia-page/src/public-api';
 
 @NgModule({
   declarations: [

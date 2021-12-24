@@ -61,6 +61,8 @@ import { GalleryElementComponent } from './elements/gallery-element/gallery-elem
 import { CarouselElementComponent } from './elements/carousel-element/carousel-element.component';
 import { MapElementComponent } from './elements/map-element/map-element.component';
 
+/** PROVIDERS */
+import { MiaPageEditorConfig, MIA_PAGE_EDITOR_CONFIG } from './entities/mia-page-editor-config';
 
 
 
@@ -137,6 +139,12 @@ import { MapElementComponent } from './elements/map-element/map-element.componen
 
     // Modals
     AddElementModalComponent
+  ],
+  providers: [
+    {
+      provide: MIA_PAGE_EDITOR_CONFIG,
+      useClass: MiaPageEditorConfig
+    },
   ]
 })
 export class MiaPageModule { }
