@@ -1,5 +1,5 @@
 import { nil } from '@agencycoda/mia-core';
-import { MiaElement } from '@agencycoda/mia-page-core';
+import { MiaElement, MiaPage } from '@agencycoda/mia-page-core';
 import { Inject, Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
@@ -17,13 +17,14 @@ export class MiaPageEditorService {
     protected dialog: MatDialog
   ) { }
 
-  duplicateElement(element: MiaElement, parent?: MiaElement) {
-    if(parent == undefined){
-      return;
-    }
-
+  duplicateElement(element: MiaElement, parent?: MiaElement, page?: MiaPage) {
     let copy = JSON.parse(JSON.stringify(element));
-    parent.data.elements.push(copy);
+
+    if(parent == undefined){
+      page!.data.elements.push(copy);
+    } else {
+      parent.data.elements.push(copy);
+    }
   }
 
   showAddElementModal(): Observable<any> {

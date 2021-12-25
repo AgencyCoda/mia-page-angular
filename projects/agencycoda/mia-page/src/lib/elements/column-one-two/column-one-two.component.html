@@ -1,8 +1,8 @@
 <div class="column-elements">
   <div class="container">
 
-    <mia-print-element [parent]="element" [element]="element.data.elements[0]" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemoveChild($event)"></mia-print-element>
-    <mia-print-element [parent]="element" [element]="element.data.elements[1]" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemoveChild($event)"></mia-print-element>
+    <mia-print-element [page]="page" [parent]="element" [element]="element.data.elements[0]" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemoveChild($event)"></mia-print-element>
+    <mia-print-element [page]="page" [parent]="element" [element]="element.data.elements[1]" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemoveChild($event)"></mia-print-element>
 
   </div>
 </div>

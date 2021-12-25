@@ -1,4 +1,4 @@
-import { MiaElement } from "@agencycoda/mia-page-core";
+import { MiaElement, MiaPage } from "@agencycoda/mia-page-core";
 import { ElementRef, EventEmitter, HostListener, Input, Output, Renderer2, ViewChild } from "@angular/core";
 import { Component, OnInit } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
@@ -13,6 +13,7 @@ import { MiaPageEditorService } from "../services/mia-page-editor.service";
 })
 export class MiaBaseElementComponent implements OnInit {
 
+  @Input() page!: MiaPage;
   @Input() element!: MiaElement;
   @Input() parent?: MiaElement;
   @Input() editor!: MiaEditorElement;
@@ -70,7 +71,7 @@ export class MiaBaseElementComponent implements OnInit {
   }
 
   onClickDuplicate() {
-    this.editorService.duplicateElement(this.element, this.parent);
+    this.editorService.duplicateElement(this.element, this.parent, this.page);
   }
 
   onClickMoveUp() {
