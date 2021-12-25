@@ -75,11 +75,11 @@ export class MiaBaseElementComponent implements OnInit {
   }
 
   onClickMoveUp() {
-
+    this.editorService.moveUpElement(this.element, this.parent, this.page);
   }
 
   onClickMoveDown() {
-
+    this.editorService.moveDownElement(this.element, this.parent, this.page);
   }
 
   @HostListener('click', ['$event'])

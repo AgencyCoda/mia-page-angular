@@ -27,6 +27,32 @@ export class MiaPageEditorService {
     }
   }
 
+  moveUpElement(element: MiaElement, parent?: MiaElement, page?: MiaPage) {
+    if(parent == undefined){
+      return;
+    }
+
+    let index = parent.data.elements.indexOf(element);
+    if(index <= 0){
+      return;
+    }
+
+    this.moveInArray(parent.data.elements, index, index-1);
+  }
+
+  moveDownElement(element: MiaElement, parent?: MiaElement, page?: MiaPage) {
+    if(parent == undefined){
+      return;
+    }
+
+    let index = parent.data.elements.indexOf(element);
+    if(index >= (parent.data.elements.length-1)){
+      return;
+    }
+
+    this.moveInArray(parent.data.elements, index, index+1);
+  }
+
   showAddElementModal(): Observable<any> {
     return this.dialog.open(AddElementModalComponent, {
 
@@ -43,5 +69,10 @@ export class MiaPageEditorService {
       }
 
       return;
+  }
+
+  moveInArray(arr: Array<any>, from: number, to: number) {
+    arr.splice(to,0,arr.splice(from,1)[0]);
+    return arr;
   }
 }
