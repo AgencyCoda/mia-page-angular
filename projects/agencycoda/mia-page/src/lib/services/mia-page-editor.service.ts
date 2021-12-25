@@ -1,4 +1,5 @@
 import { nil } from '@agencycoda/mia-core';
+import { MiaElement } from '@agencycoda/mia-page-core';
 import { Inject, Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
@@ -16,6 +17,14 @@ export class MiaPageEditorService {
     protected dialog: MatDialog
   ) { }
 
+  duplicateElement(element: MiaElement, parent?: MiaElement) {
+    if(parent == undefined){
+      return;
+    }
+
+    let copy = JSON.parse(JSON.stringify(element));
+    parent.data.elements.push(copy);
+  }
 
   showAddElementModal(): Observable<any> {
     return this.dialog.open(AddElementModalComponent, {

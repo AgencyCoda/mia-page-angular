@@ -12,16 +12,6 @@ export class ButtonElementComponent extends MiaBaseElementComponent implements O
 
   @ViewChild('actionsComp') actionsComp?: ElementRef;
 
-  constructor(
-    protected dialog: MatDialog
-  ) {
-    super(dialog);
-  }
-
-  ngOnInit(): void {
-    super.ngOnInit();
-  }
-
   public static createElement() {
     let element = new MiaElement();
     element.type = 'element-button';

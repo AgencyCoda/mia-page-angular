@@ -12,16 +12,6 @@ import { ColumnOneComponent } from '../column-one/column-one.component';
 })
 export class ColumnTwoComponent extends MiaBaseHasChildElementComponent implements OnInit {
 
-  constructor(
-    protected editorService: MiaPageEditorService,
-    protected dialog: MatDialog
-  ) {
-    super(editorService, dialog);
-  }
-
-  ngOnInit(): void {
-  }
-
   public static createElement() {
     let element = new MiaElement();
     element.type = 'column-two';

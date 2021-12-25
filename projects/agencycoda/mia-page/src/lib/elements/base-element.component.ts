@@ -5,6 +5,7 @@ import { MatDialog } from "@angular/material/dialog";
 import { MiaElementActionsComponent } from "../components/mia-element-actions/mia-element-actions.component";
 import { MiaEditorElement } from "../entities/mia-editor-element";
 import { MiaField, MiaFormConfig, MiaFormModalComponent, MiaFormModalConfig } from '@agencycoda/mia-form';
+import { MiaPageEditorService } from "../services/mia-page-editor.service";
 
 @Component({
     selector: 'mia-base-element',
@@ -13,13 +14,15 @@ import { MiaField, MiaFormConfig, MiaFormModalComponent, MiaFormModalConfig } fr
 export class MiaBaseElementComponent implements OnInit {
 
   @Input() element!: MiaElement;
+  @Input() parent?: MiaElement;
   @Input() editor!: MiaEditorElement;
 
   @Output() clickElement = new EventEmitter<MiaElement>();
   @Output() clickRemove = new EventEmitter<MiaElement>();
 
   constructor(
-    protected dialog: MatDialog
+    protected dialog: MatDialog,
+    protected editorService: MiaPageEditorService
   ) {
         
   }
@@ -64,6 +67,18 @@ export class MiaBaseElementComponent implements OnInit {
 
   onClickRemove() {
     this.clickRemove.emit(this.element);
+  }
+
+  onClickDuplicate() {
+    this.editorService.duplicateElement(this.element, this.parent);
+  }
+
+  onClickMoveUp() {
+
+  }
+
+  onClickMoveDown() {
+
   }
 
   @HostListener('click', ['$event'])

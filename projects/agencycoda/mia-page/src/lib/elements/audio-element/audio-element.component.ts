@@ -16,16 +16,6 @@ export class AudioElementComponent extends MiaBaseElementComponent implements On
 
   @ViewChild('actionsComp') actionsComp?: ElementRef;
 
-  constructor(
-    protected dialog: MatDialog
-  ) {
-    super(dialog);
-  }
-
-  ngOnInit(): void {
-    super.ngOnInit();
-  }
-
   public static createElement() {
     let element = new MiaElement();
     element.type = 'element-audio';

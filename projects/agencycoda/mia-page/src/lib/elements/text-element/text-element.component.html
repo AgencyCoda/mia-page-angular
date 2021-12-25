@@ -2,4 +2,4 @@
     <quill-editor theme="bubble" [placeholder]="'Empty text'" [(ngModel)]="element.data.text"></quill-editor>
 </div>
 
-<mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()"></mia-element-actions>
+<mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()"></mia-element-actions>

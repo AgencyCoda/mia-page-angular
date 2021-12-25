@@ -13,17 +13,6 @@ import { MiaBaseHasChildElementComponent } from '../base-has-child-element.compo
 })
 export class ColumnOneComponent extends MiaBaseHasChildElementComponent implements OnInit {
 
-  constructor(
-    protected editorService: MiaPageEditorService,
-    protected dialog: MatDialog
-  ) {
-    super(editorService, dialog);
-  }
-
-  ngOnInit(): void {
-    super.ngOnInit();
-  }
-
   public static createElement() {
     let element = new MiaElement();
     element.type = 'column-one';
