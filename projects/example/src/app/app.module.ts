@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { ViewerPageComponent } from './viewer-page/viewer-page.component';
 import { MiaPageViewerModule, MiaViewerDefault, MIA_PAGE_VIEWER_CONFIG } from 'projects/agencycoda/mia-page-viewer/src/public-api';
 
 import { MIA_AUTH_PROVIDER } from '@agencycoda/mia-auth';
@@ -15,8 +14,7 @@ import { MiaPageDefault, MiaPageModule, MIA_PAGE_EDITOR_CONFIG } from 'projects/
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ViewerPageComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

@@ -18,6 +18,7 @@ import { ButtonViewComponent } from './views/button-view/button-view.component';
 
 /** PROVIDERS */
 import { MiaPageViewConfig, MIA_PAGE_VIEWER_CONFIG } from './entities/mia-view-config';
+import { MiaViewerPageComponent } from './pages/mia-viewer-page/mia-viewer-page.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,9 @@ import { MiaPageViewConfig, MIA_PAGE_VIEWER_CONFIG } from './entities/mia-view-c
     ColumnTwoViewComponent,
     ImageViewComponent,
     ButtonViewComponent,
+    
+    // Pages
+    MiaViewerPageComponent,
   ],
   imports: [
     // Angular Core
@@ -43,7 +47,10 @@ import { MiaPageViewConfig, MIA_PAGE_VIEWER_CONFIG } from './entities/mia-view-c
     // Components
     MiaPageViewerComponent,
     MiaPrintViewComponent,
-    MiaPageSlugViewerComponent
+    MiaPageSlugViewerComponent,
+
+    // Pages
+    MiaViewerPageComponent
   ],
   providers: [
     {

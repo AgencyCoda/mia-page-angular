@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ViewerPageComponent } from './viewer-page.component';
+import { MiaViewerPageComponent } from './mia-viewer-page.component';
 
-describe('ViewerPageComponent', () => {
-  let component: ViewerPageComponent;
-  let fixture: ComponentFixture<ViewerPageComponent>;
+describe('MiaViewerPageComponent', () => {
+  let component: MiaViewerPageComponent;
+  let fixture: ComponentFixture<MiaViewerPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ViewerPageComponent ]
+      declarations: [ MiaViewerPageComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ViewerPageComponent);
+    fixture = TestBed.createComponent(MiaViewerPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
