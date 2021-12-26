@@ -16,6 +16,7 @@ export class ColumnThreeComponent extends MiaBaseHasChildElementComponent implem
     let element = new MiaElement();
     element.type = 'column-three';
     element.data = { 
+      full_width: 1,
       elements: [
         ColumnOneComponent.createWithChildren(),
         ColumnOneComponent.createWithChildren(),
@@ -23,5 +24,9 @@ export class ColumnThreeComponent extends MiaBaseHasChildElementComponent implem
       ]
     };
     return element;
+  }
+
+  public static getEditForm() {
+    return ColumnOneComponent.getEditForm();
   }
 }

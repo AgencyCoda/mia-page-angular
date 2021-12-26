@@ -63,8 +63,16 @@ export class MiaBaseElementComponent implements OnInit {
       this.addCssProperty('padding-left', this.element.data.padding.left + 'px');
     }
 
-    if(this.element.data.min_height != undefined){
+    if(this.element.data.min_height != undefined && this.element.data.min_height != ''){
       this.addCssProperty('min-height', this.element.data.min_height + 'px');
+    }
+
+    if(this.element.data.background_color != undefined && this.element.data.background_color != ''){
+      this.addCssProperty('background-color', this.element.data.background_color);
+    }
+
+    if(this.element.data.color != undefined && this.element.data.color != ''){
+      this.addCssProperty('color', this.element.data.color);
     }
   }
   /** End CSS Methods */

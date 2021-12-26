@@ -16,20 +16,6 @@ export class TextElementComponent extends MiaBaseElementComponent implements OnI
   public static createElement() {
     let element = new MiaElement();
     element.type = 'element-text';
-    element.editForm = [
-      { key: 'tabs-one', type: MiaField.TYPE_TABS, extra: { 
-        tabs: [
-          { title: 'Content', fields: [
-            { key: 'text', type: MiaField.TYPE_TEXT, label: 'Text' },
-            //{ key: 'lastname2', type: 'string', label: 'Apellido' },
-          ] },
-          { title: 'Design', fields: [
-            //{ key: 'address', type: 'string', label: 'Address' },
-            //{ key: 'testing-two', type: 'string', label: 'Testing Two' },
-          ] }
-        ]}
-      }
-    ];
     return element;
   }
 }

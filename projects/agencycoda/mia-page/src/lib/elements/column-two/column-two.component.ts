@@ -16,11 +16,16 @@ export class ColumnTwoComponent extends MiaBaseHasChildElementComponent implemen
     let element = new MiaElement();
     element.type = 'column-two';
     element.data = { 
+      full_width: 1,
       elements: [
         ColumnOneComponent.createWithChildren(),
         ColumnOneComponent.createWithChildren(),
       ]
     };
     return element;
+  }
+
+  public static getEditForm() {
+    return ColumnOneComponent.getEditForm();
   }
 }

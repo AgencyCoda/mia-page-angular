@@ -1,4 +1,4 @@
-<div class="column-elements">
+<div class="column-elements" [ngStyle]="cssStyleMain">
   <div class="container">
 
     <mia-print-element class="column-print-two" *ngFor="let subelement of element.data.elements" [page]="page" [parent]="element" [element]="subelement" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemoveChild($event)"></mia-print-element>
