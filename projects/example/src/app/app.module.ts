@@ -11,6 +11,7 @@ import { MiaPageViewerModule, MiaViewerDefault, MIA_PAGE_VIEWER_CONFIG } from 'p
 import { MIA_AUTH_PROVIDER } from '@agencycoda/mia-auth';
 import { QuillModule } from 'ngx-quill';
 import { MiaPageDefault, MiaPageModule, MIA_PAGE_EDITOR_CONFIG } from 'projects/agencycoda/mia-page/src/public-api';
+import { MIA_GOOGLE_STORAGE_PROVIDER } from '@agencycoda/mia-core';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,12 @@ import { MiaPageDefault, MiaPageModule, MIA_PAGE_EDITOR_CONFIG } from 'projects/
     {
       provide: MIA_PAGE_VIEWER_CONFIG,
       useValue: MiaViewerDefault.configDefault()
+    },
+    {
+      provide: MIA_GOOGLE_STORAGE_PROVIDER,
+      useValue: {
+        bucket: 'yoypr-files'
+      }
     }
   ],
   bootstrap: [AppComponent]
