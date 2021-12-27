@@ -1,8 +1,7 @@
 <div class="column-elements-view" [ngStyle]="cssStyleMain" [ngClass]="{'full-width-not': element.data.full_width == 0 || element.data.full_width == undefined}">
     <div class="container-view">
-  
-      <mia-print-view class="column-print-two-view" *ngFor="let subelement of element.data.elements" [element]="subelement"></mia-print-view>
-  
+
+        <mia-print-view class="column-print-two-view" *ngFor="let subelement of element.data.elements" [element]="subelement"></mia-print-view>
+
     </div>
-  </div>
-  
+</div>

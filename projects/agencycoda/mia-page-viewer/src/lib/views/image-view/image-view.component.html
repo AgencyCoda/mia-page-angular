@@ -1,6 +1,6 @@
 <div class="image-view">
     <div class="image-container">
-      <img src="https://images.unsplash.com/photo-1593642634367-d91a135587b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="" />
+      <img [src]="element.data.image != undefined ? element.data.image.url : 'https://images.unsplash.com/photo-1593642634367-d91a135587b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80'" alt="" />
     </div>
-    <p><i>Caption image text lorem ipsum dolor sit</i></p>
+    <p *ngIf="element.data.caption != undefined && element.data.caption != ''"><i>{{ element.data.caption }}</i></p>
 </div>

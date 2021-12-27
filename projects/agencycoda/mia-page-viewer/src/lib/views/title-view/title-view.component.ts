@@ -8,11 +8,4 @@ import { MiaBaseViewComponent } from '../base-view.component';
 })
 export class TitleViewComponent extends MiaBaseViewComponent implements OnInit {
 
-  constructor() {
-    super();
-  }
-
-  ngOnInit(): void {
-  }
-
 }

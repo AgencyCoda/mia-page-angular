@@ -1,5 +1,5 @@
 <div class="button-element" [ngClass]="{'is-element-active': element.isSelected}">
-  <button mat-flat-button [color]="element.data.background_color != undefined ? element.data.background_color : 'primary'" [ngStyle]="cssStyleMain">
+  <button mat-flat-button [ngStyle]="cssStyleMain">
     {{ element.data.title }}
   </button>
   <mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()"></mia-element-actions>
