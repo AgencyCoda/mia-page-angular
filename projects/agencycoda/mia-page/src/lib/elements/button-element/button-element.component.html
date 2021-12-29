@@ -1,5 +1,5 @@
-<div class="button-element" [ngClass]="{'is-element-active': element.isSelected}">
-  <button mat-flat-button color="primary">Button Text</button>
+<div class="button-element {{ classButton }}" [ngClass]="{'is-element-active': element.isSelected}">
+  <a [routerLink]="['/routePath']"><button {{ typeButton }} color="color">{{ textButton }}</button></a>
   <mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()"></mia-element-actions>
 </div>
 

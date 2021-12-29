@@ -34,7 +34,7 @@ export class ColumnOneComponent extends MiaBaseHasChildElementComponent implemen
 
   public static getEditForm() {
     return [
-      { key: 'tabs-one', type: MiaField.TYPE_TABS, extra: { 
+      { key: 'tabs-one', type: MiaField.TYPE_TABS, extra: {
         tabs: [
           { title: 'Design', fields: [
             { key: 'margin_title', type: MiaField.TYPE_LABEL, label: 'Margin', classes: 'label-custom' },

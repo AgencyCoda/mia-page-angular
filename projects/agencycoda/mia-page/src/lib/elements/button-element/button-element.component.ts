@@ -10,6 +10,11 @@ import { MiaBaseElementComponent } from '../base-element.component';
 })
 export class ButtonElementComponent extends MiaBaseElementComponent implements OnInit {
 
+  typeButton = 'mat-flat-button';
+  color = "primary";
+  textButton = 'Button Text';
+  classButton = '';
+
   @ViewChild('actionsComp') actionsComp?: ElementRef;
 
   constructor(
