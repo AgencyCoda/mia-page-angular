@@ -23,7 +23,7 @@ export class ColumnOneComponent extends MiaBaseHasChildElementComponent implemen
 
   public static getEditForm() {
     return [
-      { key: 'tabs-one', type: MiaField.TYPE_TABS, extra: { 
+      { key: 'tabs-one', type: MiaField.TYPE_TABS, extra: {
         tabs: [
           { title: 'Design', fields: [
             { key: 'full_width', type: MiaField.TYPE_CUSTOM, label: 'Full Width', extra: { component: SwitchFieldComponent } },
