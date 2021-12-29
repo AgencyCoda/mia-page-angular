@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 
 /** AGENCY CODA */
 import { MiaFormModule } from '@agencycoda/mia-form';
+import { MiaPageViewerModule } from '@agencycoda/mia-page-viewer';
 
 /** ANGULAR MATERIAL */
 import { MatDialogModule } from '@angular/material/dialog';
@@ -59,6 +60,9 @@ import { ButtonElementComponent } from './elements/button-element/button-element
 import { GalleryElementComponent } from './elements/gallery-element/gallery-element.component';
 import { CarouselElementComponent } from './elements/carousel-element/carousel-element.component';
 import { MapElementComponent } from './elements/map-element/map-element.component';
+
+/** PROVIDERS */
+import { MiaPageEditorConfig, MIA_PAGE_EDITOR_CONFIG } from './entities/mia-page-editor-config';
 
 
 
@@ -120,6 +124,7 @@ import { MapElementComponent } from './elements/map-element/map-element.componen
 
     // Agency Coda
     MiaFormModule,
+    MiaPageViewerModule,
 
     // Other Libraries
     FlexLayoutModule,
@@ -134,6 +139,12 @@ import { MapElementComponent } from './elements/map-element/map-element.componen
 
     // Modals
     AddElementModalComponent
+  ],
+  providers: [
+    {
+      provide: MIA_PAGE_EDITOR_CONFIG,
+      useClass: MiaPageEditorConfig
+    },
   ]
 })
 export class MiaPageModule { }

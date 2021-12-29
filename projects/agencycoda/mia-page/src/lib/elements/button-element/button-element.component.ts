@@ -1,3 +1,4 @@
+import { ColorSelectorFieldComponent, MiaField } from '@agencycoda/mia-form';
 import { MiaElement } from '@agencycoda/mia-page-core';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -17,19 +18,25 @@ export class ButtonElementComponent extends MiaBaseElementComponent implements O
 
   @ViewChild('actionsComp') actionsComp?: ElementRef;
 
-  constructor(
-    protected dialog: MatDialog
-  ) {
-    super(dialog);
-  }
-
-  ngOnInit(): void {
-    super.ngOnInit();
-  }
-
   public static createElement() {
     let element = new MiaElement();
     element.type = 'element-button';
+    element.data = { title: 'Button' };
+    element.editForm = ButtonElementComponent.getEditForm();
     return element;
+  }
+
+  public static getEditForm() {
+    return [
+      { key: 'tabs-one', type: MiaField.TYPE_TABS, extra: {
+        tabs: [
+          { title: 'Content', fields: [
+            { key: 'title', type: MiaField.TYPE_STRING, label: 'Text' },
+            { key: 'color', type: MiaField.TYPE_CUSTOM, label: 'Color Text', extra: { component: ColorSelectorFieldComponent, colors: ['#F8B725', '#0071BD', '#4B9ED6', '#000', '#FFF'] } },
+            { key: 'background_color', type: MiaField.TYPE_CUSTOM, label: 'Background Color', extra: { component: ColorSelectorFieldComponent, colors: ['#F8B725', '#0071BD', '#4B9ED6', '#000', '#FFF'] } },
+          ] }
+        ]}
+      }
+    ];
   }
 }

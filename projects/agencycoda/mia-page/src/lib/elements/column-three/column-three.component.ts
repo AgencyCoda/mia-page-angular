@@ -12,21 +12,11 @@ import { ColumnOneComponent } from '../column-one/column-one.component';
 })
 export class ColumnThreeComponent extends MiaBaseHasChildElementComponent implements OnInit {
 
-  constructor(
-    protected editorService: MiaPageEditorService,
-    protected dialog: MatDialog
-  ) {
-    super(editorService, dialog);
-  }
-
-  ngOnInit(): void {
-  }
-
-
   public static createElement() {
     let element = new MiaElement();
     element.type = 'column-three';
     element.data = { 
+      full_width: 1,
       elements: [
         ColumnOneComponent.createWithChildren(),
         ColumnOneComponent.createWithChildren(),
@@ -34,5 +24,9 @@ export class ColumnThreeComponent extends MiaBaseHasChildElementComponent implem
       ]
     };
     return element;
+  }
+
+  public static getEditForm() {
+    return ColumnOneComponent.getEditForm();
   }
 }

@@ -1,10 +1,11 @@
 {
   "name": "@agencycoda/mia-page-viewer",
-  "version": "0.0.3",
+  "version": "12.0.12",
   "peerDependencies": {
     "@angular/common": "^12.0.5",
     "@angular/core": "^12.0.5",
-    "@agencycoda/mia-core": ">=11.0.12"
+    "@agencycoda/mia-core": ">=11.0.12",
+    "@agencycoda/mia-page-core": ">=12.0.9"
   },
   "dependencies": {
     "tslib": "^2.1.0"

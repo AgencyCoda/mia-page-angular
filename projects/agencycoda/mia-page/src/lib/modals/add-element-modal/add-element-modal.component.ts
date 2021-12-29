@@ -26,8 +26,7 @@ export class AddElementModalComponent implements OnInit {
     if(editor.component.createElement == undefined){
       return;
     }
-    console.log('llego element');
-    console.log(editor);
+    
     this.dialogRef.close(editor.component.createElement());
   }
 }

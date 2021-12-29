@@ -25,7 +25,12 @@ export class MiaPrintViewComponent implements OnInit {
   }
 
   generateComponent() {
-    const component = this.factoryResolver.resolveComponentFactory(this.viewerService.getComponentById(this.element.type));
+    let componentName = this.viewerService.getComponentById(this.element.type);
+    if(componentName == undefined){
+      return;
+    }
+
+    const component = this.factoryResolver.resolveComponentFactory(componentName);
     
     const view = this.viewContainerRef.createComponent(component);
     (<MiaBaseViewComponent>view.instance).element = this.element;

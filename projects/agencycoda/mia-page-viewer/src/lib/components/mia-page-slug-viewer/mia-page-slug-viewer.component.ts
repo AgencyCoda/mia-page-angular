@@ -1,13 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { MiaPageHttpService, MiaPage } from '@agencycoda/mia-page-core';
 import { tap } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'mia-page-slug-viewer',
   templateUrl: './mia-page-slug-viewer.component.html',
   styleUrls: ['./mia-page-slug-viewer.component.css']
 })
-export class MiaPageSlugViewerComponent implements OnInit {
+export class MiaPageSlugViewerComponent implements OnInit, OnChanges {
 
   @Input() slug!: string;
 
@@ -15,11 +16,18 @@ export class MiaPageSlugViewerComponent implements OnInit {
   isLoading = true;
 
   constructor(
-    protected pageService: MiaPageHttpService
+    protected pageService: MiaPageHttpService,
+    protected navigator: Router
   ) { }
 
   ngOnInit(): void {
     this.loadPage();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if(changes.slug){
+      this.loadPage();
+    }
   }
 
   loadPage() {
@@ -27,6 +35,9 @@ export class MiaPageSlugViewerComponent implements OnInit {
     this.pageService
     .fetchBySlug(this.slug)
     .pipe(tap(page => this.page = page))
-    .subscribe(res => this.isLoading = false);
+    .subscribe(
+      res => this.isLoading = false,
+      error => this.navigator.navigateByUrl('/page-not-found')
+    );
   }
 }

@@ -9,6 +9,9 @@ export class MiaElementActionsComponent implements OnInit {
 
   @Output() clickEdit = new EventEmitter<any>();
   @Output() clickRemove = new EventEmitter<any>();
+  @Output() clickDuplicate = new EventEmitter<any>();
+  @Output() clickMoveUp = new EventEmitter<any>();
+  @Output() clickMoveDown = new EventEmitter<any>();
 
   constructor() { }
 
@@ -21,5 +24,17 @@ export class MiaElementActionsComponent implements OnInit {
 
   onClickRemove() {
     this.clickRemove.emit();
+  }
+
+  onClickDuplicate() {
+    this.clickDuplicate.emit();
+  }
+
+  onClickMoveUp() {
+    this.clickMoveUp.emit();
+  }
+
+  onClickMoveDown() {
+    this.clickMoveDown.emit();
   }
 }

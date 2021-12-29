@@ -1,4 +1,4 @@
-import { MiaElement } from '@agencycoda/mia-page-core';
+import { MiaElement, MiaPage } from '@agencycoda/mia-page-core';
 import { Component, ComponentFactoryResolver, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild, ViewContainerRef } from '@angular/core';
 import { MiaBaseElementComponent } from '../../elements/base-element.component';
 import { MiaEditorElement } from '../../entities/mia-editor-element';
@@ -14,6 +14,9 @@ export class MiaPrintElementComponent implements OnInit {
   @ViewChild('contentColumn') contentColumn?: ElementRef;
 
   @Input() element!: MiaElement;
+  @Input() parent?: MiaElement;
+  @Input() page!: MiaPage;
+
   @Output() clickElement = new EventEmitter<MiaElement>();
   @Output() clickRemove = new EventEmitter<MiaElement>();
 
@@ -28,6 +31,10 @@ export class MiaPrintElementComponent implements OnInit {
   }
 
   generateComponent() {
+    if(this.element == undefined || this.element.type == undefined){
+      return;
+    }
+
     let editor = this.editorService.getEditorById(this.element.type);
 
     if(editor == undefined){
@@ -39,7 +46,9 @@ export class MiaPrintElementComponent implements OnInit {
     this.element.editForm = editor.component.getEditForm();
 
     const view = this.viewContainerRef.createComponent(component);
+    (<MiaBaseElementComponent>view.instance).page = this.page;
     (<MiaBaseElementComponent>view.instance).element = this.element;
+    (<MiaBaseElementComponent>view.instance).parent = this.parent;
     (<MiaBaseElementComponent>view.instance).editor = editor;
     (<MiaBaseElementComponent>view.instance).clickElement = this.clickElement;
     (<MiaBaseElementComponent>view.instance).clickRemove = this.clickRemove;

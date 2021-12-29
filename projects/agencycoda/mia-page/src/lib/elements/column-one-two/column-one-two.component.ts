@@ -1,3 +1,4 @@
+import { MiaField, PositionFieldComponent, SwitchFieldComponent } from '@agencycoda/mia-form';
 import { MiaElement } from '@agencycoda/mia-page-core';
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -12,25 +13,21 @@ import { ColumnOneComponent } from '../column-one/column-one.component';
 })
 export class ColumnOneTwoComponent extends MiaBaseHasChildElementComponent implements OnInit {
 
-  constructor(
-    protected editorService: MiaPageEditorService,
-    protected dialog: MatDialog
-  ) {
-    super(editorService, dialog);
-  }
-
-  ngOnInit(): void {
-  }
-
   public static createElement() {
     let element = new MiaElement();
     element.type = 'column-one-two';
+    element.editForm = ColumnOneTwoComponent.getEditForm();
     element.data = { 
+      full_width: 1,
       elements: [
         ColumnOneComponent.createWithChildren(),
         ColumnOneComponent.createWithChildren(),
       ]
     };
     return element;
+  }
+
+  public static getEditForm() {
+    return ColumnOneComponent.getEditForm();
   }
 }

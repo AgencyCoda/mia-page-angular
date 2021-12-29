@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ViewerPageComponent } from './viewer-page.component';
+import { ButtonViewComponent } from './button-view.component';
 
-describe('ViewerPageComponent', () => {
-  let component: ViewerPageComponent;
-  let fixture: ComponentFixture<ViewerPageComponent>;
+describe('ButtonViewComponent', () => {
+  let component: ButtonViewComponent;
+  let fixture: ComponentFixture<ButtonViewComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ViewerPageComponent ]
+      declarations: [ ButtonViewComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ViewerPageComponent);
+    fixture = TestBed.createComponent(ButtonViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

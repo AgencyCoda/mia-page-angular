@@ -1,1 +1,2 @@
-<mia-page-viewer *ngIf="page" [page]="page"></mia-page-viewer>
+<mia-page-viewer *ngIf="page && !isLoading" [page]="page"></mia-page-viewer>
+<div *ngIf="isLoading" class="loading-viewer"></div>

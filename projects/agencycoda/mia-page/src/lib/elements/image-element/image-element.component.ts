@@ -1,3 +1,4 @@
+import { MiaField } from '@agencycoda/mia-form';
 import { MiaElement } from '@agencycoda/mia-page-core';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -12,19 +13,23 @@ export class ImageElementComponent extends MiaBaseElementComponent implements On
 
   @ViewChild('actionsComp') actionsComp?: ElementRef;
 
-  constructor(
-    protected dialog: MatDialog
-  ) {
-    super(dialog);
-  }
-
-  ngOnInit(): void {
-    super.ngOnInit();
-  }
-
   public static createElement() {
     let element = new MiaElement();
     element.type = 'element-image';
+    element.editForm = ImageElementComponent.getEditForm();
     return element;
+  }
+
+  public static getEditForm() {
+    return [
+      { key: 'tabs-one', type: MiaField.TYPE_TABS, extra: { 
+        tabs: [
+          { title: 'Content', fields: [
+            { key: 'image', type: MiaField.TYPE_FILE_ONE, label: 'Image', classes: 'label-custom' },
+            { key: 'caption', type: MiaField.TYPE_TEXT, label: 'Caption' },
+          ] }
+        ]}
+      }
+    ];
   }
 }

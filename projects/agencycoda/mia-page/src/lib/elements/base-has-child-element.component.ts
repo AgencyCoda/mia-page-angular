@@ -12,13 +12,6 @@ import { MiaBaseElementComponent } from "./base-element.component";
 })
 export class MiaBaseHasChildElementComponent extends MiaBaseElementComponent implements OnInit {
 
-  constructor(
-    protected editorService: MiaPageEditorService,
-    protected dialog: MatDialog
-  ) {
-    super(dialog);
-  }
-    
   onClickAddElement(element: MiaElement) {
     this.editorService
     .showAddElementModal()

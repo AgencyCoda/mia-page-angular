@@ -1,7 +1,9 @@
-<div class="column-elements">
+<div class="column-elements" [ngStyle]="cssStyleMain">
   <div class="container">
 
-    <mia-print-element class="column-print-two" *ngFor="let subelement of element.data.elements" [element]="subelement" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemoveChild($event)"></mia-print-element>
+    <mia-print-element class="column-print-two" *ngFor="let subelement of element.data.elements" [page]="page" [parent]="element" [element]="subelement" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemoveChild($event)"></mia-print-element>
 
   </div>
 </div>
+
+<mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()"></mia-element-actions>
