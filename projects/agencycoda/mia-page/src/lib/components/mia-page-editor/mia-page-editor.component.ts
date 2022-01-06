@@ -22,6 +22,7 @@ export class MiaPageEditorComponent implements OnInit {
   @Input() showHeader = true;
   @Input() showSaveButton = true;
   @Input() showAddButton = true;
+  @Input() disableLoadParams = false;
 
   isLoading = true;
   typePageView = 0; // 0 = Desktop, 1 = Tablet, 2 = Mobile
@@ -99,6 +100,10 @@ export class MiaPageEditorComponent implements OnInit {
    }
 
   loadParams() {
+    if(this.disableLoadParams){
+      return;
+    }
+
     this.route.params.subscribe(params => this.loadPage(params.id));
   }
 
