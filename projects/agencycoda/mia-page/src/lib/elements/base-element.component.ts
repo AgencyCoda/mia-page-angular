@@ -70,6 +70,9 @@ export class MiaBaseElementComponent implements OnInit {
     if(this.element.data.min_height != undefined && this.element.data.min_height != ''){
       this.addCssProperty('min-height', this.element.data.min_height + 'px');
     }
+    if(this.element.data.max_width != undefined && this.element.data.max_width != ''){
+      this.addCssProperty('max-width', this.element.data.max_width + 'px');
+    }
 
     if(this.element.data.background_color != undefined && this.element.data.background_color != ''){
       this.addCssProperty('background-color', this.element.data.background_color);
