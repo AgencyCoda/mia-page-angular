@@ -1,4 +1,4 @@
-import { MiaField, SwitchFieldComponent } from '@agencycoda/mia-form';
+import { MiaField, SwitchFieldComponent, TabsFieldComponent } from '@agencycoda/mia-form';
 import { PositionFieldComponent } from '@agencycoda/mia-form';
 import { MiaElement } from '@agencycoda/mia-page-core';
 import { Component, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
@@ -23,7 +23,7 @@ export class ColumnOneComponent extends MiaBaseHasChildElementComponent implemen
 
   public static getEditForm() {
     return [
-      { key: 'tabs-one', type: MiaField.TYPE_TABS, extra: {
+      { key: 'tabs-one', type: MiaField.TYPE_CUSTOM, extra: { component: TabsFieldComponent,
         tabs: [
           { title: 'Format', fields: [
             { key: 'min_height', type: MiaField.TYPE_STRING, label: 'Min Height', classes: 'label-custom' },

@@ -1,4 +1,4 @@
-import { MiaField, SwitchFieldComponent } from '@agencycoda/mia-form';
+import { MiaField, SwitchFieldComponent, TabsFieldComponent } from '@agencycoda/mia-form';
 import { MiaElement } from '@agencycoda/mia-page-core';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -23,7 +23,7 @@ export class CodeElementComponent extends MiaBaseElementComponent implements OnI
 
   public static getEditForm() {
     return [
-      { key: 'tabs-one', type: MiaField.TYPE_TABS, extra: { 
+      { key: 'tabs-one', type: MiaField.TYPE_CUSTOM, extra: { component: TabsFieldComponent,
         tabs: [
           { title: 'Content', fields: [
             { key: 'mode', type: MiaField.TYPE_SELECT, label: 'Mode', extra: {

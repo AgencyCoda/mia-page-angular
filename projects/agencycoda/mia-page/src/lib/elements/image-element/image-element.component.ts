@@ -1,4 +1,4 @@
-import { MiaField } from '@agencycoda/mia-form';
+import { MiaField, TabsFieldComponent } from '@agencycoda/mia-form';
 import { MiaElement } from '@agencycoda/mia-page-core';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -22,7 +22,7 @@ export class ImageElementComponent extends MiaBaseElementComponent implements On
 
   public static getEditForm() {
     return [
-      { key: 'tabs-one', type: MiaField.TYPE_TABS, extra: { 
+      { key: 'tabs-one', type: MiaField.TYPE_CUSTOM, extra: { component: TabsFieldComponent,
         tabs: [
           { title: 'Content', fields: [
             { key: 'image', type: MiaField.TYPE_FILE_ONE, label: 'Image', classes: 'label-custom' },

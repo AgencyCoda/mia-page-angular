@@ -1,4 +1,4 @@
-import { ColorSelectorFieldComponent, MiaField } from '@agencycoda/mia-form';
+import { ColorSelectorFieldComponent, MiaField, TabsFieldComponent } from '@agencycoda/mia-form';
 import { MiaElement } from '@agencycoda/mia-page-core';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -22,7 +22,7 @@ export class DividerElementComponent extends MiaBaseElementComponent implements 
 
   public static getEditForm() {
     return [
-      { key: 'tabs-one', type: MiaField.TYPE_TABS, extra: {
+      { key: 'tabs-one', type: MiaField.TYPE_CUSTOM, extra: { component: TabsFieldComponent,
         tabs: [
           { title: 'Content', fields: [
             { key: 'background_color', type: MiaField.TYPE_CUSTOM, label: 'Background Color', extra: { component: ColorSelectorFieldComponent, colors: ['#F8B725', '#0071BD', '#4B9ED6', '#000', '#FFF'] } },
