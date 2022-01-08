@@ -1,0 +1,156 @@
+.news-element{
+  padding: 1em;
+}
+
+.news-element .layout{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.news-element .article{
+  width: calc(33.3% - 1.33em);
+}
+
+.news-element::before{
+  content: 'News';
+}
+
+.article .image-container{
+  width: 100%;
+  height: 200px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1em;
+  display: block;
+}
+
+.article .image-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article .body h3{
+  font-size: 1.25em;
+  margin: 0;
+}
+
+.article .body h3 a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.article .body h3 a:hover{
+  color: blue;
+  text-decoration: underline;
+}
+
+.article .body .description{
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.article .body .row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.article .body .row .user{
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-right: 2em;
+}
+
+.article .body .row .user .avatar{
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.article .body .row .user .avatar img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article .body .row .date{
+  margin-right: 2em;
+}
+
+.article .body button{
+  display: block;
+  margin-left: auto;
+}
+
+.btn-load{
+  display: block;
+  margin: auto;
+  padding: 0.6em 2.5em;
+  background-color: #CEECFF;
+  color: #0071BD;
+  transition: all 0.3s ease;
+  margin-top: 2.5em;
+}
+
+.btn-load:hover{
+  background-color: #0071BD;
+  color: white;
+}
+
+.loading {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin: 1.5em;
+  cursor: wait;
+}
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #000;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 599px) {
+  .news-element .article{
+    width: 100%;
+  }
+}
+
+@media (min-width: 599px) and (max-width: 899px) {
+  .news-element .article{
+    width: calc(50% - 1em);
+  }
+}

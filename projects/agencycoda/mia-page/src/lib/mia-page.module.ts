@@ -60,6 +60,7 @@ import { ButtonElementComponent } from './elements/button-element/button-element
 import { GalleryElementComponent } from './elements/gallery-element/gallery-element.component';
 import { CarouselElementComponent } from './elements/carousel-element/carousel-element.component';
 import { MapElementComponent } from './elements/map-element/map-element.component';
+import { NewsElementComponent } from './elements/news-element/news-element.component';
 
 /** PROVIDERS */
 import { MiaPageEditorConfig, MIA_PAGE_EDITOR_CONFIG } from './entities/mia-page-editor-config';
@@ -103,6 +104,7 @@ import { MiaPageEditorConfig, MIA_PAGE_EDITOR_CONFIG } from './entities/mia-page
     GalleryElementComponent,
     CarouselElementComponent,
     MapElementComponent,
+    NewsElementComponent,
   ],
   imports: [
     // Angular Core
