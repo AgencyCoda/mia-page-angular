@@ -11,7 +11,7 @@ import { MiaPageViewerModule, MiaViewerDefault, MIA_PAGE_VIEWER_CONFIG } from 'p
 import { MIA_AUTH_PROVIDER } from '@agencycoda/mia-auth';
 import { QuillModule } from 'ngx-quill';
 import { MiaPageDefault, MiaPageModule, MIA_PAGE_EDITOR_CONFIG } from 'projects/agencycoda/mia-page/src/public-api';
-import { MIA_GOOGLE_STORAGE_PROVIDER } from '@agencycoda/mia-core';
+import { MIA_CORE_PROVIDER, MIA_GOOGLE_STORAGE_PROVIDER } from '@agencycoda/mia-core';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import { MIA_GOOGLE_STORAGE_PROVIDER } from '@agencycoda/mia-core';
   ],
   providers: [
     {
-      provide: MIA_AUTH_PROVIDER,
+      provide: MIA_CORE_PROVIDER,
       useValue: {
         baseUrl: 'https://iron-radio-322514.uc.r.appspot.com/'
         //baseUrl: 'http://0.0.0.0:8080/'
