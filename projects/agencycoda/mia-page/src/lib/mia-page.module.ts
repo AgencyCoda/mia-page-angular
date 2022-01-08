@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 
 /** AGENCY CODA */
 import { MiaFormModule } from '@agencycoda/mia-form';
-import { MiaPageViewerModule } from '@agencycoda/mia-page-viewer';
+import { MiaPageViewerModule, MiaViewerDefault, MIA_PAGE_VIEWER_CONFIG } from '@agencycoda/mia-page-viewer';
 
 /** ANGULAR MATERIAL */
 import { MatDialogModule } from '@angular/material/dialog';
@@ -146,6 +146,10 @@ import { MiaPageEditorConfig, MIA_PAGE_EDITOR_CONFIG } from './entities/mia-page
     {
       provide: MIA_PAGE_EDITOR_CONFIG,
       useClass: MiaPageEditorConfig
+    },
+    {
+      provide: MIA_PAGE_VIEWER_CONFIG,
+      useValue: MiaViewerDefault.configDefault()
     },
   ]
 })
