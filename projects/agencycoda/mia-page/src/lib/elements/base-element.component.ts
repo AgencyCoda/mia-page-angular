@@ -43,6 +43,10 @@ export class MiaBaseElementComponent implements OnInit {
     // Reset
     this.cssStyleMain = {};
 
+    if(this.element.data.background_color != undefined && this.element.data.background_color != ''){
+      this.addCssProperty('background-color', this.element.data.background_color);
+    }
+
     if(this.element.data.background_image != undefined && this.element.data.background_image != ''){
       this.addCssProperty('background-image', 'url("' + this.element.data.background_image.url + '")');
       this.addCssProperty('background-size', 'cover');
@@ -80,6 +84,10 @@ export class MiaBaseElementComponent implements OnInit {
     }
     if(this.element.data.height != undefined && this.element.data.height != ''){
       this.addCssProperty('height', this.element.data.height + 'px');
+    }
+
+    if(this.element.data.border_radius != undefined && this.element.data.border_radius != ''){
+      this.addCssProperty('border-radius', this.element.data.border_radius + 'px');
     }
   }
   /** End CSS Methods */

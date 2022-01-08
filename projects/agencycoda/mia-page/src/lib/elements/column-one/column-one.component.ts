@@ -1,4 +1,4 @@
-import { MiaField, SwitchFieldComponent, TabsFieldComponent } from '@agencycoda/mia-form';
+import { ColorSelectorFieldComponent, MiaField, SwitchFieldComponent, TabsFieldComponent } from '@agencycoda/mia-form';
 import { PositionFieldComponent } from '@agencycoda/mia-form';
 import { MiaElement } from '@agencycoda/mia-page-core';
 import { Component, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
@@ -32,8 +32,10 @@ export class ColumnOneComponent extends MiaBaseHasChildElementComponent implemen
             { key: 'margin', type: MiaField.TYPE_CUSTOM, extra: { component: PositionFieldComponent } },
             { key: 'padding_title', type: MiaField.TYPE_LABEL, label: 'Padding', classes: 'label-custom' },
             { key: 'padding', type: MiaField.TYPE_CUSTOM, extra: { component: PositionFieldComponent } },
+            { key: 'border_radius', type: MiaField.TYPE_STRING, label: 'Border Radius', classes: 'label-custom' },
           ] },
           { title: 'Content', fields: [
+            { key: 'background_color', type: MiaField.TYPE_CUSTOM, label: 'Background Color', extra: { component: ColorSelectorFieldComponent, colors: ['#000', '#333', '#eee', '#ddd'] } },
             { key: 'background_image', type: MiaField.TYPE_FILE_ONE, label: 'Background Image', classes: 'label-custom' },
           ] }
         ]}
