@@ -25,9 +25,6 @@ export class ColumnOneComponent extends MiaBaseHasChildElementComponent implemen
     return [
       { key: 'tabs-one', type: MiaField.TYPE_CUSTOM, extra: { component: TabsFieldComponent,
         tabs: [
-          { title: 'Format', fields: [
-            { key: 'min_height', type: MiaField.TYPE_STRING, label: 'Min Height', classes: 'label-custom' },
-          ] },
           { title: 'Design', fields: [
             { key: 'full_width', type: MiaField.TYPE_CUSTOM, label: 'Full Width', extra: { component: SwitchFieldComponent } },
             { key: 'min_height', type: MiaField.TYPE_STRING, label: 'Min Height', classes: 'label-custom' },

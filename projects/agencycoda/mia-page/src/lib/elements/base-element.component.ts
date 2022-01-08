@@ -74,6 +74,13 @@ export class MiaBaseElementComponent implements OnInit {
     if(this.element.data.color != undefined && this.element.data.color != ''){
       this.addCssProperty('color', this.element.data.color);
     }
+
+    if(this.element.data.width != undefined && this.element.data.width != ''){
+      this.addCssProperty('width', this.element.data.width + 'px');
+    }
+    if(this.element.data.height != undefined && this.element.data.height != ''){
+      this.addCssProperty('height', this.element.data.height + 'px');
+    }
   }
   /** End CSS Methods */
 

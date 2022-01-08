@@ -24,6 +24,10 @@ export class ImageElementComponent extends MiaBaseElementComponent implements On
     return [
       { key: 'tabs-one', type: MiaField.TYPE_CUSTOM, extra: { component: TabsFieldComponent,
         tabs: [
+          { title: 'Design', fields: [
+            { key: 'width', type: MiaField.TYPE_STRING, label: 'Width', },
+            { key: 'height', type: MiaField.TYPE_STRING, label: 'Height' },
+          ] },
           { title: 'Content', fields: [
             { key: 'image', type: MiaField.TYPE_FILE_ONE, label: 'Image', classes: 'label-custom' },
             { key: 'caption', type: MiaField.TYPE_TEXT, label: 'Caption' },
