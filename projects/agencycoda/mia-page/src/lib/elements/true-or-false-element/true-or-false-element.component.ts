@@ -15,7 +15,7 @@ export class TrueOrFalseElementComponent extends MiaBaseElementComponent impleme
   public static createElement() {
     let element = new MiaElement();
     element.type = 'element-true-or-false';
-    element.data = { value_correct: 0 };
+    element.data = { value_correct: 0, points: 0 };
     element.editForm = TrueOrFalseElementComponent.getEditForm();
     return element;
   }

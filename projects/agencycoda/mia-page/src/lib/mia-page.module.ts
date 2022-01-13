@@ -65,6 +65,7 @@ import { NewsElementComponent } from './elements/news-element/news-element.compo
 /** PROVIDERS */
 import { MiaPageEditorConfig, MIA_PAGE_EDITOR_CONFIG } from './entities/mia-page-editor-config';
 import { TrueOrFalseElementComponent } from './elements/true-or-false-element/true-or-false-element.component';
+import { FillBlanksElementComponent } from './elements/fill-blanks-element/fill-blanks-element.component';
 
 
 
@@ -107,6 +108,7 @@ import { TrueOrFalseElementComponent } from './elements/true-or-false-element/tr
     MapElementComponent,
     NewsElementComponent,
     TrueOrFalseElementComponent,
+    FillBlanksElementComponent,
   ],
   imports: [
     // Angular Core
