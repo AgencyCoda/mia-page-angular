@@ -19,6 +19,7 @@ import { GalleryElementComponent } from "../elements/gallery-element/gallery-ele
 import { CarouselElementComponent } from "../elements/carousel-element/carousel-element.component";
 import { MapElementComponent } from "../elements/map-element/map-element.component";
 import { NewsElementComponent } from "../elements/news-element/news-element.component";
+import { TrueOrFalseElementComponent } from "../elements/true-or-false-element/true-or-false-element.component";
 
 export class MiaPageDefault {
     static configDefault() {
@@ -54,6 +55,7 @@ export class MiaPageDefault {
               { id: 'element-carousel', title: 'Carousel', type: 0, icon: 'view_carousel', component: CarouselElementComponent },
               { id: 'element-map', title: 'Map', type: 0, icon: 'location_on', component: MapElementComponent },
               { id: 'element-news', title: 'News', type: 0, icon: 'article', component: NewsElementComponent },
+              { id: 'element-true-or-false', title: 'True or False', type: 0, icon: 'article', component: TrueOrFalseElementComponent },
             ]
           },
           {
