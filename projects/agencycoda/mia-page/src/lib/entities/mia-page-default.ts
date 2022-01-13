@@ -21,6 +21,7 @@ import { MapElementComponent } from "../elements/map-element/map-element.compone
 import { NewsElementComponent } from "../elements/news-element/news-element.component";
 import { TrueOrFalseElementComponent } from "../elements/true-or-false-element/true-or-false-element.component";
 import { FillBlanksElementComponent } from "../elements/fill-blanks-element/fill-blanks-element.component";
+import { MultipleChooiseElementComponent } from "../elements/multiple-chooise-element/multiple-chooise-element.component";
 
 export class MiaPageDefault {
     static configDefault() {
@@ -58,6 +59,7 @@ export class MiaPageDefault {
               { id: 'element-news', title: 'News', type: 0, icon: 'article', component: NewsElementComponent },
               { id: 'element-true-or-false', title: 'True or False', type: 0, icon: 'article', component: TrueOrFalseElementComponent },
               { id: 'element-fill-blanks', title: 'Fill in the blanks', type: 0, icon: 'article', component: FillBlanksElementComponent },
+              { id: 'element-multiple-choice', title: 'Multiple Choice', type: 0, icon: 'article', component: MultipleChooiseElementComponent },
             ]
           },
           {

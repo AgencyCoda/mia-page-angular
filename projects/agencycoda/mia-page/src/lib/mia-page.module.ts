@@ -20,6 +20,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 /** OTHER LIBRARIES */
@@ -67,6 +68,7 @@ import { NewsElementComponent } from './elements/news-element/news-element.compo
 import { MiaPageEditorConfig, MIA_PAGE_EDITOR_CONFIG } from './entities/mia-page-editor-config';
 import { TrueOrFalseElementComponent } from './elements/true-or-false-element/true-or-false-element.component';
 import { FillBlanksElementComponent } from './elements/fill-blanks-element/fill-blanks-element.component';
+import { MultipleChooiseElementComponent } from './elements/multiple-chooise-element/multiple-chooise-element.component';
 
 
 
@@ -111,6 +113,7 @@ import { FillBlanksElementComponent } from './elements/fill-blanks-element/fill-
     NewsElementComponent,
     TrueOrFalseElementComponent,
     FillBlanksElementComponent,
+    MultipleChooiseElementComponent,
   ],
   imports: [
     // Angular Core
@@ -130,6 +133,7 @@ import { FillBlanksElementComponent } from './elements/fill-blanks-element/fill-
     MatProgressBarModule,
     MatDividerModule,
     MatSliderModule,
+    MatCheckboxModule,
 
     // Agency Coda
     MiaFormModule,

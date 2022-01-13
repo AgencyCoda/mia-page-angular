@@ -1,0 +1,12 @@
+<div class="multiple-choice-element" [ngClass]="{'is-element-active': element.isSelected}">
+    <div class="list">
+        <div *ngFor="let option of element.data.options" class="item">
+            <mat-checkbox [(ngModel)]="option.is_correct" class="example-margin"></mat-checkbox>
+            <input type="text" [(ngModel)]="option.title" />
+            <button (click)="onClickRemoveOption(option)">X</button>
+        </div>
+        <button (click)="onClickAddOption()">Add Option</button>
+    </div>
+</div>
+
+<mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()"></mia-element-actions>
