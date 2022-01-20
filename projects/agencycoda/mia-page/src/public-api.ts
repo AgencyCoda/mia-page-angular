@@ -24,6 +24,7 @@ export * from './lib/elements/image-element/image-element.component';
  * Components
  */
 export * from './lib/components/mia-page-editor/mia-page-editor.component';
+export * from './lib/components/mia-container-print-element/mia-container-print-element.component';
 export * from './lib/components/mia-print-element/mia-print-element.component';
 export * from './lib/components/mia-element-selector/mia-element-selector.component';
 export * from './lib/components/mia-page-management/mia-page-management.component';
