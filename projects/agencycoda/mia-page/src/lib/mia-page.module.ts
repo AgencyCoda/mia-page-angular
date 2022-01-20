@@ -1,7 +1,6 @@
 /** ANGULAR */
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DragDropModule } from '@angular/cdk/drag-drop';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
@@ -21,6 +20,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 /** OTHER LIBRARIES */
@@ -69,6 +70,7 @@ import { MiaPageEditorConfig, MIA_PAGE_EDITOR_CONFIG } from './entities/mia-page
 import { TrueOrFalseElementComponent } from './elements/true-or-false-element/true-or-false-element.component';
 import { FillBlanksElementComponent } from './elements/fill-blanks-element/fill-blanks-element.component';
 import { MultipleChooiseElementComponent } from './elements/multiple-chooise-element/multiple-chooise-element.component';
+import { MiaContainerPrintElementComponent } from './components/mia-container-print-element/mia-container-print-element.component';
 
 
 
@@ -114,15 +116,16 @@ import { MultipleChooiseElementComponent } from './elements/multiple-chooise-ele
     TrueOrFalseElementComponent,
     FillBlanksElementComponent,
     MultipleChooiseElementComponent,
+    MiaContainerPrintElementComponent,
   ],
   imports: [
     // Angular Core
     CommonModule,
     FormsModule,
-    DragDropModule,
     RouterModule,
 
     // Angular Material
+    DragDropModule,
     MatDialogModule,
     MatTabsModule,
     MatIconModule,
@@ -134,6 +137,7 @@ import { MultipleChooiseElementComponent } from './elements/multiple-chooise-ele
     MatDividerModule,
     MatSliderModule,
     MatCheckboxModule,
+    MatTooltipModule,
 
     // Agency Coda
     MiaFormModule,

@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { MiaElement } from '@agencycoda/mia-page-core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'mia-element-actions',
@@ -7,13 +8,17 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class MiaElementActionsComponent implements OnInit {
 
+  @Input() element?: MiaElement;
+
   @Output() clickEdit = new EventEmitter<any>();
   @Output() clickRemove = new EventEmitter<any>();
   @Output() clickDuplicate = new EventEmitter<any>();
   @Output() clickMoveUp = new EventEmitter<any>();
   @Output() clickMoveDown = new EventEmitter<any>();
 
-  constructor() { }
+  constructor(
+    protected elementRef: ElementRef
+  ) { }
 
   ngOnInit(): void {
   }
@@ -36,5 +41,39 @@ export class MiaElementActionsComponent implements OnInit {
 
   onClickMoveDown() {
     this.clickMoveDown.emit();
+  }
+
+  onClickPositionAbsolute() {
+    if(!this.element){
+      return;
+    }
+    if(!this.element.data){
+      this.element.data = {};
+    }
+    this.element.data.position = 1;
+  }
+
+  onClickPositionNormal() {
+    if(!this.element){
+      return;
+    }
+    if(!this.element.data){
+      this.element.data = {};
+    }
+
+    this.element.data.position = 0;
+    this.elementRef.nativeElement.parentElement.style.removeProperty('transform');
+  }
+
+  isPositionAbsolute(): boolean {
+    if(!this.element){
+      return false;
+    }
+
+    if(this.element.data && this.element.data.position == 1){
+      return true;
+    }
+
+    return false;
   }
 }

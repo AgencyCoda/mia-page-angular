@@ -1,6 +1,6 @@
 
-<div class="image-element" [ngClass]="{'is-element-active': element.isSelected}">
-  <mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()"></mia-element-actions>
+<div class="image-element" [ngClass]="{'is-element-active': element.isSelected}" cdkDrag>
+  <mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()" [element]="element"></mia-element-actions>
 
   <div class="image-container">
     <img [src]="element.data.image != undefined ? element.data.image.url : 'https://images.unsplash.com/photo-1593642634367-d91a135587b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80'" alt="" [ngStyle]="cssStyleMain" />
