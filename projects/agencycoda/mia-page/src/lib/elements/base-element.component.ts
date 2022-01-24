@@ -152,6 +152,18 @@ export class MiaBaseElementComponent implements OnInit {
     e.stopPropagation();
   }
 
+  isPositionAbsolute(): boolean {
+    if(!this.element){
+      return false;
+    }
+
+    if(this.element.data && this.element.data.position == 1){
+      return true;
+    }
+
+    return false;
+  }
+
   public static createElement() {
     let element = new MiaElement();
     return element;

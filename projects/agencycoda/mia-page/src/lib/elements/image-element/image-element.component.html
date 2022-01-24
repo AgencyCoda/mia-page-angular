@@ -1,5 +1,5 @@
 
-<div class="image-element" [ngClass]="{'is-element-active': element.isSelected}" cdkDrag>
+<div class="image-element" [ngClass]="{'is-element-active': element.isSelected}" cdkDrag [cdkDragDisabled]="!isPositionAbsolute()">
   <mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()" [element]="element"></mia-element-actions>
 
   <div class="image-container">
