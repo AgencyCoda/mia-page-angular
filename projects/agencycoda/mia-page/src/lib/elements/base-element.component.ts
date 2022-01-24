@@ -118,7 +118,7 @@ export class MiaBaseElementComponent implements OnInit {
 
     return this.dialog.open(MiaFormModalComponent, {
       width: '500px',
-      panelClass: 'modal-full-width-mobile',
+      panelClass: ['modal-full-width-mobile', 'modal-edit-form-element'],
       data: data
     }).afterClosed().subscribe(res => {
       this.element.isSelected = false;

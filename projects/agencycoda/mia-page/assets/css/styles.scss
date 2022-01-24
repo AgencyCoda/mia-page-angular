@@ -233,3 +233,12 @@ mat-dialog-content{
     }
   }
 }
+
+.add-element-modal, .modal-edit-form-element {
+  .mat-dialog-container, mat-dialog-container { padding: 0;}
+}
+.modal-edit-form-element {
+  .content {
+    padding: 0 !important;
+  }
+}

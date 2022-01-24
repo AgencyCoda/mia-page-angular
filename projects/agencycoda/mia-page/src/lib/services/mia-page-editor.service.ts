@@ -55,7 +55,7 @@ export class MiaPageEditorService {
 
   showAddElementModal(): Observable<any> {
     return this.dialog.open(AddElementModalComponent, {
-
+      'panelClass': 'add-element-modal'
     }).afterClosed().pipe(nil());
   }
 
