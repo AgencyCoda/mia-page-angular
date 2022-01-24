@@ -20,4 +20,11 @@ export class MiaContainerPrintElementComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onClickElement(element: MiaElement) {
+    this.clickElement.emit(element);
+  }
+
+  onClickRemove() {
+    this.clickRemove.emit(this.element);
+  }
 }
