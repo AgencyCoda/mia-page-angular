@@ -36,12 +36,14 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
+    padding-bottom: 5em;
+    box-sizing: border-box;
     overflow: hidden !important;
 
     .btn-add-section{
       display: block;
       margin: auto;
-      margin-top: 2em;
+      margin-top: 3em;
       /* transform: translateY(-20px); */
       z-index: 4;
       border-radius: 200px;

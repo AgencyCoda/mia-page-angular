@@ -8,14 +8,14 @@
       <button *ngIf="isPositionAbsolute()" mat-icon-button matTooltip="Move to Back"><mat-icon>flip_to_back</mat-icon></button>
       <button *ngIf="isPositionAbsolute()" mat-icon-button matTooltip="Move" cdkDragHandle><mat-icon>open_with</mat-icon></button>
 
-      <button mat-icon-button matTooltip="Edit" (click)="onClickEdit()"><mat-icon>create</mat-icon></button>
-      
-      <button *ngIf="!isPositionAbsolute()" mat-icon-button matTooltip="Duplicate" (click)="onClickDuplicate()"><mat-icon>content_copy</mat-icon></button>
+      <button mat-icon-button matTooltip="Edit" (click)="onClickEdit()" class="btn-edit"><mat-icon>create</mat-icon></button>
 
-      <button *ngIf="!isPositionAbsolute()" mat-icon-button matTooltip="Up" (click)="onClickMoveUp()"><mat-icon>arrow_upward</mat-icon></button>
-      <button *ngIf="!isPositionAbsolute()" mat-icon-button matTooltip="Down" (click)="onClickMoveDown()"><mat-icon>arrow_downward</mat-icon></button>
+      <button *ngIf="!isPositionAbsolute()" mat-icon-button matTooltip="Duplicate" (click)="onClickDuplicate()" class="btn-duplicate"><mat-icon>content_copy</mat-icon></button>
 
-      <button mat-icon-button matTooltip="Delete" color="warn" (click)="onClickRemove()"><mat-icon>delete</mat-icon></button>
+      <button *ngIf="!isPositionAbsolute()" mat-icon-button matTooltip="Up" (click)="onClickMoveUp()" class="btn-up"><mat-icon>arrow_upward</mat-icon></button>
+      <button *ngIf="!isPositionAbsolute()" mat-icon-button matTooltip="Down" (click)="onClickMoveDown()" class="btn-down"><mat-icon>arrow_downward</mat-icon></button>
+
+      <button mat-icon-button matTooltip="Delete" color="warn" (click)="onClickRemove()" class="btn-delete"><mat-icon>delete</mat-icon></button>
     </div>
 
 </div>
