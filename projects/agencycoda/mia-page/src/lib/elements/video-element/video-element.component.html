@@ -1,6 +1,11 @@
 
 <div class="video-element" [ngClass]="{'is-element-active': element.isSelected}">
-  <p>video-element works!</p>
-  <mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()"></mia-element-actions>
+  
+  <video [controls]="element.data.controls == 1" [autoplay]="element.data.autoplay == 1" [loop]="element.data.loop == 1" [ngStyle]="cssVideoElement">
+    <source [src]="urlVideo()">
+  Your browser does not support the video tag.
+  </video>
+
+  <mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()" [element]="element"></mia-element-actions>
 </div>
 
