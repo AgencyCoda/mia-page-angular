@@ -96,7 +96,13 @@ mia-column-two-one, lib-column-two-one{
   }
 }
 
-.image-element,.text-element,.button-element,.video-element,.divider-element,.news-element{
+.image-element,
+.text-element,
+.button-element,
+.video-element,
+.divider-element,
+.news-element,
+.code-element{
   border: 2px solid transparent;
   transition: all 0.3s ease;
   position: relative;

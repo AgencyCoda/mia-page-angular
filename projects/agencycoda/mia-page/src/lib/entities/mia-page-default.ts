@@ -44,7 +44,7 @@ export class MiaPageDefault {
               { id: 'element-image', title: 'Image', type: 0, icon: 'image', component: ImageElementComponent },
               { id: 'element-video', title: 'Video', type: 0, icon: 'video_library', component: VideoElementComponent },
               { id: 'element-audio', title: 'Audio', type: 0, icon: 'audiotrack', component: AudioElementComponent },
-              { id: 'element-list', title: 'List', type: 0, icon: 'format_list_numbered', component: ListElementComponent },
+              //{ id: 'element-list', title: 'List', type: 0, icon: 'format_list_numbered', component: ListElementComponent },
               { id: 'element-code', title: 'Code', type: 0, icon: 'code', component: CodeElementComponent },
               { id: 'element-divider', title: 'Line', type: 0, icon: 'remove', component: DividerElementComponent },
               { id: 'element-quote', title: 'Quote', type: 0, icon: 'format_quote', component: QuoteElementComponent },
@@ -60,14 +60,14 @@ export class MiaPageDefault {
               { id: 'element-multiple-choice', title: 'Multiple Choice', type: 0, icon: 'article', component: MultipleChooiseElementComponent },
             ]
           },
-          {
+          /*{
             title: 'Custom',
             has_search: true,
             has_group: true,
             items: [
               { id: 'custom-headline', title: 'headline 1', type: 1, image: 'assets/mia_elements/element_column_one.png', group: 'Headlines' },
             ]
-          },
+          },*/
         ]
       }
     };

@@ -1,3 +1,6 @@
-<p>code-element works!</p>
+<div class="code-element" [ngClass]="{'is-element-active': element.isSelected}">
+    <div class="code-content" [innerHTML]="safeHtml()">
 
-<mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()"></mia-element-actions>
+    </div>
+    <mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()" [element]="element"></mia-element-actions>
+</div>
