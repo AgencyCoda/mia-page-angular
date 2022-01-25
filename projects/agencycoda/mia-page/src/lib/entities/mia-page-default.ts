@@ -7,10 +7,8 @@ import { TextElementComponent } from "../elements/text-element/text-element.comp
 import { ImageElementComponent } from "../elements/image-element/image-element.component";
 import { VideoElementComponent } from "../elements/video-element/video-element.component";
 import { AudioElementComponent } from "../elements/audio-element/audio-element.component";
-import { ListElementComponent } from "../elements/list-element/list-element.component";
 import { CodeElementComponent } from "../elements/code-element/code-element.component";
 import { DividerElementComponent } from "../elements/divider-element/divider-element.component";
-import { QuoteElementComponent } from "../elements/quote-element/quote-element.component";
 import { SpaceElementComponent } from "../elements/space-element/space-element.component";
 import { EmbedElementComponent } from "../elements/embed-element/embed-element.component";
 import { ButtonElementComponent } from "../elements/button-element/button-element.component";
@@ -44,12 +42,10 @@ export class MiaPageDefault {
               { id: 'element-image', title: 'Image', type: 0, icon: 'image', component: ImageElementComponent },
               { id: 'element-video', title: 'Video', type: 0, icon: 'video_library', component: VideoElementComponent },
               { id: 'element-audio', title: 'Audio', type: 0, icon: 'audiotrack', component: AudioElementComponent },
-              //{ id: 'element-list', title: 'List', type: 0, icon: 'format_list_numbered', component: ListElementComponent },
               { id: 'element-code', title: 'Code', type: 0, icon: 'code', component: CodeElementComponent },
               { id: 'element-divider', title: 'Line', type: 0, icon: 'remove', component: DividerElementComponent },
-              { id: 'element-quote', title: 'Quote', type: 0, icon: 'format_quote', component: QuoteElementComponent },
               { id: 'element-space', title: 'Space', type: 0, icon: 'check_box_outline_blank', component: SpaceElementComponent },
-              { id: 'element-embed', title: 'Embed', type: 0, icon: 'integration_instructions', component: EmbedElementComponent },
+              //{ id: 'element-embed', title: 'Embed', type: 0, icon: 'integration_instructions', component: EmbedElementComponent },
               { id: 'element-button', title: 'Button', type: 0, icon: 'check_box_outline', component: ButtonElementComponent },
               { id: 'element-gallery', title: 'Gallery', type: 0, icon: 'collections', component: GalleryElementComponent },
               { id: 'element-carousel', title: 'Carousel', type: 0, icon: 'view_carousel', component: CarouselElementComponent },
