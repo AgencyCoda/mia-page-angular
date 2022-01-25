@@ -1,1 +1,4 @@
-<p>space-element works!</p>
+<div class="space-element" [ngStyle]="cssStyleMain" [ngClass]="{'is-element-active': element.isSelected}">
+
+    <mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()" [element]="element"></mia-element-actions>
+</div>
