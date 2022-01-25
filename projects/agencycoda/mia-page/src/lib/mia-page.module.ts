@@ -55,7 +55,6 @@ import { AudioElementComponent } from './elements/audio-element/audio-element.co
 import { ListElementComponent } from './elements/list-element/list-element.component';
 import { CodeElementComponent } from './elements/code-element/code-element.component';
 import { DividerElementComponent } from './elements/divider-element/divider-element.component';
-import { QuoteElementComponent } from './elements/quote-element/quote-element.component';
 import { SpaceElementComponent } from './elements/space-element/space-element.component';
 import { EmbedElementComponent } from './elements/embed-element/embed-element.component';
 import { ButtonElementComponent } from './elements/button-element/button-element.component';
@@ -103,7 +102,6 @@ import { MiaContainerPrintElementComponent } from './components/mia-container-pr
     ListElementComponent,
     CodeElementComponent,
     DividerElementComponent,
-    QuoteElementComponent,
     SpaceElementComponent,
     EmbedElementComponent,
     ButtonElementComponent,
