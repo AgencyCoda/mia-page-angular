@@ -42,7 +42,6 @@ import { MiaManagementDeletedSidebarComponent } from './components/mia-managemen
 import { SeoPreviewBoxComponent } from './components/seo-preview-box/seo-preview-box.component';
 
 /** ELEMENTS */
-import { TitleElementComponent } from './elements/title-element/title-element.component';
 import { RowElementComponent } from './elements/row-element/row-element.component';
 import { ColumnOneComponent } from './elements/column-one/column-one.component';
 import { TextElementComponent } from './elements/text-element/text-element.component';
@@ -87,7 +86,6 @@ import { MiaContainerPrintElementComponent } from './components/mia-container-pr
     MiaManagementDeletedSidebarComponent,
     SeoPreviewBoxComponent,
     // Elements
-    TitleElementComponent,
     RowElementComponent,
     ImageElementComponent,
     VideoElementComponent,

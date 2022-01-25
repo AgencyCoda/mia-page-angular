@@ -6,7 +6,6 @@ import { ColumnOneComponent } from "../elements/column-one/column-one.component"
 import { TextElementComponent } from "../elements/text-element/text-element.component";
 import { ImageElementComponent } from "../elements/image-element/image-element.component";
 import { VideoElementComponent } from "../elements/video-element/video-element.component";
-import { TitleElementComponent } from "../elements/title-element/title-element.component";
 import { AudioElementComponent } from "../elements/audio-element/audio-element.component";
 import { ListElementComponent } from "../elements/list-element/list-element.component";
 import { CodeElementComponent } from "../elements/code-element/code-element.component";
@@ -41,7 +40,6 @@ export class MiaPageDefault {
             title: 'Elements',
             has_search: true,
             items: [
-              { id: 'element-title', title: 'Heading', type: 0, icon: 'title', component: TitleElementComponent },
               { id: 'element-text', title: 'Text', type: 0, icon: 'format_size', component: TextElementComponent },
               { id: 'element-image', title: 'Image', type: 0, icon: 'image', component: ImageElementComponent },
               { id: 'element-video', title: 'Video', type: 0, icon: 'video_library', component: VideoElementComponent },
