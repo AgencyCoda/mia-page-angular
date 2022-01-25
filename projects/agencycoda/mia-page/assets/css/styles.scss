@@ -21,8 +21,8 @@ body {
   max-width: 100%;
 }
 
-mia-column-one{
-  height: 100%;
+mia-column-one {
+  /* height: 100%; */
 }
 
 mia-column-one,
@@ -50,27 +50,29 @@ mia-column-two,
 mia-column-one-two,
 mia-column-two-one,
 lib-column-two-one {
-  .column-elements {
-    border-top: 2px solid transparent;
-    border-bottom: 2px solid transparent;
+  mia-column-one {
     height: 100%;
-    padding: 3em 0;
+  }
+  .column-elements {
+    border: 2px solid transparent;
+    height: 100%;
+    padding: 1em;
+    box-sizing: border-box;
     &:hover {
-      border-top-color: rgba($color: blue, $alpha: 0.5);
-      border-bottom-color: rgba($color: blue, $alpha: 0.5);
+      border-color: rgba($color: blue, $alpha: 0.5);
     }
 
     .container {
       display: flex;
       align-items: stretch;
 
-      .container {
+      /* .container {
         width: initial;
         max-width: initial;
         margin: initial;
         display: block;
         align-items: stretch;
-      }
+      } */
     }
 
     mia-print-element {
@@ -79,24 +81,12 @@ lib-column-two-one {
   }
 }
 
-mia-column-three {
-  mia-column-one {
-    /* width: 33.3%; */
-  }
-}
-
-mia-column-two {
-  mia-column-one {
-    /* width: 50%; */
-  }
-}
-
 mia-column-one-two {
-  mia-container-print-element{
-    &:nth-of-type(1){
+  mia-container-print-element {
+    &:nth-of-type(1) {
       width: 33.3%;
     }
-    &:nth-of-type(2){
+    &:nth-of-type(2) {
       width: 66.6%;
     }
   }
@@ -111,6 +101,12 @@ lib-column-two-one {
     &:nth-of-type(2) {
       width: 33.3%;
     }
+  }
+}
+
+mia-column-three{
+  mia-container-print-element{
+    width: 33.3%;
   }
 }
 
