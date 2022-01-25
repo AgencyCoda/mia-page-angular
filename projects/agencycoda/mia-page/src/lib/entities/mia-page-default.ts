@@ -45,7 +45,7 @@ export class MiaPageDefault {
               { id: 'element-code', title: 'Code', type: 0, icon: 'code', component: CodeElementComponent },
               { id: 'element-divider', title: 'Line', type: 0, icon: 'remove', component: DividerElementComponent },
               { id: 'element-space', title: 'Space', type: 0, icon: 'check_box_outline_blank', component: SpaceElementComponent },
-              { id: 'element-embed', title: 'Embed', type: 0, icon: 'integration_instructions', component: EmbedElementComponent },
+              //{ id: 'element-embed', title: 'Embed', type: 0, icon: 'integration_instructions', component: EmbedElementComponent },
               { id: 'element-button', title: 'Button', type: 0, icon: 'check_box_outline', component: ButtonElementComponent },
               { id: 'element-gallery', title: 'Gallery', type: 0, icon: 'collections', component: GalleryElementComponent },
               { id: 'element-carousel', title: 'Carousel', type: 0, icon: 'view_carousel', component: CarouselElementComponent },
