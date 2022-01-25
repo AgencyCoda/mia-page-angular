@@ -20,6 +20,8 @@ export * from './lib/elements/base-element.component';
 export * from './lib/elements/column-one/column-one.component';
 export * from './lib/elements/text-element/text-element.component';
 export * from './lib/elements/image-element/image-element.component';
+export * from './lib/elements/code-element/code-element.component';
+export * from './lib/elements/column-two/column-two.component';
 /**
  * Components
  */
