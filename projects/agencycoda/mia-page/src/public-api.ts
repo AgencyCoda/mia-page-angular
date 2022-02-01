@@ -30,6 +30,7 @@ export * from './lib/components/mia-container-print-element/mia-container-print-
 export * from './lib/components/mia-print-element/mia-print-element.component';
 export * from './lib/components/mia-element-selector/mia-element-selector.component';
 export * from './lib/components/mia-page-management/mia-page-management.component';
+export * from './lib/components/mia-render-page-to-image/mia-render-page-to-image.component';
 /**
  * Modals
  */

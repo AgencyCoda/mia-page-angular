@@ -41,6 +41,8 @@ import { MiaManagementDeletedSidebarComponent } from './components/mia-managemen
 
 import { SeoPreviewBoxComponent } from './components/seo-preview-box/seo-preview-box.component';
 
+import { MiaRenderPageToImageComponent } from './components/mia-render-page-to-image/mia-render-page-to-image.component';
+
 /** ELEMENTS */
 import { RowElementComponent } from './elements/row-element/row-element.component';
 import { ColumnOneComponent } from './elements/column-one/column-one.component';
@@ -84,6 +86,7 @@ import { MiaContainerPrintElementComponent } from './components/mia-container-pr
     MiaManagementSidebarComponent,
     MiaManagementDeletedSidebarComponent,
     SeoPreviewBoxComponent,
+    MiaRenderPageToImageComponent,
     // Elements
     RowElementComponent,
     ImageElementComponent,
@@ -112,7 +115,7 @@ import { MiaContainerPrintElementComponent } from './components/mia-container-pr
     TrueOrFalseElementComponent,
     FillBlanksElementComponent,
     MultipleChooiseElementComponent,
-    MiaContainerPrintElementComponent,
+    MiaContainerPrintElementComponent
   ],
   imports: [
     // Angular Core
@@ -149,6 +152,7 @@ import { MiaContainerPrintElementComponent } from './components/mia-container-pr
     MiaPrintElementComponent,
     MiaElementSelectorComponent,
     MiaPageManagementComponent,
+    MiaRenderPageToImageComponent,
 
     // Modals
     AddElementModalComponent

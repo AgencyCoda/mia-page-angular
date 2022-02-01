@@ -270,3 +270,8 @@ mat-dialog-content {
     padding: 1em;
   }
 }
+
+.modal-overlay-invisible {
+  z-index: -1;
+  opacity: 0; 
+}
