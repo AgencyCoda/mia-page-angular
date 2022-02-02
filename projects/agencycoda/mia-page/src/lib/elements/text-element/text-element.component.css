@@ -38,6 +38,10 @@
   font-size: 2.441em !important;
 }
 
+h2 {
+  font-size: 2.441em !important;
+}
+
 ::ng-deep quill-editor h3 {
   font-size: 1.953em !important;
 }
