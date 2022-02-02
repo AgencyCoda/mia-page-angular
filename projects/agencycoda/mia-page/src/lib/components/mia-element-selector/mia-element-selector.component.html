@@ -16,10 +16,10 @@
 </mat-tab-group>
 
 <ng-template #elementButton let-element="element">
-  <div class="container-tab">
-    <img *ngIf="element.type == 1" [src]="element.image" (click)="onSelectElement(element)" />
+  <div class="container-tab" (click)="onSelectElement(element)">
+    <img *ngIf="element.type == 1" [src]="element.image"  />
 
-    <div *ngIf="element.type == 0" class="" (click)="onSelectElement(element)">
+    <div *ngIf="element.type == 0" class="">
       <mat-icon>{{ element.icon }}</mat-icon> &nbsp;
       {{ element.title }}
     </div>
