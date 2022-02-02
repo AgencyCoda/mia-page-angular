@@ -26,9 +26,10 @@ export class ColumnOneComponent extends MiaBaseHasChildElementComponent implemen
       { key: 'tabs-one', type: MiaField.TYPE_CUSTOM, extra: { component: TabsFieldComponent,
         tabs: [
           { title: 'Design', fields: [
-            { key: 'full_width', type: MiaField.TYPE_CUSTOM, label: 'Full Width', extra: { component: SwitchFieldComponent } },
-            { key: 'max_width', type: MiaField.TYPE_STRING, label: 'Max Width', classes: 'label-custom' },
-            { key: 'min_height', type: MiaField.TYPE_STRING, label: 'Min Height', classes: 'label-custom' },
+            //{ key: 'full_width', type: MiaField.TYPE_CUSTOM, label: 'Full Width', extra: { component: SwitchFieldComponent } },
+            //{ key: 'max_width', type: MiaField.TYPE_STRING, label: 'Max Width', classes: 'label-custom' },
+            //{ key: 'min_height', type: MiaField.TYPE_STRING, label: 'Min Height', classes: 'label-custom' },
+            { key: 'section_width', type: MiaField.TYPE_CUSTOM, label: 'Section Width', extra: { component: SizeRadioFieldComponent, key_custom: 'section_width_custom', class_name: 'column-elements', default_value: 'column-elements-large' } },
             { key: 'section_height', type: MiaField.TYPE_CUSTOM, label: 'Section Height', extra: { component: SizeRadioFieldComponent, key_custom: 'section_height_custom', class_name: 'section', default_value: 'section-large' } },
             { key: 'margin_title', type: MiaField.TYPE_LABEL, label: 'Margin', classes: 'label-custom' },
             { key: 'margin', type: MiaField.TYPE_CUSTOM, extra: { component: PositionFieldComponent } },
