@@ -57,7 +57,7 @@ export class VideoElementComponent extends MiaBaseElementComponent implements On
             { key: 'height', type: MiaField.TYPE_STRING, label: 'Height' },
           ] },
           { title: 'Content', fields: [
-            { key: 'video', type: MiaField.TYPE_FILE_ONE, label: 'Video', classes: 'label-custom' },
+            { key: 'video', type: MiaField.TYPE_FILE_ONE, label: 'Video', classes: 'label-custom', extra: { button_text: 'Upload video file' } },
             { key: 'caption', type: MiaField.TYPE_TEXT, label: 'Caption' },
             { key: 'controls', type: MiaField.TYPE_CUSTOM, label: 'Show Video Controls', extra: { component: SwitchFieldComponent } },
             { key: 'loop', type: MiaField.TYPE_CUSTOM, label: 'Loop Video', extra: { component: SwitchFieldComponent } },
