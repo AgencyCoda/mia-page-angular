@@ -1,13 +1,13 @@
-<mat-tab-group>
+<mat-tab-group (selectedIndexChange)="onSelectedTabIndex($event)">
   <mat-tab *ngFor="let tab of config.tabs" [label]="tab.title" dynamicHeight>
 
     <div class="container-tab">
       <div *ngIf="tab.has_search" class="mia-element-search">
         <mat-icon>search</mat-icon>
-        <input type="text" placeholder="Search..." />
+        <input type="text" placeholder="Search..." [formControl]="inputSearch" />
       </div>
 
-      <div *ngFor="let item of tab.items" class="mia-element-button">
+      <div *ngFor="let item of getItemsFiltered(tab.items)" class="mia-element-button">
         <ng-container  *ngTemplateOutlet="elementButton; context:{ element: item }"></ng-container>
       </div>
     </div>

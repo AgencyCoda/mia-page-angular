@@ -1,3 +1,4 @@
+import { FormControl } from "@angular/forms";
 import { MiaEditorElement } from "./mia-editor-element";
 
 export class MiaEditorTab {
