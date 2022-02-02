@@ -7,6 +7,7 @@
       <mat-button-toggle [ngClass]="{'button-element-active': element.data.value_correct == 1}" value=1 (click)="element.data.value_correct = 1">True</mat-button-toggle>
       <mat-button-toggle [ngClass]="{'button-element-active': element.data.value_correct == 0}" value=0 (click)="element.data.value_correct = 0">False</mat-button-toggle>
     </mat-button-toggle-group>
+
+    <mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()"></mia-element-actions>
 </div>
 
-<mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()"></mia-element-actions>
