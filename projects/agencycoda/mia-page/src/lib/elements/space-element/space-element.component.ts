@@ -24,7 +24,6 @@ export class SpaceElementComponent extends MiaBaseElementComponent implements On
       { key: 'tabs-one', type: MiaField.TYPE_CUSTOM, extra: { component: TabsFieldComponent,
         tabs: [
           { title: 'Design', fields: [
-            { key: 'width', type: MiaField.TYPE_STRING, label: 'Width', },
             { key: 'height', type: MiaField.TYPE_STRING, label: 'Height' },
           ] },
         ]}

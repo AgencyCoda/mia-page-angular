@@ -1,1 +1,4 @@
-<p>gallery-element works!</p>
+<div class="gallery-element" [ngClass]="{'is-element-active': element.isSelected}">
+  <p>gallery</p>
+  <mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()" [element]="element"></mia-element-actions>
+</div>

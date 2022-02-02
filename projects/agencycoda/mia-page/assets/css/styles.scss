@@ -125,7 +125,10 @@ mia-column-three{
 .true-or-false-element,
 .multiple-choice-element,
 .fill-blanks-element,
-.audio-element{
+.audio-element,
+.map-element,
+.carousel-element,
+.gallery-element{
   border: 2px solid transparent;
   transition: all 0.3s ease;
   position: relative;

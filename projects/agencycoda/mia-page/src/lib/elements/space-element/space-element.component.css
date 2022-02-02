@@ -1,0 +1,15 @@
+.space-element::before{
+  content: 'SPACE';
+}
+
+.space-element{
+  padding: 1em;
+  width: 100%;
+  box-sizing: border-box !important;
+}
+
+.space-container{
+  width: 100% !important;
+  box-sizing: border-box !important;
+  border: 1px dashed #ccc;
+}
