@@ -1,3 +1,3 @@
-<div class="column-one-view" [ngStyle]="cssStyleMain" [ngClass]="{'full-width-not': element.data.full_width == 0 || element.data.full_width == undefined}">
+<div class="column-one-view {{ element.data.width_class }}" [ngStyle]="cssStyleMain" [ngClass]="{'full-width-not': element.data.full_width == 0 || element.data.full_width == undefined}">
     <mia-print-view *ngFor="let subelement of element.data.elements" [element]="subelement"></mia-print-view>
 </div>
