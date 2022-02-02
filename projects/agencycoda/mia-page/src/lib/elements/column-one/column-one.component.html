@@ -1,9 +1,10 @@
-<div class="column-elements" [ngStyle]="cssStyleMain" [ngClass]="{'full-width-not': element.data.full_width == 0 || element.data.full_width == undefined}">
+<div class="column-elements" [ngStyle]="cssStyleMain" [ngClass]="{'full-width-not': element.data.full_width == 0 || element.data.full_width == undefined, 'is-column-elements-active': element.isSelected}">
 
   <div class="container">
-    <mia-print-element *ngFor="let subelement of element.data.elements" [page]="page" [parent]="element" [element]="subelement" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemoveChild($event)"></mia-print-element>
+    <mia-container-print-element *ngFor="let subelement of element.data.elements" [page]="page" [parent]="element" [element]="subelement" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemoveChild($event)"></mia-container-print-element>
     <button mat-mini-fab color="primary" (click)="onClickAddElement(this.element); $event.stopPropagation()" class="btn-add-element"><mat-icon>add</mat-icon></button>
   </div>
+
 </div>
 
 <mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()"></mia-element-actions>

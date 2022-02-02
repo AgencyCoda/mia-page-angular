@@ -1,5 +1,5 @@
 import { MiaElement, MiaPage } from '@agencycoda/mia-page-core';
-import { Component, ComponentFactoryResolver, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild, ViewContainerRef } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ComponentFactoryResolver, ComponentRef, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, ViewChild, ViewContainerRef, ViewRef } from '@angular/core';
 import { MiaBaseElementComponent } from '../../elements/base-element.component';
 import { MiaEditorElement } from '../../entities/mia-editor-element';
 import { MiaPageEditorService } from '../../services/mia-page-editor.service';
@@ -9,10 +9,8 @@ import { MiaPageEditorService } from '../../services/mia-page-editor.service';
   templateUrl: './mia-print-element.component.html',
   styleUrls: ['./mia-print-element.component.css']
 })
-export class MiaPrintElementComponent implements OnInit {
-
-  @ViewChild('contentColumn') contentColumn?: ElementRef;
-
+export class MiaPrintElementComponent implements OnInit, AfterViewInit {
+  
   @Input() element!: MiaElement;
   @Input() parent?: MiaElement;
   @Input() page!: MiaPage;
@@ -21,13 +19,16 @@ export class MiaPrintElementComponent implements OnInit {
   @Output() clickRemove = new EventEmitter<MiaElement>();
 
   constructor(
-    protected factoryResolver: ComponentFactoryResolver,
     protected viewContainerRef: ViewContainerRef,
-    protected editorService: MiaPageEditorService
+    protected editorService: MiaPageEditorService,
   ) { }
 
   ngOnInit(): void {
     this.generateComponent();
+  }
+
+  ngAfterViewInit(): void {
+    
   }
 
   generateComponent() {
@@ -41,17 +42,15 @@ export class MiaPrintElementComponent implements OnInit {
       return;
     }
 
-    const component = this.factoryResolver.resolveComponentFactory(editor.component);
-    
     this.element.editForm = editor.component.getEditForm();
 
-    const view = this.viewContainerRef.createComponent(component);
-    (<MiaBaseElementComponent>view.instance).page = this.page;
-    (<MiaBaseElementComponent>view.instance).element = this.element;
-    (<MiaBaseElementComponent>view.instance).parent = this.parent;
-    (<MiaBaseElementComponent>view.instance).editor = editor;
-    (<MiaBaseElementComponent>view.instance).clickElement = this.clickElement;
-    (<MiaBaseElementComponent>view.instance).clickRemove = this.clickRemove;
+    const view = this.viewContainerRef.createComponent<MiaBaseElementComponent>(editor.component);
+    view.instance.page = this.page;
+    view.instance.element = this.element;
+    view.instance.parent = this.parent;
+    view.instance.editor = editor;
+    view.instance.clickElement = this.clickElement;
+    view.instance.clickRemove = this.clickRemove;
   }
 
 }

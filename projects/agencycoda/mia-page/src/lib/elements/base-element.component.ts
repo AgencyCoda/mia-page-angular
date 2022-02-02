@@ -118,7 +118,7 @@ export class MiaBaseElementComponent implements OnInit {
 
     return this.dialog.open(MiaFormModalComponent, {
       width: '500px',
-      panelClass: 'modal-full-width-mobile',
+      panelClass: ['modal-full-width-mobile', 'modal-edit-form-element'],
       data: data
     }).afterClosed().subscribe(res => {
       this.element.isSelected = false;
@@ -150,6 +150,18 @@ export class MiaBaseElementComponent implements OnInit {
   onClick(e: any) {
     this.clickElement.emit(this.element);
     e.stopPropagation();
+  }
+
+  isPositionAbsolute(): boolean {
+    if(!this.element){
+      return false;
+    }
+
+    if(this.element.data && this.element.data.position == 1){
+      return true;
+    }
+
+    return false;
   }
 
   public static createElement() {

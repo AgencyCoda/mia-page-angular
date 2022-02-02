@@ -1,7 +1,11 @@
 .column-print-two {
-    width: 50%;
+    /* width: 50%; */
+    width: 100%;
 }
 
-mia-print-element{
+/* mia-print-element{
   border: 3px solid blue;
 }
+mia-container-print-element{
+  border: 3px solid blue;
+} */

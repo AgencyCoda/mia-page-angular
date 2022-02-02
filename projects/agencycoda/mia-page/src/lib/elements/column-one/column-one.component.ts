@@ -1,4 +1,4 @@
-import { ColorSelectorFieldComponent, MiaField, SwitchFieldComponent, TabsFieldComponent } from '@agencycoda/mia-form';
+import { ColorSelectorFieldComponent, MiaField, SizeRadioFieldComponent, SwitchFieldComponent, TabsFieldComponent } from '@agencycoda/mia-form';
 import { PositionFieldComponent } from '@agencycoda/mia-form';
 import { MiaElement } from '@agencycoda/mia-page-core';
 import { Component, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
@@ -30,6 +30,7 @@ export class ColumnOneComponent extends MiaBaseHasChildElementComponent implemen
             { key: 'max_width', type: MiaField.TYPE_STRING, label: 'Max Width', classes: 'label-custom' },
             { key: 'width_class', type: MiaField.TYPE_STRING, label: 'Width Class', classes: 'label-custom' },
             { key: 'min_height', type: MiaField.TYPE_STRING, label: 'Min Height', classes: 'label-custom' },
+            { key: 'section_height', type: MiaField.TYPE_CUSTOM, label: 'Section Height', extra: { component: SizeRadioFieldComponent, key_custom: 'section_height_custom', class_name: 'section', default_value: 'section-large' } },
             { key: 'margin_title', type: MiaField.TYPE_LABEL, label: 'Margin', classes: 'label-custom' },
             { key: 'margin', type: MiaField.TYPE_CUSTOM, extra: { component: PositionFieldComponent } },
             { key: 'padding_title', type: MiaField.TYPE_LABEL, label: 'Padding', classes: 'label-custom' },

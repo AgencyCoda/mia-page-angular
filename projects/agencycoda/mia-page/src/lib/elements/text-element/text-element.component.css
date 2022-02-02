@@ -80,3 +80,7 @@ h2 {
   font-family: 'DM Sans', sans-serif !important;
   font-size: 1.25em !important;
 }
+
+mia-element-actions ::ng-deep .btn-edit{
+  display: none !important;
+}

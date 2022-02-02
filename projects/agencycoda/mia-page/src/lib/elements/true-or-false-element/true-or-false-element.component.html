@@ -1,0 +1,7 @@
+<div class="true-or-false-element" [ngClass]="{'is-element-active': element.isSelected}">
+    <quill-editor theme="bubble" [placeholder]="'Empty text'" [(ngModel)]="element.data.text"></quill-editor>
+    <button [ngClass]="{'button-element-active': element.data.value_correct == 1}" (click)="element.data.value_correct = 1">True</button>
+    <button [ngClass]="{'button-element-active': element.data.value_correct == 0}" (click)="element.data.value_correct = 0">False</button>
+</div>
+
+<mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()"></mia-element-actions>

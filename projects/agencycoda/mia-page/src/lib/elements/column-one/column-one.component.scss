@@ -2,23 +2,39 @@
     width: 100%;
     min-height: 40px;
     border-style: dotted;
-    border-width: 1px;
+    border-width: 2px;
     border-color: #ddd;
     box-sizing: border-box;
     display: block;
+    padding: 1em 3em;
 
     &:hover{
+      border-color: blue;
+      border-style: solid;
       .btn-add-element{
         opacity: 1 !important;
       }
     }
+  }
+
+  .is-column-elements-active{
+    z-index: 6;
+    border-color: blue !important;
+    border-style: solid !important;
+
+  &::before {
+    opacity: 1 !important;
+  }
 }
 
 .btn-add-element{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   opacity: 0;
   transition: all 0.3s ease;
   margin: auto;
-  margin-top: 1em;
+  margin-top: 0.5em;
   display: block;
 }
 

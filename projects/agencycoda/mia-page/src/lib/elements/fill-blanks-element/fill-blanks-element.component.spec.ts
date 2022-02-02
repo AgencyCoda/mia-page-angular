@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TitleElementComponent } from './title-element.component';
+import { FillBlanksElementComponent } from './fill-blanks-element.component';
 
-describe('TitleElementComponent', () => {
-  let component: TitleElementComponent;
-  let fixture: ComponentFixture<TitleElementComponent>;
+describe('FillBlanksElementComponent', () => {
+  let component: FillBlanksElementComponent;
+  let fixture: ComponentFixture<FillBlanksElementComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TitleElementComponent ]
+      declarations: [ FillBlanksElementComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TitleElementComponent);
+    fixture = TestBed.createComponent(FillBlanksElementComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

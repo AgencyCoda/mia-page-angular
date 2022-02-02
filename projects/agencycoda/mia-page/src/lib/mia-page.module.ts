@@ -1,7 +1,6 @@
 /** ANGULAR */
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DragDropModule } from '@angular/cdk/drag-drop';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
@@ -19,6 +18,10 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 /** OTHER LIBRARIES */
@@ -38,8 +41,9 @@ import { MiaManagementDeletedSidebarComponent } from './components/mia-managemen
 
 import { SeoPreviewBoxComponent } from './components/seo-preview-box/seo-preview-box.component';
 
+import { MiaRenderPageToImageComponent } from './components/mia-render-page-to-image/mia-render-page-to-image.component';
+
 /** ELEMENTS */
-import { TitleElementComponent } from './elements/title-element/title-element.component';
 import { RowElementComponent } from './elements/row-element/row-element.component';
 import { ColumnOneComponent } from './elements/column-one/column-one.component';
 import { TextElementComponent } from './elements/text-element/text-element.component';
@@ -53,7 +57,6 @@ import { AudioElementComponent } from './elements/audio-element/audio-element.co
 import { ListElementComponent } from './elements/list-element/list-element.component';
 import { CodeElementComponent } from './elements/code-element/code-element.component';
 import { DividerElementComponent } from './elements/divider-element/divider-element.component';
-import { QuoteElementComponent } from './elements/quote-element/quote-element.component';
 import { SpaceElementComponent } from './elements/space-element/space-element.component';
 import { EmbedElementComponent } from './elements/embed-element/embed-element.component';
 import { ButtonElementComponent } from './elements/button-element/button-element.component';
@@ -64,6 +67,11 @@ import { NewsElementComponent } from './elements/news-element/news-element.compo
 
 /** PROVIDERS */
 import { MiaPageEditorConfig, MIA_PAGE_EDITOR_CONFIG } from './entities/mia-page-editor-config';
+import { TrueOrFalseElementComponent } from './elements/true-or-false-element/true-or-false-element.component';
+import { FillBlanksElementComponent } from './elements/fill-blanks-element/fill-blanks-element.component';
+import { MultipleChooiseElementComponent } from './elements/multiple-chooise-element/multiple-chooise-element.component';
+import { MiaContainerPrintElementComponent } from './components/mia-container-print-element/mia-container-print-element.component';
+
 
 
 
@@ -78,8 +86,8 @@ import { MiaPageEditorConfig, MIA_PAGE_EDITOR_CONFIG } from './entities/mia-page
     MiaManagementSidebarComponent,
     MiaManagementDeletedSidebarComponent,
     SeoPreviewBoxComponent,
+    MiaRenderPageToImageComponent,
     // Elements
-    TitleElementComponent,
     RowElementComponent,
     ImageElementComponent,
     VideoElementComponent,
@@ -97,7 +105,6 @@ import { MiaPageEditorConfig, MIA_PAGE_EDITOR_CONFIG } from './entities/mia-page
     ListElementComponent,
     CodeElementComponent,
     DividerElementComponent,
-    QuoteElementComponent,
     SpaceElementComponent,
     EmbedElementComponent,
     ButtonElementComponent,
@@ -105,15 +112,19 @@ import { MiaPageEditorConfig, MIA_PAGE_EDITOR_CONFIG } from './entities/mia-page
     CarouselElementComponent,
     MapElementComponent,
     NewsElementComponent,
+    TrueOrFalseElementComponent,
+    FillBlanksElementComponent,
+    MultipleChooiseElementComponent,
+    MiaContainerPrintElementComponent
   ],
   imports: [
     // Angular Core
     CommonModule,
     FormsModule,
-    DragDropModule,
     RouterModule,
 
     // Angular Material
+    DragDropModule,
     MatDialogModule,
     MatTabsModule,
     MatIconModule,
@@ -123,6 +134,9 @@ import { MiaPageEditorConfig, MIA_PAGE_EDITOR_CONFIG } from './entities/mia-page
     MatListModule,
     MatProgressBarModule,
     MatDividerModule,
+    MatSliderModule,
+    MatCheckboxModule,
+    MatTooltipModule,
 
     // Agency Coda
     MiaFormModule,
@@ -138,6 +152,7 @@ import { MiaPageEditorConfig, MIA_PAGE_EDITOR_CONFIG } from './entities/mia-page
     MiaPrintElementComponent,
     MiaElementSelectorComponent,
     MiaPageManagementComponent,
+    MiaRenderPageToImageComponent,
 
     // Modals
     AddElementModalComponent

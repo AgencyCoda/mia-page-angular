@@ -1,111 +1,129 @@
 @import "./typography";
 
-html, body { height: 100%; font-size: 100%; }
+html,
+body {
+  height: 100%;
+  font-size: 100%;
+}
 body {
   font-size: 16px;
   font: 16px;
   margin: 0;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   /* @include xs { font-size: 14px; }
   @include sm { font-size: 15px; }
   @include md { font-size: 15.5px; } */
 }
 
-.container{
-  width: 1200px;
+.container {
+  /* width: 1200px; */
   margin: auto;
   max-width: 100%;
 }
 
-mia-column-one, mia-column-two, mia-text-element, mia-column-one-two {
-    display: block;
-    position: relative;
+mia-column-one {
+  /* height: 100%; */
+}
+
+mia-column-one,
+mia-column-two,
+mia-text-element,
+mia-column-one-two {
+  display: block;
+  position: relative;
 }
 
 mia-element-actions {
-    position: absolute;
-    top: -60px;
-    right: 0;
-    display: block;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 8px 10px 0 rgba($color: #000000, $alpha: 0.2);
-    z-index: 5;
-    transition: all 0.3s ease;
+  position: absolute;
+  top: -60px;
+  right: 0;
+  display: block;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 10px 0 rgba($color: #000000, $alpha: 0.2);
+  z-index: 5;
+  transition: all 0.3s ease;
 }
 
-mia-column-three, mia-column-two, mia-column-one-two, mia-column-two-one, lib-column-two-one{
-  .column-elements{
-    border-top: 2px solid transparent;
-    border-bottom: 2px solid transparent;
+mia-column-three,
+mia-column-two,
+mia-column-one-two,
+mia-column-two-one,
+lib-column-two-one {
+  mia-column-one {
     height: 100%;
-    padding: 3em 0;
-    &:hover{
-      border-top-color: rgba($color: blue, $alpha: 0.5);
-      border-bottom-color: rgba($color: blue, $alpha: 0.5);
+  }
+  .column-elements {
+    border: 2px solid transparent;
+    height: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    &:hover {
+      border-color: rgba($color: blue, $alpha: 0.5);
     }
 
-    .container{
+    .container {
       display: flex;
+      align-items: stretch;
 
-      .container{
+      /* .container {
         width: initial;
         max-width: initial;
         margin: initial;
         display: block;
-      }
+        align-items: stretch;
+      } */
     }
 
-    mia-print-element{
+    mia-print-element {
       display: none;
     }
   }
 }
 
-mia-column-one{
+mia-column-one-two {
+  mia-container-print-element {
+    &:nth-of-type(1) {
+      width: 33.3%;
+    }
+    &:nth-of-type(2) {
+      width: 66.6%;
+    }
+  }
+}
+
+mia-column-two-one,
+lib-column-two-one {
+  mia-container-print-element {
+    &:nth-of-type(1) {
+      width: 66.6%;
+    }
+    &:nth-of-type(2) {
+      width: 33.3%;
+    }
+  }
 }
 
 mia-column-three{
-  mia-column-one{
+  mia-container-print-element{
     width: 33.3%;
   }
 }
 
-mia-column-two{
-  mia-column-one{
-    width: 50%;
-  }
-}
-
-mia-column-one-two{
-  mia-column-one{
-    &:nth-of-type(1){
-      width: 33.3%;
-    }
-    &:nth-of-type(2){
-      width: 66.6%;
-    }
-  }
-}
-
-mia-column-two-one, lib-column-two-one{
-  mia-column-one{
-    &:nth-of-type(1){
-      width: 66.6%;
-    }
-    &:nth-of-type(2){
-      width: 33.3%;
-    }
-  }
-}
-
-.image-element,.text-element,.button-element,.video-element,.divider-element,.news-element{
+.image-element,
+.text-element,
+.button-element,
+.video-element,
+.divider-element,
+.news-element,
+.code-element,
+.space-element{
   border: 2px solid transparent;
   transition: all 0.3s ease;
   position: relative;
 
-  &::before{
-    content: 'LOREM IPSUM';
+  &::before {
+    content: "LOREM IPSUM";
     position: absolute;
     top: -24px;
     left: -2px;
@@ -119,61 +137,65 @@ mia-column-two-one, lib-column-two-one{
     transition: all 0.3s ease;
   }
 
-  &:hover{
+  &:hover {
     border-color: blue;
-    &::before{
+    &::before {
       opacity: 1;
     }
   }
 }
 
-.is-element-active{
+.is-element-active {
   z-index: 6;
   border-color: blue !important;
 
-  &::before{
+  &::before {
     opacity: 1 !important;
   }
 }
 
-mia-print-element { width: 100%;}
+mia-container-print-element {
+  width: 100%;
+}
+mia-print-element {
+  width: 100%;
+}
 
-mat-dialog-content{
-  h2{
+mat-dialog-content {
+  h2 {
     font-size: 1.563em !important;
     margin-top: 0 !important;
     font-weight: 600 !important;
   }
 }
 
-.modal-settings-page{
-  mat-dialog-container{
+.modal-settings-page {
+  mat-dialog-container {
     padding: 0 !important;
     margin: 0 !important;
 
-    mat-dialog-content{
+    mat-dialog-content {
       padding: 0 !important;
       margin: 0 !important;
     }
   }
 
-  mia-form-modal-v3{
-    .settings-page-layout-dialog{
-
-      h2{
+  mia-form-modal-v3 {
+    .settings-page-layout-dialog {
+      h2 {
         font-size: 1.563em;
         font-weight: 600;
       }
 
-      .layout{
+      .layout {
         display: flex;
         min-height: 500px;
         max-height: 800px;
         overflow: hidden;
         align-items: stretch !important;
 
-        .navigation{
-          background-color: #EFEFEF;
+        .navigation {
+          background-color: #efefef;
           width: 320px;
           min-width: 320px;
           max-width: 320px;
@@ -181,29 +203,29 @@ mat-dialog-content{
           box-sizing: border-box;
           height: initial !important;
 
-          h2{
+          h2 {
             margin-bottom: 2em;
           }
 
-          .link{
+          .link {
             font-size: 1.1em;
             font-weight: 600;
             color: #696969;
             margin-bottom: 1em;
             padding: 0.3em 0;
             cursor: pointer;
-            &:hover{
+            &:hover {
               color: #333333;
             }
           }
 
-          .link-active{
+          .link-active {
             color: #222222 !important;
             text-decoration: underline;
           }
         }
 
-        .content{
+        .content {
           overflow-y: auto;
           display: flex;
           flex-direction: column;
@@ -212,16 +234,16 @@ mat-dialog-content{
       }
     }
 
-    .settings-page-general{
+    .settings-page-general {
       padding: 3em;
       overflow-y: auto;
 
-      .buttons{
+      .buttons {
         display: flex;
         align-items: center;
         margin-top: 2em;
 
-        .separate-line-vert{
+        .separate-line-vert {
           width: 1px;
           min-width: 1px;
           height: 20px;
@@ -231,4 +253,25 @@ mat-dialog-content{
       }
     }
   }
+}
+
+.add-element-modal,
+.modal-edit-form-element {
+  .mat-dialog-container,
+  mat-dialog-container {
+    padding: 0;
+  }
+}
+.modal-edit-form-element {
+  .content {
+    padding: 0 !important;
+  }
+  .mat-tab-body-wrapper {
+    padding: 1em;
+  }
+}
+
+.modal-overlay-invisible {
+  z-index: -1;
+  opacity: 0; 
 }

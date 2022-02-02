@@ -12,6 +12,7 @@ mia-element-actions{
 
 .image-container{
   width: 100%;
+  display: flex;
 }
 
 .image-container img{

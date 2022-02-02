@@ -3,6 +3,7 @@ import { MiaElement, MiaPage } from '@agencycoda/mia-page-core';
 import { Inject, Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
+import { MiaRenderPageToImageComponent } from '../components/mia-render-page-to-image/mia-render-page-to-image.component';
 import { MiaEditorElement } from '../entities/mia-editor-element';
 import { MiaPageEditorConfig, MIA_PAGE_EDITOR_CONFIG } from '../entities/mia-page-editor-config';
 import { AddElementModalComponent } from '../modals/add-element-modal/add-element-modal.component';
@@ -16,6 +17,16 @@ export class MiaPageEditorService {
     @Inject(MIA_PAGE_EDITOR_CONFIG) public config: MiaPageEditorConfig,
     protected dialog: MatDialog
   ) { }
+
+  renderPageToImage(page: MiaPage): Observable<string|undefined> {
+    return this.dialog.open(MiaRenderPageToImageComponent, {
+      width: '1000px',
+      panelClass: ['modal-full-width-mobile', 'modal-edit-form-element', 'modal-invisible'],
+      data: page,
+      backdropClass: 'modal-backdrop-invisible',
+      hasBackdrop: false
+    }).afterClosed();
+  }
 
   duplicateElement(element: MiaElement, parent?: MiaElement, page?: MiaPage) {
     let copy = JSON.parse(JSON.stringify(element));
@@ -55,7 +66,7 @@ export class MiaPageEditorService {
 
   showAddElementModal(): Observable<any> {
     return this.dialog.open(AddElementModalComponent, {
-
+      'panelClass': 'add-element-modal'
     }).afterClosed().pipe(nil());
   }
 

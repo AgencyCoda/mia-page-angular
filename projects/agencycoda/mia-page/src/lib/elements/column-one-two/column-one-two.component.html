@@ -1,8 +1,8 @@
 <div class="column-elements" [ngStyle]="cssStyleMain">
   <div class="container">
 
-    <mia-print-element [page]="page" [parent]="element" [element]="element.data.elements[0]" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemoveChild($event)"></mia-print-element>
-    <mia-print-element [page]="page" [parent]="element" [element]="element.data.elements[1]" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemoveChild($event)"></mia-print-element>
+    <mia-container-print-element [page]="page" [parent]="element" [element]="element.data.elements[0]" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemoveChild($event)"></mia-container-print-element>
+    <mia-container-print-element [page]="page" [parent]="element" [element]="element.data.elements[1]" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemoveChild($event)"></mia-container-print-element>
 
   </div>
 </div>
