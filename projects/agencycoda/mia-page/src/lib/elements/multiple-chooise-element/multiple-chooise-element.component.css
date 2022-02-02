@@ -1,0 +1,11 @@
+.text-element::before{
+  content: 'MULTIPLE CHOOISE';
+}
+
+.multiple-choice-element{
+  padding: 1em;
+}
+
+.multiple-choice-element mat-checkbox{
+  margin-right: 1em;
+}

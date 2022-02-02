@@ -22,6 +22,10 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 
 
 /** OTHER LIBRARIES */
@@ -142,6 +146,9 @@ import { MiaContainerPrintElementComponent } from './components/mia-container-pr
     MatSliderModule,
     MatCheckboxModule,
     MatTooltipModule,
+    MatButtonToggleModule,
+    MatFormFieldModule,
+    MatInputModule,
 
     // Agency Coda
     MiaFormModule,

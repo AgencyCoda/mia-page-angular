@@ -1,0 +1,22 @@
+.fill-blanks-element{
+  margin: 1em 0;
+}
+
+.fill-blanks-element .actions{
+  display: flex;
+  gap: 1em;
+}
+
+.fill-blanks-element .values{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.values textarea, input{
+  border: none;
+}
+
+.values .word{
+  border-bottom: 1px solid blue;
+}
