@@ -2,7 +2,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 /** AGENCY CODA */
 import { MiaFormModule } from '@agencycoda/mia-form';
@@ -27,6 +27,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 /** OTHER LIBRARIES */
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { QuillModule } from 'ngx-quill';
+import { ContenteditableValueAccessorModule } from '@tinkoff/angular-contenteditable-accessor';
 
 /** COMPONENTS */
 import { MiaPageEditorComponent } from './components/mia-page-editor/mia-page-editor.component';
@@ -64,13 +65,15 @@ import { GalleryElementComponent } from './elements/gallery-element/gallery-elem
 import { CarouselElementComponent } from './elements/carousel-element/carousel-element.component';
 import { MapElementComponent } from './elements/map-element/map-element.component';
 import { NewsElementComponent } from './elements/news-element/news-element.component';
+import { FillBlanksElementComponent } from './elements/fill-blanks-element/fill-blanks-element.component';
+import { WordDialogComponent } from './elements/fill-blanks-element/word-dialog/word-dialog.component';
+import { TrueOrFalseElementComponent } from './elements/true-or-false-element/true-or-false-element.component';
+import { MultipleChooiseElementComponent } from './elements/multiple-chooise-element/multiple-chooise-element.component';
 
 /** PROVIDERS */
 import { MiaPageEditorConfig, MIA_PAGE_EDITOR_CONFIG } from './entities/mia-page-editor-config';
-import { TrueOrFalseElementComponent } from './elements/true-or-false-element/true-or-false-element.component';
-import { FillBlanksElementComponent } from './elements/fill-blanks-element/fill-blanks-element.component';
-import { MultipleChooiseElementComponent } from './elements/multiple-chooise-element/multiple-chooise-element.component';
 import { MiaContainerPrintElementComponent } from './components/mia-container-print-element/mia-container-print-element.component';
+
 
 
 
@@ -115,12 +118,14 @@ import { MiaContainerPrintElementComponent } from './components/mia-container-pr
     TrueOrFalseElementComponent,
     FillBlanksElementComponent,
     MultipleChooiseElementComponent,
-    MiaContainerPrintElementComponent
+    MiaContainerPrintElementComponent,
+    WordDialogComponent
   ],
   imports: [
     // Angular Core
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule,
 
     // Angular Material
@@ -144,7 +149,8 @@ import { MiaContainerPrintElementComponent } from './components/mia-container-pr
 
     // Other Libraries
     FlexLayoutModule,
-    QuillModule
+    QuillModule,
+    ContenteditableValueAccessorModule
   ],
   exports: [
     // Components

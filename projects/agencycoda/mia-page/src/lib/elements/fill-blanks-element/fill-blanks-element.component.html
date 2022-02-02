@@ -1,20 +1,24 @@
 <div class="fill-blanks-element" [ngClass]="{'is-element-active': element.isSelected}">
     <div class="values">
-        <div *ngFor="let item of element.data.values" class="item">
+
+
+        <div [(ngModel)]="element.data.content" contenteditable></div>
+
+        <!--<div *ngFor="let item of element.data.values" class="item">
 
             <div *ngIf="item.type == 0" class="text">
-                <div [(ngModel)]="item.text" contenteditable></div>
+                
             </div>
             <div *ngIf="item.type == 1" class="word">
                 <input type="text" [(ngModel)]="item.word" placeholder="Word" />
                 <input type="number" [(ngModel)]="item.points" placeholder="Points" />
             </div>
 
-        </div>
+        </div>-->
 
-        <button (click)="onClickAddText()">Add text</button>
+        <!--<button (click)="onClickAddText()">Add text</button>-->
         <button (click)="onClickAddBlank()">Add blank</button>
     </div>
 </div>
 
-<mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()"></mia-element-actions>
+<mia-element-actions *ngIf="element.isSelected" [element]="element" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()"></mia-element-actions>

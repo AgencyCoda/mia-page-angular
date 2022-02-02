@@ -2,6 +2,7 @@ import { MiaField, TabsFieldComponent } from '@agencycoda/mia-form';
 import { MiaElement } from '@agencycoda/mia-page-core';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MiaBaseElementComponent } from '../base-element.component';
+import { WordDialogComponent } from './word-dialog/word-dialog.component';
 
 @Component({
   selector: 'lib-fill-blanks-element',
@@ -12,18 +13,26 @@ export class FillBlanksElementComponent extends MiaBaseElementComponent implemen
 
   @ViewChild('actionsComp') actionsComp?: ElementRef;
 
-  onClickAddText() {
+  /*onClickAddText() {
     this.element.data.values.push({ type: 0, text: '' });
-  }
+  }*/
 
   onClickAddBlank() {
-    this.element.data.values.push({ type: 1, word: '', points: 0 });
+    this.dialog.open(WordDialogComponent)
+    .afterClosed()
+    .subscribe(res => {
+      if(res == undefined){
+        return;
+      }
+
+      this.element.data.content += '<span class="word" contenteditable="false">' + res + '</span>';
+    });
   }
 
   public static createElement() {
     let element = new MiaElement();
     element.type = 'element-fill-blanks';
-    element.data = { values: [], show_replies: false };
+    element.data = { values: [], show_replies: false, content: '' };
     element.editForm = FillBlanksElementComponent.getEditForm();
     return element;
   }
