@@ -1,4 +1,4 @@
-.text-element::before{
+.true-or-false-element::before{
   content: 'TRUE OR FALSE';
 }
 
@@ -15,7 +15,6 @@
 
 .true-or-false-element quill-editor{
   width: 100%;
-
 }
 
 .true-or-false-element ::ng-deep .ql-container{
