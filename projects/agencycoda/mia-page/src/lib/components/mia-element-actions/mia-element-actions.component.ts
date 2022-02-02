@@ -44,7 +44,9 @@ export class MiaElementActionsComponent implements OnInit {
   }
 
   onClickPositionAbsolute() {
-    if(!this.element){
+    return;
+    // Deactive in this version
+    /*if(!this.element){
       return;
     }
     if(!this.element.data){
@@ -52,7 +54,7 @@ export class MiaElementActionsComponent implements OnInit {
     }
     this.element.data.position = 1;
     this.elementRef.nativeElement.parentElement.style.removeProperty('transform');
-    this.elementRef.nativeElement.parentElement.style.setProperty('position', 'absolute');
+    this.elementRef.nativeElement.parentElement.style.setProperty('position', 'absolute');*/
   }
 
   onClickPositionNormal() {
