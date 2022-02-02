@@ -2,7 +2,7 @@
     <div class="values">
         <div *ngFor="let item of element.data.values" class="item">
             <div *ngIf="item.type == 0" class="text">
-                <textarea [(ngModel)]="item.text"></textarea>
+                <div [(ngModel)]="item.text" contenteditable></div>
             </div>
             <div *ngIf="item.type == 1" class="word">
                 <input type="text" [(ngModel)]="item.word" placeholder="Word" />
