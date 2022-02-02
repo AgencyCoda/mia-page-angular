@@ -22,6 +22,7 @@ export class MiaBaseElementComponent implements OnInit {
   @Output() clickRemove = new EventEmitter<MiaElement>();
 
   cssStyleMain: any = {};
+  cssClassMain: any = {};
 
   constructor(
     protected dialog: MatDialog,
@@ -92,6 +93,11 @@ export class MiaBaseElementComponent implements OnInit {
     if(this.element.data.border_radius != undefined && this.element.data.border_radius != ''){
       this.addCssProperty('border-radius', this.element.data.border_radius + 'px');
     }
+
+    if(this.element.data.section_width_custom != undefined){
+      this.addCssProperty('width', this.element.data.section_width_custom + 'px');
+    }
+
   }
   /** End CSS Methods */
 

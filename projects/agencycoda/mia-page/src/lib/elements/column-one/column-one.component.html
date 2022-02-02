@@ -1,4 +1,4 @@
-<div class="column-elements" [ngStyle]="cssStyleMain" [ngClass]="{'is-column-elements-active': element.isSelected}">
+<div class="column-elements" [ngStyle]="cssStyleMain" [ngClass]="{ 'is-column-elements-active': element.isSelected}" [class]="element.data.section_width">
 
   <div class="container">
     <mia-container-print-element *ngFor="let subelement of element.data.elements" [page]="page" [parent]="element" [element]="subelement" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemoveChild($event)"></mia-container-print-element>

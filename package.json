@@ -15,7 +15,7 @@
   "dependencies": {
     "@agencycoda/mia-auth": "^13.1.0",
     "@agencycoda/mia-core": "^13.1.0",
-    "@agencycoda/mia-form": "^13.1.10",
+    "@agencycoda/mia-form": "^13.1.11",
     "@agencycoda/mia-page": "13.1.1",
     "@agencycoda/mia-page-core": "^13.1.1",
     "@agencycoda/mia-page-viewer": "^13.1.1",
