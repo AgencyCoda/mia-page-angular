@@ -1,7 +1,12 @@
 <div class="true-or-false-element" [ngClass]="{'is-element-active': element.isSelected}">
     <quill-editor theme="bubble" [placeholder]="'Empty text'" [(ngModel)]="element.data.text"></quill-editor>
-    <button [ngClass]="{'button-element-active': element.data.value_correct == 1}" (click)="element.data.value_correct = 1">True</button>
-    <button [ngClass]="{'button-element-active': element.data.value_correct == 0}" (click)="element.data.value_correct = 0">False</button>
+    <!-- <button mat-button [ngClass]="{'button-element-active': element.data.value_correct == 1}" (click)="element.data.value_correct = 1">True</button>
+    <button mat-button [ngClass]="{'button-element-active': element.data.value_correct == 0}" (click)="element.data.value_correct = 0">False</button> -->
+
+    <mat-button-toggle-group name="true or false" aria-label="True or false" value=0>
+      <mat-button-toggle [ngClass]="{'button-element-active': element.data.value_correct == 1}" value=1 (click)="element.data.value_correct = 1">True</mat-button-toggle>
+      <mat-button-toggle [ngClass]="{'button-element-active': element.data.value_correct == 0}" value=0 (click)="element.data.value_correct = 0">False</mat-button-toggle>
+    </mat-button-toggle-group>
 </div>
 
 <mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()"></mia-element-actions>
