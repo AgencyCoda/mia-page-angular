@@ -1,42 +1,40 @@
-<div class="container">
-  <div class="audio-element">
+<div class="audio-element">
 
-    <audio #audioPlayer [src]="element.data.url"></audio>
+  <audio #audioPlayer [src]="element.data.url"></audio>
 
-    <div class="header">
+  <div class="header">
 
-      <button mat-fab color="primary" class="btn-play" (click)="tooglePlay()">
-        <mat-icon *ngIf="!isPlaying">play_arrow</mat-icon>
-        <mat-icon *ngIf="isPlaying">pause</mat-icon>
-      </button>
+    <button mat-fab color="primary" class="btn-play" (click)="tooglePlay()">
+      <mat-icon *ngIf="!isPlaying">play_arrow</mat-icon>
+      <mat-icon *ngIf="isPlaying">pause</mat-icon>
+    </button>
 
-      <div class="texts">
-        <p><b>{{ element.data.title }}</b></p>
-        <p><small>Author: {{ element.data.author }}</small></p>
-      </div>
-
-      <div class="details">
-        <p *ngIf="currentTime != 0">{{ secondsToMinutes(currentTime) }}</p>
-        <p *ngIf="currentTime == 0">{{ secondsToMinutes(duration) }}</p>
-
-        <div class="separate-line-vert"></div>
-
-        <button mat-icon-button (click)="toggleVolume()">
-          <mat-icon *ngIf="volume > 0">volume_up</mat-icon>
-          <mat-icon *ngIf="volume == 0">volume_off</mat-icon>
-        </button>
-
-        <button mat-icon-button [matMenuTriggerFor]="settings"><mat-icon>more_horiz</mat-icon></button>
-      </div>
+    <div class="texts">
+      <p><b>{{ element.data.title }}</b></p>
+      <p><small>Author: {{ element.data.author }}</small></p>
     </div>
 
-    <mat-slider (change)="timeChange($event)" [min]="0" class="ngx-d-none ngx-d-sm-block ngx-flex-fill ngx-p-1" [max]="duration" style="width: 100%" [value]="currentTime"></mat-slider>
+    <div class="details">
+      <p *ngIf="currentTime != 0">{{ secondsToMinutes(currentTime) }}</p>
+      <p *ngIf="currentTime == 0">{{ secondsToMinutes(duration) }}</p>
 
+      <div class="separate-line-vert"></div>
+
+      <button mat-icon-button (click)="toggleVolume()">
+        <mat-icon *ngIf="volume > 0">volume_up</mat-icon>
+        <mat-icon *ngIf="volume == 0">volume_off</mat-icon>
+      </button>
+
+      <!-- <button mat-icon-button [matMenuTriggerFor]="settings"><mat-icon>more_horiz</mat-icon></button> -->
+    </div>
   </div>
+
+  <mat-slider (change)="timeChange($event)" [min]="0" class="ngx-d-none ngx-d-sm-block ngx-flex-fill ngx-p-1" [max]="duration" style="width: 100%" [value]="currentTime"></mat-slider>
+
+  <mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()"></mia-element-actions>
 </div>
 
-<mat-menu #settings="matMenu">
-  <button mat-menu-item><mat-icon>cloud_download</mat-icon> Download</button>
-</mat-menu>
 
-<mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()"></mia-element-actions>
+<!-- <mat-menu #settings="matMenu">
+  <button mat-menu-item><mat-icon>cloud_download</mat-icon> Download</button>
+</mat-menu> -->

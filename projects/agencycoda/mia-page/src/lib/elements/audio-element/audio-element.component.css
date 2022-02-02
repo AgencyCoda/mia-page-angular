@@ -1,12 +1,14 @@
-@import "../../components/mia-page-management/web-management-general-styles.scss";
+
+.audio-element::before{
+  content: 'AUDIO';
+}
 
 .audio-element{
   background-color: white;
-  border-radius: 0.5em;
   padding: 1em;
   box-shadow: 0 3px 3px 0 #dfdfdf, 0px 7px 20px 0 #dfdfdf;
-  width: 700px;
   max-width: 100%;
+  margin: 1em 0;
   box-sizing: border-box;
 }
 

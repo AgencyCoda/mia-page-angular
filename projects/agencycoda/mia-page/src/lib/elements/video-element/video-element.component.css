@@ -1,3 +1,7 @@
-.video-element::before{
-    content: 'VIDEO';
-  }
+.video-element::before {
+  content: "VIDEO";
+}
+
+.video-element video {
+  object-fit: cover;
+}

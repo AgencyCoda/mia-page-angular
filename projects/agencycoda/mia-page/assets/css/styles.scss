@@ -1,5 +1,9 @@
 @import "./typography";
 
+mat-dialog-container{
+
+}
+
 html,
 body {
   height: 100%;
@@ -120,7 +124,8 @@ mia-column-three{
 .space-element,
 .true-or-false-element,
 .multiple-choice-element,
-.fill-blanks-element{
+.fill-blanks-element,
+.audio-element{
   border: 2px solid transparent;
   transition: all 0.3s ease;
   position: relative;
