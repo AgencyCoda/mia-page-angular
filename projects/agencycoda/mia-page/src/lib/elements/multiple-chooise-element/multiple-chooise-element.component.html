@@ -12,6 +12,7 @@
         </div>
         <button mat-flat-button color='primary' (click)="onClickAddOption()">Add Option</button>
     </div>
+
+    <mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()"></mia-element-actions>
 </div>
 
-<mia-element-actions *ngIf="element.isSelected" (clickEdit)="onClickEdit()" (clickRemove)="onClickRemove()" (clickDuplicate)="onClickDuplicate()" (clickMoveUp)="onClickMoveUp()" (clickMoveDown)="onClickMoveDown()"></mia-element-actions>

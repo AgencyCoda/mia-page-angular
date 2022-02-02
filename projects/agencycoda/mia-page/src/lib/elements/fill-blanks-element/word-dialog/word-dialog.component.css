@@ -1,0 +1,18 @@
+.content{
+  padding: 1em;
+}
+
+h5{
+  margin: 0;
+  text-align: center;
+}
+
+mat-form-field{
+  width: 100%;
+  min-width: 300px;
+  margin: 1em 0;
+}
+
+button{
+  width: 100%;
+}

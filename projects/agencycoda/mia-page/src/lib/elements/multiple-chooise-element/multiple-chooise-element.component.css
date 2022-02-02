@@ -1,4 +1,4 @@
-.text-element::before{
+.multiple-choice-element::before{
   content: 'MULTIPLE CHOOISE';
 }
 

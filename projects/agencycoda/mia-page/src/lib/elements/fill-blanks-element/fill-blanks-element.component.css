@@ -1,22 +1,44 @@
-.fill-blanks-element{
-  margin: 1em 0;
+.fill-blanks-element::before{
+  content: 'FILL IN THE BLANK';
 }
 
-.fill-blanks-element .actions{
-  display: flex;
-  gap: 1em;
+.button-element-active {
+    background-color: red;
+}
+
+.fill-blanks-element{
+  padding: 1em;
 }
 
 .fill-blanks-element .values{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
+  width: 100%;
+  margin-bottom: 1em;
 }
 
-.values textarea, input{
-  border: none;
+.fill-blanks-element .div-text{
+  padding: 1em;
+  width: 100%;
+  border: 1px dashed #cccccc;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
-.values .word{
-  border-bottom: 1px solid blue;
+.fill-blanks-element .div-text ::ng-deep div{
+  display: inline-block !important;
+}
+
+
+.fill-blanks-element .div-text:hover{
+  border-color: blue;
+}
+
+.fill-blanks-element ::ng-deep.div-text .word{
+  border-bottom: 1px solid black;
+  font-weight: 500;
+  margin: 0 0.5em;
+}
+
+.fill-blanks-element ::ng-deep.div-text .word:hover{
+  color: blue;
+  border-color: blue;
 }

@@ -1,3 +1,8 @@
-<p>Add Word:</p>
-<input type="text" [formControl]="input" />
-<button (click)="onClickApply()">Apply</button>
+<div class="content">
+  <h5><b>Add New Word</b></h5>
+  <mat-form-field>
+    <input matInput type="text" [formControl]="input" placeholder="Write new word here" />
+  </mat-form-field>
+  <br>
+  <button mat-flat-button color='primary' (click)="onClickApply()">Apply</button>
+</div>
