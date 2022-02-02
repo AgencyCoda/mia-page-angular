@@ -1,11 +1,16 @@
 <div class="multiple-choice-element" [ngClass]="{'is-element-active': element.isSelected}">
     <div class="list">
         <div *ngFor="let option of element.data.options" class="item">
-            <mat-checkbox [(ngModel)]="option.is_correct" class="example-margin"></mat-checkbox>
-            <input type="text" [(ngModel)]="option.title" />
-            <button (click)="onClickRemoveOption(option)">X</button>
+          <mat-form-field>
+            <mat-checkbox matPrefix [(ngModel)]="option.is_correct" class="example-margin"></mat-checkbox>
+            <input matInput type="text" [(ngModel)]="option.title" />
+            <button matSuffix mat-icon-button (click)="onClickRemoveOption(option)" color='warn' matTooltip="Delete"><mat-icon>close</mat-icon></button>
+          </mat-form-field>
+          <!-- <mat-checkbox [(ngModel)]="option.is_correct" class="example-margin"></mat-checkbox>
+          <input matInput type="text" [(ngModel)]="option.title" />
+          <button (click)="onClickRemoveOption(option)">X</button> -->
         </div>
-        <button (click)="onClickAddOption()">Add Option</button>
+        <button mat-flat-button color='primary' (click)="onClickAddOption()">Add Option</button>
     </div>
 </div>
 
