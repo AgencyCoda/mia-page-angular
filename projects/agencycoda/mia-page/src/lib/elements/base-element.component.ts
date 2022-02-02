@@ -122,11 +122,13 @@ export class MiaBaseElementComponent implements OnInit {
 
     data.config = config;
 
-    return this.dialog.open(MiaFormModalComponent, {
+    let dialogRef = this.dialog.open(MiaFormModalComponent, {
       width: '500px',
       panelClass: ['modal-full-width-mobile', 'modal-edit-form-element'],
       data: data
-    }).afterClosed().subscribe(res => {
+    });
+
+    return dialogRef.afterClosed().subscribe(res => {
       this.element.isSelected = false;
       this.onInitCss();
     });
