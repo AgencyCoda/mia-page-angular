@@ -32,8 +32,10 @@ export class ButtonElementComponent extends MiaBaseElementComponent implements O
         tabs: [
           { title: 'Content', fields: [
             { key: 'title', type: MiaField.TYPE_STRING, label: 'Text' },
+            { key: 'url', type: MiaField.TYPE_STRING, label: 'Url Link' },
             { key: 'color', type: MiaField.TYPE_CUSTOM, label: 'Color Text', extra: { component: ColorSelectorFieldComponent, colors: ['#F8B725', '#0071BD', '#4B9ED6', '#000', '#FFF'] } },
             { key: 'background_color', type: MiaField.TYPE_CUSTOM, label: 'Background Color', extra: { component: ColorSelectorFieldComponent, colors: ['#F8B725', '#0071BD', '#4B9ED6', '#000', '#FFF'] } },
+            { key: 'border_color', type: MiaField.TYPE_CUSTOM, label: 'Border Color', extra: { component: ColorSelectorFieldComponent, colors: ['#F8B725', '#0071BD', '#4B9ED6', '#000', '#FFF', 'transparent'] } },
             { key: 'class', type: 'string', label: 'CSS CLASS' }
           ] }
         ]}

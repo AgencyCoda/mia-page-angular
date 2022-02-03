@@ -1,24 +1,26 @@
 <div *ngIf="page != undefined" class="web-management-layout">
 
-    <div class="content">
-        <div *ngIf="showHeader" class="toolbar-page">
-            <div class="edit-button">
-              <button mat-button (click)="onClickSave()">SAVE</button>
-            </div>
-            <div class="texts">
-              <div class="title">{{ page.title }}</div>
-              <div class="subtitle"><small>Page - {{ pageStatus() }}</small></div>
-            </div>
-            <div class="layout_view">
-              <button mat-icon-button matTooltip="Mobile" (click)="typePageView = 2"><mat-icon>smartphone</mat-icon></button>
-              <button mat-icon-button matTooltip="Tablet" (click)="typePageView = 1"><mat-icon>tablet_mac</mat-icon></button>
-              <button mat-icon-button matTooltip="Desktop" (click)="typePageView = 0"><mat-icon>desktop_windows</mat-icon></button>
-            </div>
+    <div *ngIf="showHeader" class="toolbar-page">
+        <div class="edit-button">
+          <button mat-button (click)="onClickSave()">SAVE</button>
         </div>
-
-        <div *ngIf="page != undefined" class="view-desktop" [ngClass]="{'view-desktop': typePageView == 0, 'view-tablet': typePageView == 1, 'view-mobile': typePageView == 2 }">
-            <mia-container-print-element *ngFor="let element of page.data.elements" [page]="page" [element]="element" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemove($event)"></mia-container-print-element>
-            <button *ngIf="showAddButton" mat-flat-button color="primary" class="btn-add-section" (click)="onClickAddElement()">ADD SECTION</button>
+        <div class="texts">
+          <div class="title">{{ page.title }}</div>
+          <div class="subtitle"><small>Page - {{ pageStatus() }}</small></div>
+        </div>
+        <div class="layout_view">
+          <button class="btn-desktop" mat-icon-button matTooltip="Desktop" (click)="typePageView = 0"><mat-icon>desktop_windows</mat-icon></button>
+          <button class="btn-tablet" mat-icon-button matTooltip="Tablet" (click)="typePageView = 1"><mat-icon>tablet_mac</mat-icon></button>
+          <button class="btn-mobile" mat-icon-button matTooltip="Mobile" (click)="typePageView = 2"><mat-icon>smartphone</mat-icon></button>
         </div>
     </div>
+
+    <div *ngIf="page != undefined" class="layout-pages">
+      <div class="view-device view-desktop" [ngClass]="{'view-desktop': typePageView == 0, 'view-tablet': typePageView == 1, 'view-mobile': typePageView == 2 }">
+          <mia-container-print-element *ngFor="let element of page.data.elements" [page]="page" [element]="element" (clickElement)="onClickElement($event)" (clickRemove)="onClickRemove($event)"></mia-container-print-element>
+          <button *ngIf="showAddButton" mat-flat-button color="primary" class="btn-add-section" (click)="onClickAddElement()">ADD SECTION</button>
+          <br><br>
+      </div>
+    </div>
+
 </div>

@@ -1,0 +1,7 @@
+.gallery::before{
+  content: 'GALLERY';
+}
+
+.gallery{
+  margin: 1em 0;
+}
