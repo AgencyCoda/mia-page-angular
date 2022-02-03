@@ -48,6 +48,10 @@ export class MiaBaseElementComponent implements OnInit {
       this.addCssProperty('background-color', this.element.data.background_color);
     }
 
+    if(this.element.data.border_color != undefined && this.element.data.border_color != ''){
+      this.addCssProperty('border-color', this.element.data.border_color);
+    }
+
     if(this.element.data.background_image != undefined && this.element.data.background_image != ''){
       this.addCssProperty('background-image', 'url("' + this.element.data.background_image.url + '")');
       this.addCssProperty('background-size', 'cover');
