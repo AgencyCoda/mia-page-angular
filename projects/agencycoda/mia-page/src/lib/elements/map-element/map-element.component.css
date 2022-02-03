@@ -1,0 +1,21 @@
+.map-element::before{
+  content: 'MAP';
+}
+
+.map-element{
+  margin: 1em 0;
+}
+
+.map-element .container-map{
+  width: 100%;
+  height: 400px;
+}
+
+.map-element .container-map iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

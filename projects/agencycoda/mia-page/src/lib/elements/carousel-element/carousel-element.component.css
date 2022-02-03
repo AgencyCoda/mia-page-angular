@@ -1,0 +1,7 @@
+.carousel::before{
+  content: 'CAROUSEL';
+}
+
+.carousel{
+  margin: 1em 0;
+}
